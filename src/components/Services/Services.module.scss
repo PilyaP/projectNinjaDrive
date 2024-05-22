@@ -1,0 +1,121 @@
+.services {
+    padding: 80px 0;
+    background-color: #000;
+    color: #fff;
+
+    .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 80px;
+        text-align: center;
+    }
+
+    .heading {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .tags {
+        margin-bottom: 40px;
+
+        span {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 5px;
+            display: inline-block;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    }
+
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .gridItem {
+        flex: 1 1 300px;
+        max-width: 300px;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    }
+
+    .card {
+        background-color: #f86d08;
+        color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: left;
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: #ffcd00;
+            color: #000;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 16px;
+        }
+    }
+}
+
+/* Планшетная версия */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+
+    .tags {
+        span {
+            font-size: 14px;
+        }
+    }
+
+    .card {
+        h3 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .button {
+            font-size: 14px;
+        }
+    }
+}

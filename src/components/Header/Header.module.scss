@@ -1,0 +1,97 @@
+.header {
+    background-color: #000;
+}
+
+.container {
+    max-width: 1280px;
+    padding: 0 80px;
+ 
+padding-top: 32px;
+    
+    
+}
+.logoItem{
+    display: flex;
+
+}
+.logo img {
+    max-height: 50px;
+    margin-right:214px ;
+}
+
+.nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav li {
+    color: #fff;
+}
+
+.menuIcon {
+    display: none;
+}
+
+/* Планшетная версия */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .nav ul {
+        gap: 24px;
+    }
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .menuIcon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+}
+
+/* Дополнительные стили для мобильного меню */
+.mobileNav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px;
+    display: none;
+}
+
+.mobileNav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.mobileNav li {
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    text-align: left;
+}
+
+.showMobileNav {
+    display: flex;
+}
