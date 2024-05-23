@@ -31,23 +31,25 @@ const reviews = [
 const Reviews = () => {
   return (
     <section className={styles.reviewsSection}>
-      <h2 className={styles.title}>Відгуки</h2>
-      <p className={styles.subtitle}>
-        Відгуки тих, хто скористався нашими послугами, говорять самі за себе
-      </p>
-      <div className={styles.slider}>
-        {reviews.map((review, index) => (
-          <div key={index} className={styles.reviewCard}>
-            <div className={styles.avatar}>
-              <span className={styles.initials}>{review.initials}</span>
+      <div className="container">
+        <h2 className={styles.title}>Відгуки</h2>
+        <p className={styles.subtitle}>
+          Відгуки тих, хто скористався нашими послугами, говорять самі за себе
+        </p>
+        <div className={styles.slider}>
+          {reviews.map((review, index) => (
+            <div key={index} className={styles.reviewCard}>
+              <div className={styles.avatar}>
+                <span className={styles.initials}>{review.initials}</span>
+              </div>
+              <div className={styles.reviewContent}>
+                <h3 className={styles.name}>{review.name}</h3>
+                <p className={styles.text}>{review.text}</p>
+                <p className={styles.source}>{review.source}</p>
+              </div>
             </div>
-            <div className={styles.reviewContent}>
-              <h3 className={styles.name}>{review.name}</h3>
-              <p className={styles.text}>{review.text}</p>
-              <p className={styles.source}>{review.source}</p>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function GiftCertificate() {
   return (
     <section className={styles.giftCertificate}>
-      <div className={styles.container}>
+      <div className="container">
         <div className={styles.content}>
           <h2 className={styles.heading}>ПОДАРУНКОВИЙ СЕРТИФІКАТ</h2>
           <p className={styles.subtitle}>
@@ -18,10 +18,10 @@ export default function GiftCertificate() {
         </div>
         <div className={styles.imageContainer}>
           <Image
-            src=""
+            src="/certificate-desk.png"
             alt="Подарунковий сертифікат"
-            width={300}
-            height={400}
+            width={391}
+            height={406}
           />
         </div>
       </div>

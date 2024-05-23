@@ -12,9 +12,19 @@ export default function About() {
 
   return (
     <section className={styles.about}>
-      <div className={styles.container}>
+      <div className="container">
         <div className={styles.textSection}>
-          <h2 className={styles.heading}>Про нас</h2>
+          <div className={""}>
+            <h2 className={styles.heading}>Про нас</h2>
+
+            <Image src="/arrow-desk.png" alt="Arrow" width={164} height={28} />
+          </div>
+          <Image
+            src="/interest-desk.png"
+            alt="interest-desk"
+            width={272}
+            height={38}
+          />
           <p className={styles.subheading}>
             Драйвова команда на передових планках
           </p>
@@ -64,11 +74,11 @@ export default function About() {
         </div>
         <div className={styles.imageSection}>
           <Image
-            src=""
+            src="/animation.gif"
             alt="Квадроцикл"
             layout="responsive"
-            width={500}
-            height={300}
+            width={625}
+            height={423}
           />
         </div>
       </div>

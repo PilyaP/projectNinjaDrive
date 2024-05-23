@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Services() {
   return (
     <section className={styles.services}>
-      <div className={styles.container}>
+      <div className="container">
         <h2 className={styles.heading}>Послуги</h2>
         <div className={styles.tags}>
           <span>Квадро</span>
@@ -13,10 +13,20 @@ export default function Services() {
         </div>
         <div className={styles.grid}>
           <div className={styles.gridItem}>
-            <Image src="" alt="Квадро" width={300} height={400} />
+            <Image
+              src="/services-desk-1.png"
+              alt="Квадро"
+              width={294}
+              height={570}
+            />
           </div>
           <div className={styles.gridItem}>
-            <Image src="" alt="Мотоцикл" width={300} height={400} />
+            <Image
+              src="/services-desk-2.png"
+              alt="Мотоцикл"
+              width={194}
+              height={378}
+            />
           </div>
           <div className={styles.gridItem}>
             <div className={styles.card}>
@@ -34,10 +44,20 @@ export default function Services() {
             </div>
           </div>
           <div className={styles.gridItem}>
-            <Image src="" alt="Мотоцикл" width={300} height={400} />
+            <Image
+              src="/services-desk-3.png"
+              alt="Мотоцикл"
+              width={193}
+              height={570}
+            />
           </div>
           <div className={styles.gridItem}>
-            <Image src="" alt="Квадро" width={300} height={400} />
+            <Image
+              src="/services-desk-4.png"
+              alt="Квадро"
+              width={302}
+              height={434}
+            />
           </div>
         </div>
       </div>

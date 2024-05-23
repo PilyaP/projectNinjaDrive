@@ -1,11 +1,18 @@
 // Footer.js
+import Image from "next/image";
 import styles from "./Footer.module.scss";
 
 const Footer = () => (
   <footer className={styles.footerContainer}>
-    <div className={styles.footerContent}>
-      <div className={styles.logo}>
-        <img src="/logo.png" alt="Logo" />
+    <div className="container">
+      <div style={{ width: "99px", height: "94px", position: "relative" }}>
+        <Image
+          src="/logo.png"
+          alt="Logo"
+          layout="responsive"
+          width={99}
+          height={94}
+        />
       </div>
       <nav className={styles.navigation}>
         <ul>
@@ -29,22 +36,13 @@ const Footer = () => (
           </li>
         </ul>
       </nav>
-      <div className={styles.socialMedia}>
-        <a href="#">
-          <i className="fab fa-facebook">hth</i>
-        </a>
-        <a href="#">
-          <i className="fab fa-instagram">instagram</i>
-        </a>
-        <a href="#">
-          <i className="fab fa-whatsapp">whatsapp</i>
-        </a>
-        <a href="#">
-          <i className="fab fa-tiktok">tiktok</i>
-        </a>
+      <div className={styles.socialsMob}>
+        <Image src="/facebook-dask.png" alt="Facebook" width={40} height={40} />
+        <Image src="/insta-desk.png" alt="Instagram" width={40} height={40} />
+        <Image src="/whats-desk.png" alt="WhatsApp" width={40} height={40} />
+        <Image src="/tiktok-desk.png" alt="TikTok" width={30} height={30} />
       </div>
-    </div>
-    <div>
+
       <p>Всі права захищено</p>
       <p>Політика конфіденційності</p>
     </div>

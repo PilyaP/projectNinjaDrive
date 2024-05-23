@@ -1,3 +1,6 @@
+
+
+
 .services {
     padding: 80px 0;
     background-color: #000;
@@ -31,21 +34,21 @@
 
     .grid {
         display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
+        gap: 24px;
         justify-content: center;
+      
+        // align-items: flex-end;
+        /* Выравнивание по нижнему краю */
     }
 
     .gridItem {
-        flex: 1 1 300px;
-        max-width: 300px;
+        flex:  calc((100% - 72px) / 4);
+        max-width: calc((100% - 72px) / 4);
         position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
 
-        img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
     }
 
     .card {
@@ -54,6 +57,9 @@
         padding: 20px;
         border-radius: 10px;
         text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
 
         h3 {
             font-size: 24px;

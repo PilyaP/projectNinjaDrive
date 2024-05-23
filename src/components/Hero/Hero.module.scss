@@ -1,3 +1,6 @@
+
+
+
 .hero {
     padding: 80px 0;
     background-color: #000;
@@ -6,12 +9,21 @@
     .container {
         max-width: 1280px;
         margin: 0 auto;
-        padding: 0 80px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
+        padding: 80px;
 
+    }
+.ninja{
+position: absolute;
+top: 133px;
+width: 1280px;
+height: 277px;
+
+}
+.heroText{
+            display: flex;
+                flex-direction: row;
+                align-items: center;
+}
     .text {
         flex: 1;
         margin-right: 40px;
@@ -27,18 +39,36 @@
         }
 
         h1 {
-            font-size: 48px;
-            margin: 0;
+display: none;
         }
 
         h2 {
-            font-size: 36px;
-            margin: 10px 0;
+font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: var(--white);
         }
-
+                h3 {
+                    font-family: var(--second-family);
+                    font-weight: 900;
+                    font-size: 72px;
+                    text-transform: uppercase;
+                    color: var(--orange);
+                    line-height: 72px;
+                }
+                                h4 {
+        font-family: var(--second-family);
+            font-weight: 700;
+            font-size: 36px;
+            text-transform: uppercase;
+            color: var(--white);
+                }
         p {
-            margin: 20px 0;
-            font-size: 18px;
+font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--white);
         }
 
         .buttons {
@@ -64,7 +94,11 @@
                 border-radius: 5px;
             }
         }
-
+.socialsMob
+{
+    display: flex;
+    gap: 16px;
+}
         .socials {
             display: flex;
             gap: 20px;
@@ -72,16 +106,22 @@
         }
 
         .gift {
-            margin-top: 10px;
-            font-size: 18px;
-            color: #f86d08;
+position: relative;
+bottom:70px;
+left: 268px;
         }
+
+                .stripe {
+                    position: relative;
+                    bottom: 0px;
+                    left: 268px;
+                }
     }
 
     .image {
-        flex: 1;
-        position: relative;
-        height: 500px;
+ z-index: 20px;
+        height: 918px;
+width: 918px;
     }
 }
 
