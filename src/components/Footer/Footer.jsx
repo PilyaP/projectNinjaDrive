@@ -9,7 +9,7 @@ const Footer = () => (
         <Image
           src="/logo.png"
           alt="Logo"
-          
+          layout="responsive"
           width={99}
           height={94}
         />
@@ -23,6 +23,8 @@ const Footer = () => (
             <a href="#services">Послуги</a>
           </li>
           <li>
+
+
             <a href="#pricing">Ціни</a>
           </li>
           <li>
@@ -32,7 +34,8 @@ const Footer = () => (
             <a href="#reviews">Відгуки</a>
           </li>
           <li>
-            <a href="#contacts">Контакти</a>
+            <a href="#contacts">Контакти
+        </a>
           </li>
         </ul>
       </nav>
