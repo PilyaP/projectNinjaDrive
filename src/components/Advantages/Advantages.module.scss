@@ -2,23 +2,30 @@
 
 
 .advantages {
-    
+       
 text-transform: uppercase;
     color: #fff;
-    
+padding-top: 220px;
 
 
     .heading {
-        font-size: 36px;
-        margin-bottom: 40px;
+font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: var(--white);
 
-        span {
-            display: block;
-            font-size: 24px;
-            color: #f86d08;
-        }
     }
+        .imgWhy{
 
+            position: relative;
+            top:0;
+            left: 300px;
+        }
+ .grid {
+
+padding-top: 73px;
+ }
 
 
         .caption {
@@ -33,8 +40,23 @@ text-transform: uppercase;
             color: #fff;
         }
     }
-
-
+//         .safety{
+            
+// position: absolute;
+// top:180px;
+// right: 1460px;
+//         }
+// .impression{
+// position: absolute;
+// top: 130px;
+// right: 980px;
+// z-index: 4;
+// }
+// .comfort{
+// position: absolute;
+// top: 200px;
+//     right: 620px;
+// }
 /* Планшетная версия */
 @media (max-width: 1024px) {
     .container {
@@ -42,14 +64,10 @@ text-transform: uppercase;
     }
 
     .grid {
-        flex-direction: column;
-        align-items: center;
+
+        position: relative;
     }
 
-    .gridItem {
-        max-width: 90%;
-        margin-bottom: 20px;
-    }
 }
 
 /* Мобильная версия */

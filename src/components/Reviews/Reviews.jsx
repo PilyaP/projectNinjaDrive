@@ -30,7 +30,7 @@ const reviews = [
 
 const Reviews = () => {
   return (
-    <section className={styles.reviewsSection}>
+    <section id="reviews" className={styles.reviewsSection}>
       <div className="container">
         <h2 className={styles.title}>Відгуки</h2>
         <p className={styles.subtitle}>

@@ -23,17 +23,39 @@ height: 500px;
 
     
         h2 {
-            font-size: 36px;
-            margin-top: 25px;
+            
+            margin-top: 60px;
+            font-family: var(--second-family);
+                font-weight: 700;
+                font-size: 48px;
+                text-transform: uppercase;
+                color: var(--white);
             
         }
 
-        p {
-            margin: 10px 0;
-            font-size: 18px;
-        }
+.contactThink {
+    
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--white);
+}
 
+.contactFat {
+    
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--white);
+}
+.contactAdress{
+margin-top: 32px;
+margin-bottom: 32px;
+}
+.contactTel{
+margin-top: 72px;
+
+}
         .socials {
+            margin-top: 12px;
             display: flex;
             justify-content: center;
             gap: 15px;
