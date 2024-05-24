@@ -6,10 +6,32 @@ export default function Services() {
     <section className={styles.services}>
       <div className="container">
         <h2 className={styles.heading}>Послуги</h2>
-        <div className={styles.tags}>
-          <span>Квадро</span>
-          <span>Багі</span>
-          <span>Мотоцикл</span>
+        <div className={styles.tagsImage}>
+          {/* <div className={styles.tags}>Kvadro</div> */}
+          <div>
+            <Image
+              src="/quadro-text-desk.png"
+              alt="Квадроцикл"
+              width={146}
+              height={48}
+            />
+          </div>
+          <div>
+            <Image
+              src="/bagi-text-desk.png"
+              alt="Квадроцикл"
+              width={181}
+              height={48}
+            />
+          </div>
+          <div>
+            <Image
+              src="/moto-text-desk.png"
+              alt="Квадроцикл"
+              width={181}
+              height={48}
+            />
+          </div>
         </div>
         <div className={styles.grid}>
           <div className={styles.gridItem}>
@@ -29,6 +51,11 @@ export default function Services() {
             />
           </div>
           <div className={styles.gridItem}>
+            {/* <div className={styles.bgCardDark}>
+              <div className={styles.bgCard}>
+
+              </div>
+            </div> */}
             <div className={styles.card}>
               <h3>Широкий спектр послуг</h3>
               <p>
@@ -42,6 +69,7 @@ export default function Services() {
                 Переглянути в Instagram
               </a>
             </div>
+            <Image src="/test.png" alt="cards" width={337} height={540} />
           </div>
           <div className={styles.gridItem}>
             <Image
@@ -50,6 +78,7 @@ export default function Services() {
               width={193}
               height={570}
             />
+            <div className={styles.gridItem}></div>
           </div>
           <div className={styles.gridItem}>
             <Image

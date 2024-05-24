@@ -6,15 +6,19 @@
     background-color: #000;
     color: #fff;
 
-    .container {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 0 80px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
+.aboutSection{
+            display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+}
+.aboutUs{
+    display: flex;
+    gap: 41px;
+}
+.arrow{
+    height: 28px;
+    align-items: center;
+}
     .textSection {
         flex: 1;
         margin-right: 40px;

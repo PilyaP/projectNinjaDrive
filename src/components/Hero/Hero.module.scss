@@ -111,11 +111,7 @@ bottom:70px;
 left: 268px;
         }
 
-                .stripe {
-                    position: relative;
-                    bottom: 0px;
-                    left: 268px;
-                }
+
     }
 
     .image {
@@ -124,7 +120,14 @@ left: 268px;
 width: 918px;
     }
 }
-
+                                .stripe {
+                                    position: absolute;
+                                    bottom: 610px;
+                                    left: 1000px;
+                                    z-index: 2;
+                
+                
+                                }
 /* Планшетная версия */
 @media (max-width: 1024px) {
     .container {
@@ -168,6 +171,6 @@ width: 918px;
     }
 
     .image {
-        height: 300px;
+       
     }
 }

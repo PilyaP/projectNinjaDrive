@@ -22,7 +22,11 @@ export default function Hero() {
                 width={63}
                 height={24}
               />
-              <span>1K+ Позитивних відгуків</span>
+              <div>
+                <p>1K+</p>
+
+                <p>Позитивних відгуків</p>
+              </div>
             </div>
             <h1>2323</h1>
             <h2>Відчуй драйв на повну:</h2>
@@ -80,15 +84,15 @@ export default function Hero() {
               width={1029}
               height={918}
             />
+            <div className={styles.stripe}>
+              <Image
+                src="/stripe-hero-desk.png"
+                alt="Квадроцикл"
+                width={1770}
+                height={223}
+              />
+            </div>
           </div>
-        </div>
-        <div className={styles.stripe}>
-          <Image
-            src="/stripe-hero-desk.png"
-            alt="Квадроцикл"
-            width={1770}
-            height={223}
-          />
         </div>
       </div>
     </section>

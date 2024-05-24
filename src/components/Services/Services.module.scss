@@ -18,9 +18,22 @@
         margin-bottom: 20px;
     }
 
-    .tags {
-        margin-bottom: 40px;
-
+    .tagsImage {
+        position: relative;
+// .tags {
+//     background: var(--black);
+//         transform: rotate(37deg);
+//         border-radius: 24px;
+//             padding: 12px 24px;
+//             width: 146px;
+//             height: 48px;
+//         font-family: var(--second-family);
+//             font-weight: 400;
+//             font-size: 24px;
+//             color: var(--yellow);
+//         // text-align: center;
+//         margin: auto;
+//     }
         span {
             background-color: #333;
             color: #fff;
@@ -37,7 +50,7 @@
         gap: 24px;
         justify-content: center;
       
-        // align-items: flex-end;
+        align-items: flex-end;
         /* Выравнивание по нижнему краю */
     }
 
@@ -49,18 +62,45 @@
         flex-direction: column;
         justify-content: flex-end;
 
-    }
+    
+        .bgCardDark{
+background: #301717;
+   
+    border-radius: 24px;
+    
+    z-index: 1;
+    width: 262px;
+    position: relative;
+    bottom: 15px;
+    height: 521px;
+        }
+        .bgCard {
+            border-radius: 24px;
+            width: 279px;
+            height: 521px;
+            background: #67370b;
+            position: relative;
+            z-index: 2;
+        }
+                .card {
+        
+                    background: var(--orange);
+                    transform: rotate(4deg);
+                    color: #fff;
+                    padding: 4px;
+                    border-radius: 24px;
+                    text-align: left;
+                    display: flex;
+                    flex-direction: column;
+                    z-index: 3;
+                    width: 262px;
+                    position: relative;
+                    top:533px;
+                    left: 26px;
+                    height: 521px;
+                    
 
-    .card {
-        background-color: #f86d08;
-        color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-
+                }
         h3 {
             font-size: 24px;
             margin-bottom: 15px;
