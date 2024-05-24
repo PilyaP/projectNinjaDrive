@@ -9,7 +9,7 @@ const Footer = () => (
         <Image
           src="/logo.png"
           alt="Logo"
-          layout="responsive"
+          
           width={99}
           height={94}
         />
