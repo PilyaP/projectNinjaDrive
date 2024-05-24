@@ -3,6 +3,7 @@
 import { useState } from "react";
 import styles from "./Header.module.scss";
 import Image from "next/image";
+import MenuIcon from "@mui/icons-material/Menu";
 
 export default function Header() {
   const [showMobileNav, setShowMobileNav] = useState(false);
@@ -35,7 +36,7 @@ export default function Header() {
           </nav>
         </div>
         <div className={styles.menuIcon} onClick={toggleMobileNav}>
-          <Image src="" alt="Menu" width={24} height={24} />
+          <MenuIcon style={{ color: "white", width: "24px", height: "24px" }} />
         </div>
         <div
           className={`${styles.mobileNav} ${

@@ -8,7 +8,7 @@ export default function Services() {
         <h2 className={styles.heading}>Послуги</h2>
         <div className={styles.tagsImage}>
           {/* <div className={styles.tags}>Kvadro</div> */}
-          <div>
+          <div className={styles.quadroText}>
             <Image
               src="/quadro-text-desk.png"
               alt="Квадроцикл"
@@ -16,15 +16,15 @@ export default function Services() {
               height={48}
             />
           </div>
-          <div>
+          <div className={styles.bagiText}>
             <Image
               src="/bagi-text-desk.png"
               alt="Квадроцикл"
-              width={181}
+              width={99}
               height={48}
             />
           </div>
-          <div>
+          <div className={styles.motoText}>
             <Image
               src="/moto-text-desk.png"
               alt="Квадроцикл"
