@@ -6,33 +6,49 @@ export default function Advantages() {
     <section className={styles.advantages}>
       <div className="container">
         <h2 className={styles.heading}>Наші переваги</h2>
-        <Image src="/why-we-desk.png" alt="Facebook" width={209} height={38} />
+        <div className={styles.imgWhy}>
+          <Image
+            src="/why-we-desk.png"
+            alt="Facebook"
+            width={209}
+            height={38}
+          />
+        </div>
         <div className={styles.grid}>
-          <div className={styles.gridItem}>
+          <Image
+            src="/all-perevagu.png"
+            alt="Безпека"
+            width={1275}
+            height={677}
+          />
+        </div>
+
+        {/* <div className={styles.grid}>
+          <div className={styles.safety}>
             <Image
               src="/advantages-desk-1.png"
               alt="Безпека"
-              width={300}
-              height={400}
+              width={434}
+              height={564}
             />
           </div>
-          <div className={styles.gridItem}>
+          <div className={styles.impression}>
             <Image
               src="/advantages-desk-2.png"
               alt="Враження"
-              width={300}
-              height={400}
+              width={558}
+              height={677}
             />
           </div>
-          <div className={styles.gridItem}>
+          <div className={styles.comfort}>
             <Image
               src="/advantages-desk-3.png"
               alt="Комфорт"
-              width={300}
-              height={400}
+              width={433}
+              height={563}
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

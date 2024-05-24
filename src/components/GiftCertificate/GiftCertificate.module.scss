@@ -1,77 +1,58 @@
 
 
-
+.certificate{
+    padding-top: 298px;
+    position: relative;
+}
 
 .giftCertificate {
     background-color: #ffdc00;
-   margin-left: auto;
-   margin-right: auto;
+
     border-radius: 12px;
         width: 1280px;
         height: 315px;
-    text-align: center;
 
-    .container {
-        max-width: 1280px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 80px;
-    }
+   
+}
+
 
     .content {
-        flex: 1;
-        text-align: left;
+margin-left: 12px;
     }
 
     .heading {
-        font-size: 36px;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
+padding-top: 24px;
+}
 
     .subtitle {
-        font-size: 24px;
-        margin-bottom: 20px;
+
     }
 
     .description {
-        font-size: 18px;
-        margin-bottom: 30px;
+ 
     }
 
     .button {
-        background-color: #ff6b00;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
+
     }
 
     .imageContainer {
-        flex: 1;
-        text-align: right;
+        position: absolute;
+        bottom: 0;
+        right: 1050px;
+        width: 391px;
+        height: 406;
+
     }
 
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-}
+
 
 /* Планшетная версия */
 @media (max-width: 1024px) {
-    .container {
-        flex-direction: column;
-        padding: 0 40px;
-    }
+
 
     .content {
-        text-align: center;
-        margin-bottom: 20px;
+  
     }
 
     .imageContainer {
@@ -81,9 +62,7 @@
 
 /* Мобильная версия */
 @media (max-width: 768px) {
-    .container {
-        padding: 0 20px;
-    }
+
 
     .heading {
         font-size: 28px;
