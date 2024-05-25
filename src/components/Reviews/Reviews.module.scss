@@ -1,83 +1,104 @@
 .reviewsSection {
-    background-color: #000;
-    color: #fff;
-    padding-bottom: 224px;
-    padding-top: 220px;
-    text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding-bottom: 224px;
+  padding-top: 220px;
 
-    .title {
-        font-family: var(--second-family);
-        font-weight: 700;
-        font-size: 48px;
-        text-transform: uppercase;
-        color: var(--white);
+  .title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  .subtitle {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--white);
+    display: flex;
+    gap: 12px;
+    justify-content: end;
+    width: 1277px;
+    height: 112px;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+
+  .imageReviewPosition {
+    position: relative;
+  }
+
+  .imageReview {
+    position: absolute;
+    top: 0;
+    right: 410px;
+  }
+
+  .slider {
+    padding-top: 102px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .arrow {
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 24px;
+      cursor: pointer;
+      padding: 0 20px;
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
     }
 
-    .subtitle,
-    .description {
+    .reviewContainer {
+      display: flex;
+      gap: 42px;
+      overflow: hidden;
+    }
+
+    .reviewCard {
+      background: #333; // Adjust background color to match the design
+      border-radius: 12px;
+      padding: 24px 12px;
+      max-width: 399px;
+      max-height: 432px;
+      text-align: center; // Center text inside the card
+
+      .avatar {
         font-family: var(--font-family);
         font-weight: 400;
-        font-size: 16px;
+        font-size: 48px;
         color: var(--white);
-    }
-
-    .slider {
+        border-radius: 50%;
+        width: 72px;
+        height: 72px;
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative;
+        margin: 0 auto 16px; 
+      }
 
-        .arrow {
-            background: none;
-            border: none;
-            color: var(--white);
-            font-size: 24px;
-            cursor: pointer;
-            padding: 0 20px;
-
-            &:disabled {
-                opacity: 0.5;
-                cursor: not-allowed;
-            }
+      .reviewContent {
+        .name {
+          font-weight: bold;
+          margin-bottom: 8px; 
         }
 
-        .reviewContainer {
-            display: flex;
-            gap: 42px;
-            overflow: hidden;
+        .text {
+          margin-bottom: 16px; 
         }
 
-        .reviewCard {
-            background: var(--10);
-            border-radius: 12px;
-            padding: 24px 12px;
-            max-width: 399px;
-            max-height: 432px;
-
-            .avatar {
-                font-family: var(--font-family);
-                font-weight: 400;
-                font-size: 48px;
-                color: var(--white);
-                border-radius: 50%;
-                width: 72px;
-                height: 72px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .reviewContent {
-                .name {
-                    font-weight: bold;
-                }
-
-                .text {}
-
-                .source {
-                    color: #888;
-                }
-            }
+        .source {
+          color: #888;
         }
+      }
     }
+  }
 }

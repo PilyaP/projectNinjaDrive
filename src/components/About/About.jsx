@@ -88,9 +88,8 @@ export default function About() {
               провідник у світі пригод та емоційного драйву.
             </p>
             <Image
-              src="/animation.gif"
+              src="/animation2.gif"
               alt="Квадроцикл"
-              layout="responsive"
               width={625}
               height={423}
             />
