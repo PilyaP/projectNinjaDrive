@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import styles from "./Reviews.module.scss";
+import Image from "next/image";
 
 const reviews = [
   {
@@ -75,15 +76,27 @@ const Reviews = () => {
     <section id="reviews" className={styles.reviewsSection}>
       <div className="container">
         <h2 className={styles.title}>що говорять про нас люди</h2>
-        <p className={styles.subtitle}>
-          Ми завжди прагнемо досконалості у всьому, що робимо, і наші клієнти це
-          цінують. Відгуки тих, хто скористався нашими послугами, говорять самі
-          за себе.
-        </p>
-        <p className={styles.description}>
-          Наша репутація побудована на надійності, професіоналізмі та
-          індивідуальному підході до кожного замовлення
-        </p>
+        <div className={styles.subtitle}>
+          <p>
+            Ми завжди прагнемо досконалості у всьому, що робимо, і наші клієнти
+            це цінують. Відгуки тих, хто скористався нашими послугами, говорять
+            самі за себе.
+          </p>
+          <p>
+            Наша репутація побудована на надійності, професіоналізмі та
+            індивідуальному підході до кожного замовлення
+          </p>
+        </div>
+        <div className={styles.imageReviewPosition}>
+          <div className={styles.imageReview}>
+            <Image
+              src="/rewiev-desk.png"
+              alt="rewiev"
+              width={410}
+              height={460}
+            />
+          </div>
+        </div>
         <div className={styles.slider}>
           <button onClick={prevSlide} className={styles.arrow}>
             &#8249;
