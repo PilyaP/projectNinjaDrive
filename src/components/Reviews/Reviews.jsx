@@ -1,7 +1,6 @@
 "use client";
 
-import React from "react";
-import Image from "next/image";
+import React, { useState } from "react";
 import styles from "./Reviews.module.scss";
 
 const reviews = [
@@ -26,29 +25,91 @@ const reviews = [
     initials: "Я",
     avatar: "/path/to/avatar3.png",
   },
+  {
+    name: "Владислав",
+    text: "Были килька разив. Все видминно, биг атмосфери, сервиси момив и го маршрутів! Крути инструктори, купа шикарних эмоций!",
+    source: "*Видгук з гугл карт",
+    initials: "B",
+    avatar: "/path/to/avatar2.png",
+  },
+  {
+    name: "Владислав",
+    text: "Были килька разив. Все видминно, биг атмосфери, сервиси момив и го маршрутів! Крути инструктори, купа шикарних эмоций!",
+    source: "*Видгук з гугл карт",
+    initials: "B",
+    avatar: "/path/to/avatar2.png",
+  },
+  {
+    name: "Владислав",
+    text: "Были килька разив. Все видминно, биг атмосфери, сервиси момив и го маршрутів! Крути инструктори, купа шикарних эмоций!",
+    source: "*Видгук з гугл карт",
+    initials: "B",
+    avatar: "/path/to/avatar2.png",
+  },
 ];
 
 const Reviews = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const getRandomColor = () => {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+
+  const nextSlide = () => {
+    if (currentIndex < reviews.length - 3) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
+  const prevSlide = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+
   return (
     <section id="reviews" className={styles.reviewsSection}>
       <div className="container">
-        <h2 className={styles.title}>Відгуки</h2>
+        <h2 className={styles.title}>що говорять про нас люди</h2>
         <p className={styles.subtitle}>
-          Відгуки тих, хто скористався нашими послугами, говорять самі за себе
+          Ми завжди прагнемо досконалості у всьому, що робимо, і наші клієнти це
+          цінують. Відгуки тих, хто скористався нашими послугами, говорять самі
+          за себе.
+        </p>
+        <p className={styles.description}>
+          Наша репутація побудована на надійності, професіоналізмі та
+          індивідуальному підході до кожного замовлення
         </p>
         <div className={styles.slider}>
-          {reviews.map((review, index) => (
-            <div key={index} className={styles.reviewCard}>
-              <div className={styles.avatar}>
-                <span className={styles.initials}>{review.initials}</span>
-              </div>
-              <div className={styles.reviewContent}>
-                <h3 className={styles.name}>{review.name}</h3>
-                <p className={styles.text}>{review.text}</p>
-                <p className={styles.source}>{review.source}</p>
-              </div>
-            </div>
-          ))}
+          <button onClick={prevSlide} className={styles.arrow}>
+            &#8249;
+          </button>
+          <div className={styles.reviewContainer}>
+            {reviews
+              .slice(currentIndex, currentIndex + 3)
+              .map((review, index) => (
+                <div key={index} className={styles.reviewCard}>
+                  <div
+                    className={styles.avatar}
+                    style={{ backgroundColor: getRandomColor() }}
+                  >
+                    <span className={styles.initials}>{review.initials}</span>
+                  </div>
+                  <div className={styles.reviewContent}>
+                    <h3 className={styles.name}>{review.name}</h3>
+                    <p className={styles.text}>{review.text}</p>
+                    <p className={styles.source}>{review.source}</p>
+                  </div>
+                </div>
+              ))}
+          </div>
+          <button onClick={nextSlide} className={styles.arrow}>
+            &#8250;
+          </button>
         </div>
       </div>
     </section>
