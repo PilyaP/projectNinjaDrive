@@ -1,65 +1,80 @@
-
-
-
 .reviewsSection {
-    text-align: center;
-    padding: 2rem 0;
     background-color: #000;
     color: #fff;
+    padding-bottom: 224px;
+    padding-top: 220px;
+    text-align: center;
 
     .title {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 48px;
+        text-transform: uppercase;
+        color: var(--white);
     }
 
-    .subtitle {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
+    .subtitle,
+    .description {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        color: var(--white);
     }
 
     .slider {
         display: flex;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        gap: 1rem;
-        padding: 1rem;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .arrow {
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 24px;
+            cursor: pointer;
+            padding: 0 20px;
+
+            &:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+        }
+
+        .reviewContainer {
+            display: flex;
+            gap: 42px;
+            overflow: hidden;
+        }
 
         .reviewCard {
-            background-color: #1a1a1a;
-            border-radius: 1rem;
-            padding: 1rem;
-            min-width: 250px;
-            scroll-snap-align: center;
-            text-align: left;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: var(--10);
+            border-radius: 12px;
+            padding: 24px 12px;
+            max-width: 399px;
+            max-height: 432px;
 
             .avatar {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 48px;
+                color: var(--white);
+                border-radius: 50%;
+                width: 72px;
+                height: 72px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 3rem;
-                height: 3rem;
-                border-radius: 50%;
-                background-color: #ff4c4c;
-                color: #fff;
-                font-size: 1.5rem;
-                margin-bottom: 1rem;
             }
 
             .reviewContent {
                 .name {
-                    font-size: 1.2rem;
                     font-weight: bold;
-                    margin-bottom: 0.5rem;
                 }
 
-                .text {
-                    font-size: 1rem;
-                    margin-bottom: 0.5rem;
-                }
+                .text {}
 
                 .source {
-                    font-size: 0.8rem;
                     color: #888;
                 }
             }

@@ -1,194 +1,145 @@
-import styles from "./Pricing.module.scss";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
+import styles from "./Pricing.module.scss";
+
+const items = [
+  {
+    src: "/quadro-desk-210.png",
+    alt: "Квадро 210 куб",
+    title: "Квадро 210 куб",
+    details: [
+      "Год. оплата за другу людину 400₴/год",
+      "Гід до 7р. безкоштовно",
+      "Бронь 500₴ / 1 одиниця техніки",
+    ],
+    pricing: [
+      { time: "1 година", price: "1000₴" },
+      { time: "2 години", price: "1800₴" },
+    ],
+    buttonLink: "https://wa.me/123456789",
+  },
+  {
+    src: "/quadro-desk-300.png",
+    alt: "Квадро 300 куб",
+    title: "Квадро 300 куб",
+    details: [
+      "Год. оплата за другу людину 400₴/год",
+      "Гід до 7р. безкоштовно",
+      "Бронь 500₴ / 1 одиниця техніки",
+    ],
+    pricing: [
+      { time: "1 година", price: "1300₴" },
+      { time: "2 години", price: "2400₴" },
+    ],
+    buttonLink: "https://wa.me/123456789",
+  },
+  {
+    src: "/quadro-desk-400.png",
+    alt: "Квадро 400 куб",
+    title: "Квадро 400 куб",
+    details: [
+      "Год. оплата за другу людину 400₴/год",
+      "Гід до 7р. безкоштовно",
+      "Бронь 500₴ / 1 одиниця техніки",
+    ],
+    pricing: [
+      { time: "1 година", price: "1400₴" },
+      { time: "2 години", price: "2600₴" },
+    ],
+    buttonLink: "https://wa.me/123456789",
+  },
+  {
+    src: "/quadro-desk-550.png",
+    alt: "Квадро 550 куб",
+    title: "Квадро 550 куб",
+    details: [
+      "Год. оплата за другу людину 400₴/год",
+      "Гід до 7р. безкоштовно",
+      "Бронь 500₴ / 1 одиниця техніки",
+    ],
+    pricing: [
+      { time: "1 година", price: "1600₴" },
+      { time: "2 години", price: "3000₴" },
+    ],
+    buttonLink: "https://wa.me/123456789",
+  },
+  {
+    src: "/moto-desk-300.png",
+    alt: "Advance300",
+    title: "Advance300",
+    details: ["Бронь 500₴/ 1 одиниця техніки"],
+    pricing: [
+      { time: "2 години", price: "2800₴" },
+      { time: "3 години", price: "3500₴" },
+    ],
+    buttonLink: "https://wa.me/123456789",
+  },
+  {
+    src: "/pitbike-desk.png",
+    alt: "Pitbike",
+    title: "Pitbike",
+    details: ["Бронь 500₴/ 1 одиниця техніки"],
+    pricing: [
+      { time: "2 години", price: "2800₴" },
+      { time: "3 години", price: "3500₴" },
+    ],
+    buttonLink: "https://wa.me/123456789",
+  },
+  {
+    src: "/bagi-desk.png",
+    alt: "Багі BRP 1000",
+    title: "Багі BRP 1000",
+    details: ["Бронь 500₴/ 1 одиниця техніки"],
+    pricing: [
+      { time: "з інструктором на одному багі", price: "4000₴" },
+      { time: "без інструктора/1год", price: "5000₴" },
+    ],
+    buttonLink: "https://wa.me/123456789",
+  },
+];
 
 export default function Pricing() {
+  const [visibleItems, setVisibleItems] = useState(4);
+
+  const showMoreItems = () => {
+    setVisibleItems((prev) => prev + 4);
+  };
+
   return (
     <section className={styles.pricing}>
       <div className="container">
         <h2 className={styles.heading}>Тарифи та Вартість</h2>
         <Image src="/zig-zag-desk.png" alt="zig-zag" width={229} height={27} />
         <div className={styles.grid}>
-          <div className={styles.gridItem}>
-            <Image
-              src="/quadro-desk-210.png"
-              alt="Квадро 210 куб"
-              width={300}
-              height={200}
-            />
-            <h3>Квадро 210 куб</h3>
-            <ul>
-              <li>Год. оплата за другу людину 400₴/год</li>
-              <li>Гід до 7р. безкоштовно</li>
-              <li>Бронь 500₴ / 1 одиниця техніки</li>
-            </ul>
-            <div className={styles.pricingInfo}>
-              <div>
-                <p>1 година</p>
-                <p>1000₴</p>
+          {items.slice(0, visibleItems).map((item, index) => (
+            <div key={index} className={styles.gridItem}>
+              <Image src={item.src} alt={item.alt} width={300} height={200} />
+              <h3>{item.title}</h3>
+              <ul>
+                {item.details.map((detail, idx) => (
+                  <li key={idx}>{detail}</li>
+                ))}
+              </ul>
+              <div className={styles.pricingInfo}>
+                {item.pricing.map((price, idx) => (
+                  <div key={idx}>
+                    <p>{price.time}</p>
+                    <p>{price.price}</p>
+                  </div>
+                ))}
               </div>
-              <div>
-                <p>2 години</p>
-                <p>1800₴</p>
-              </div>
+              <a href={item.buttonLink} className={styles.button}>
+                Обрати
+              </a>
             </div>
-            <a href="https://wa.me/123456789" className={styles.button}>
-              Обрати
-            </a>
-          </div>
-          <div className={styles.gridItem}>
-            <Image
-              src="/quadro-desk-300.png"
-              alt="Квадро 300 куб"
-              width={300}
-              height={200}
-            />
-            <h3>Квадро 300 куб</h3>
-            <ul>
-              <li>Год. оплата за другу людину 400₴/год</li>
-              <li>Гід до 7р. безкоштовно</li>
-              <li>Бронь 500₴ / 1 одиниця техніки</li>
-            </ul>
-            <div className={styles.pricingInfo}>
-              <div>
-                <p>1 година</p>
-                <p>1300₴</p>
-              </div>
-              <div>
-                <p>2 години</p>
-                <p>2400₴</p>
-              </div>
-            </div>
-            <a href="https://wa.me/123456789" className={styles.button}>
-              Обрати
-            </a>
-          </div>
-          <div className={styles.gridItem}>
-            <Image
-              src="/quadro-desk-400.png"
-              alt="Квадро 400 куб"
-              width={300}
-              height={200}
-            />
-            <h3>Квадро 400 куб</h3>
-            <ul>
-              <li>Год. оплата за другу людину 400₴/год</li>
-              <li>Гід до 7р. безкоштовно</li>
-              <li>Бронь 500₴ / 1 одиниця техніки</li>
-            </ul>
-            <div className={styles.pricingInfo}>
-              <div>
-                <p>1 година</p>
-                <p>1400₴</p>
-              </div>
-              <div>
-                <p>2 години</p>
-                <p>2600₴</p>
-              </div>
-            </div>
-            <a href="https://wa.me/123456789" className={styles.button}>
-              Обрати
-            </a>
-          </div>
-          <div className={styles.gridItem}>
-            <Image
-              src="/quadro-desk-550.png"
-              alt="Квадро 550 куб"
-              width={300}
-              height={200}
-            />
-            <h3>Квадро 550 куб</h3>
-            <ul>
-              <li>Год. оплата за другу людину 400₴/год</li>
-              <li>Гід до 7р. безкоштовно</li>
-              <li>Бронь 500₴ / 1 одиниця техніки</li>
-            </ul>
-            <div className={styles.pricingInfo}>
-              <div>
-                <p>1 година</p>
-                <p>1600₴</p>
-              </div>
-              <div>
-                <p>2 години</p>
-                <p>3000₴</p>
-              </div>
-            </div>
-            <a href="https://wa.me/123456789" className={styles.button}>
-              Обрати
-            </a>
-          </div>
-
-          <div className={styles.gridItem}>
-            <Image
-              src="/moto-desk-300.png"
-              alt="Advance300"
-              width={300}
-              height={200}
-            />
-            <h3>Advance300</h3>
-            <p>*бронь 500₴/ 1 одиня техніки</p>
-            <div className={styles.pricingInfo}>
-              <div>
-                <p>2 години</p>
-                <p>2800₴</p>
-              </div>
-              <div>
-                <p>3 години</p>
-                <p>3500₴</p>
-              </div>
-            </div>
-            <a href="https://wa.me/123456789" className={styles.button}>
-              Обрати
-            </a>
-          </div>
-
-          <div className={styles.gridItem}>
-            <Image
-              src="/pitbike-desk.png"
-              alt="Pitbike"
-              width={300}
-              height={200}
-            />
-            <h3>Pitbike</h3>
-            <p>*бронь 500₴/ 1 одиня техніки</p>
-            <div className={styles.pricingInfo}>
-              <div>
-                <p>2 години</p>
-                <p>2800₴</p>
-              </div>
-              <div>
-                <p>3 години</p>
-                <p>3500₴</p>
-              </div>
-            </div>
-            <a href="https://wa.me/123456789" className={styles.button}>
-              Обрати
-            </a>
-          </div>
-
-          <div className={styles.gridItem}>
-            <Image
-              src="/bagi-desk.png"
-              alt="Багі BRP 1000"
-              width={300}
-              height={200}
-            />
-            <h3>Багі BRP 1000</h3>
-            <p>*бронь 500₴/ 1 одиня техніки</p>
-            <div className={styles.pricingInfo}>
-              <div>
-                <p>з інструктором на одному багі</p>
-                <p>4000₴</p>
-              </div>
-              <div>
-                <p>без інструктора/1год</p>
-                <p>5000₴</p>
-              </div>
-            </div>
-            <a href="https://wa.me/123456789" className={styles.button}>
-              Обрати
-            </a>
-          </div>
+          ))}
         </div>
+        {visibleItems < items.length && (
+          <button onClick={showMoreItems} className={styles.loadMoreButton}>
+            Показати більше
+          </button>
+        )}
       </div>
     </section>
   );
