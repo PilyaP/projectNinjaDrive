@@ -9,6 +9,7 @@ import GiftCertificate from "@/components/GiftCertificate/GiftCertificate";
 import Reviews from "@/components/Reviews/Reviews";
 import Contacts from "@/components/Contacts/Contacts";
 import Footer from "@/components/Footer/Footer";
+import WhatsButton from "@/components/WhatsButton/WhatsButton";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <Reviews />
       <Contacts />
       <Footer />
+      <WhatsButton />
     </main>
   );
 }
