@@ -41,32 +41,40 @@ export default function Hero() {
               <button className={styles.signup}>Записатися</button>
               <button className={styles.certificate}>Сертифікат</button>
             </div>
-            <div className={styles.socialsMob}>
-              <Image
-                src="/facebook-dask.png"
-                alt="Facebook"
-                width={40}
-                height={40}
-              />
-              <Image
-                src="/insta-desk.png"
-                alt="Instagram"
-                width={40}
-                height={40}
-              />
-              <Image
-                src="/whats-desk.png"
-                alt="WhatsApp"
-                width={40}
-                height={40}
-              />
-              <Image
-                src="/tiktok-desk.png"
-                alt="TikTok"
-                width={30}
-                height={30}
-              />
-            </div>
+            <ul className={styles.socialsMob}>
+              <li>
+                <Image
+                  src="/facebook-dask.png"
+                  alt="Facebook"
+                  width={40}
+                  height={40}
+                />
+              </li>
+              <li>
+                <Image
+                  src="/insta-desk.png"
+                  alt="Instagram"
+                  width={40}
+                  height={40}
+                />
+              </li>
+              <li>
+                <Image
+                  src="/whats-desk.png"
+                  alt="WhatsApp"
+                  width={40}
+                  height={40}
+                />
+              </li>
+              <li>
+                <Image
+                  src="/tiktok-desk.png"
+                  alt="TikTok"
+                  width={30}
+                  height={30}
+                />
+              </li>
+            </ul>
 
             <div className={styles.gift}>
               <Image

@@ -6,7 +6,7 @@ export default function Services() {
     <section className={styles.services}>
       <div className="container">
         <h2 className={styles.heading}>Послуги</h2>
-        <div className={styles.tagsImage}>
+        <ul className={styles.tagsImage}>
           {/* <div className={styles.tags}>Kvadro</div> */}
           <div className={styles.quadroText}>
             <Image
@@ -32,31 +32,31 @@ export default function Services() {
               height={48}
             />
           </div>
-        </div>
+        </ul>
         <div className={styles.grid}>
-          <div className={styles.gridItem}>
+          <li className={styles.gridItem}>
             <Image
               src="/services-desk-1.png"
               alt="Квадро"
               width={294}
               height={570}
             />
-          </div>
-          <div className={styles.gridItem}>
+          </li>
+          <li className={styles.gridItem}>
             <Image
               src="/services-desk-2.png"
               alt="Мотоцикл"
               width={194}
               height={378}
             />
-          </div>
+          </li>
           <div className={styles.gridItem}>
             {/* <div className={styles.bgCardDark}>
               <div className={styles.bgCard}>
 
               </div>
             </div> */}
-            <div className={styles.card}>
+            <li className={styles.card}>
               <h3>Широкий спектр послуг</h3>
               <p>
                 Для шанувальників мотоциклів ми надаємо прокат сучасних моделей.
@@ -68,10 +68,10 @@ export default function Services() {
               <a href="https://instagram.com" className={styles.button}>
                 Переглянути в Instagram
               </a>
-            </div>
+            </li>
             <Image src="/test.png" alt="cards" width={337} height={540} />
           </div>
-          <div className={styles.gridItem}>
+          <li className={styles.gridItem}>
             <Image
               src="/services-desk-3.png"
               alt="Мотоцикл"
@@ -79,15 +79,15 @@ export default function Services() {
               height={570}
             />
             <div className={styles.gridItem}></div>
-          </div>
-          <div className={styles.gridItem}>
+          </li>
+          <li className={styles.gridItem}>
             <Image
               src="/services-desk-4.png"
               alt="Квадро"
               width={302}
               height={434}
             />
-          </div>
+          </li>
         </div>
       </div>
     </section>
