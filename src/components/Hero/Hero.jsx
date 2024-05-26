@@ -1,105 +1,44 @@
-import styles from "./Hero.module.scss";
+import s from "./Hero.module.scss";
 import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className={styles.hero}>
+    <section className={s.hero}>
       <div className="container">
-        <div className={styles.heroText}>
-          <div className={styles.ninja}>
-            <Image
-              src="/ninja-back-desk.png"
-              alt="Back Ninja"
-              width={1280}
-              height={277}
-            />
+        <div className={s.heroText}>
+          <div className={s.ninja}>
           </div>
-          <div className={styles.text}>
-            <div className={styles.reviews}>
-              <Image
-                src="/photos-1k-desk.png"
-                alt="Отзывы"
-                width={63}
-                height={24}
-              />
-              <div>
-                <p>1K+</p>
-
-                <p>Позитивних відгуків</p>
+          <div className={s.heroContent}>
+            <div className={s.heroContentText}>
+              <div className={s.heroReviewsExmp}>
+                <Image
+                  src="/photos-1k-desk.png"
+                  alt="Отзывы"
+                  width={63}
+                  height={24}
+                />
+                  <p className={s.heroSubtitle}>
+                    <span className={s.heroSubtitleNum}>1K+</span>
+                  Позитивних відгуків
+                  </p>
               </div>
+            
+              <h3 className={s.heroUptitle}>Відчуй драйв на повну:</h3>
+              <h1 className={s.heroMaintitle}>Пригоди на квадроциклах</h1>
+              <h3 className={s.heroUptitle}>чекають на тебе!</h3>
             </div>
-            <h1>2323</h1>
-            <h2>Відчуй драйв на повну:</h2>
-            <h3>Пригоди на квадроциклах</h3>
-            <h4>чекають на тебе!</h4>
-            <p>
-              Ninja Drive Club: Приєднуйся до нас, щоб відкрити нові горизонти,
-              насолодитися швидкістю і природою в одному заїзді. Твоя пригода
-              починається тут
-            </p>
-            <div className={styles.buttons}>
-              <button className={styles.signup}>Записатися</button>
-              <button className={styles.certificate}>Сертифікат</button>
+            
+            <div className={s.heroButtonsBox}>
+              <ul className={s.heroButtonsList}>
+               <li> <button className={`${s.heroBtn} ${s.signup}`}>Записатися</button></li>
+               <li> <button  className={`${s.heroBtn} ${s.certificate}`}>Сертифікат</button></li>
+              </ul>
+                <p className={s.heroCalltoAction}>купуй в подарунок:)</p>
             </div>
-            <ul className={styles.socialsMob}>
-              <li>
-                <Image
-                  src="/facebook-dask.png"
-                  alt="Facebook"
-                  width={40}
-                  height={40}
-                />
-              </li>
-              <li>
-                <Image
-                  src="/insta-desk.png"
-                  alt="Instagram"
-                  width={40}
-                  height={40}
-                />
-              </li>
-              <li>
-                <Image
-                  src="/whats-desk.png"
-                  alt="WhatsApp"
-                  width={40}
-                  height={40}
-                />
-              </li>
-              <li>
-                <Image
-                  src="/tiktok-desk.png"
-                  alt="TikTok"
-                  width={30}
-                  height={30}
-                />
-              </li>
-            </ul>
-
-            <div className={styles.gift}>
-              <Image
-                src="/buy-desk.png"
-                alt="Facebook"
-                width={251}
-                height={38}
-              />
-            </div>
+            
           </div>
-          <div className={styles.image}>
-            <Image
-              src="/motorcycle-hero-desk.png"
-              alt="Квадроцикл"
-              width={1029}
-              height={918}
-            />
-            <div className={styles.stripe}>
-              <Image
-                src="/stripe-hero-desk.png"
-                alt="Квадроцикл"
-                width={1770}
-                height={223}
-              />
-            </div>
+          <div className={s.image}>
+           
           </div>
         </div>
       </div>

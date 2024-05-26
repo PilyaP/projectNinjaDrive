@@ -15,8 +15,8 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <Header />
-      {/* <Hero />
-      <About />
+      <Hero />
+      {/* <About />
       <Services />
       <Pricing />
       <Advantages />
