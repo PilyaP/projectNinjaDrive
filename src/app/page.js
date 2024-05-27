@@ -14,16 +14,16 @@ import Footer from "@/components/Footer/Footer";
 export default function Home() {
   return (
     <main className={styles.main}>
-      {/* <Header />
+      <Header />
       <Hero />
       <About />
       <Services />
-      <Pricing /> */}
+      <Pricing />
       <Advantages />
-      {/* <GiftCertificate />
+      <GiftCertificate />
       <Reviews />
-      <Contacts /> 
-      <Footer /> */}
+      <Contacts />
+      <Footer />
       {/* <WhatsButton /> */}
     </main>
   );
