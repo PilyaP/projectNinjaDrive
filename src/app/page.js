@@ -18,12 +18,12 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
-      <Pricing />
+      <Pricing /> */}
       <Advantages />
-      <GiftCertificate />
+      {/* <GiftCertificate />
       <Reviews />
-      <Contacts /> */}
-      <Footer />
+      <Contacts /> 
+      <Footer /> */}
       {/* <WhatsButton /> */}
     </main>
   );
