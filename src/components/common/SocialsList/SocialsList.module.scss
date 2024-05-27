@@ -1,3 +1,6 @@
+
+@import '../../../../styles/mixins.scss';
+
 .socialsList{
     display: flex;
     gap: 16px;
@@ -5,8 +8,16 @@
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 24px;
+
+    @include tablet{
+        flex-direction: row;
+    }
 }
 .socialsListIcon{
     width: 24px;
     height: 24px;
+    @include desktop{
+        width: 40px;
+        height: 40px;
+    }
 }
