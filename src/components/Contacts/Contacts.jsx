@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Contacts = () => {
   return (
-    <section className={styles.contacts}>
+    <section className={styles.contacts} id="contacts">
       <div className="container">
         <div className={styles.info}>
           <div className={styles.contactsMap}>

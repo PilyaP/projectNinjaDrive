@@ -11,7 +11,7 @@ export default function About() {
   };
 
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id="about">
       <div className="container">
         <div className={styles.aboutSection}>
           <div className={styles.textSection}>

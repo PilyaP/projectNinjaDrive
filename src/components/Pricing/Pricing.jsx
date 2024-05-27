@@ -107,7 +107,7 @@ export default function Pricing() {
   };
 
   return (
-    <section className={styles.pricing}>
+    <section className={styles.pricing} id="pricing">
       <div className="container">
         <h2 className={styles.heading}>Тарифи та Вартість</h2>
         <Image src="/zig-zag-desk.png" alt="zig-zag" width={229} height={27} />

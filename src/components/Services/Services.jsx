@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Services() {
   return (
-    <section className={styles.services}>
+    <section className={styles.services} id="servies">
       <div className="container">
         <h2 className={styles.heading}>Послуги</h2>
         <ul className={styles.tagsImage}>

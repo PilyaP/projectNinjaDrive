@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Advantages() {
   return (
-    <section className={styles.advantages}>
+    <section className={styles.advantages} id="advantages">
       <div className="container">
         <h2 className={styles.heading}>Наші переваги</h2>
         <div className={styles.imgWhy}>

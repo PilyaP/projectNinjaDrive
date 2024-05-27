@@ -1,176 +1,344 @@
+@import '../../../styles/mixins.scss';
 
+.hero{
+    position: relative;
+    padding-top: 387px;
+    padding-bottom: 110px;
+    // width: 100%;
+    overflow-x: hidden;
 
+    &::after{
+        content: '';
+        top: 0;
+        right: -458px;
+        position: absolute;
+        background-image: url('/motorcycle-hero-mobile.png');
 
-.hero {
-    padding: 80px 0;
-    background-color: #000;
-    color: #fff;
+        @include tablet{
+            background-image: url('/motorcycle-hero-tab.png');
+        }
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
 
-    .container {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 80px;
-
+        width: 833px;
+        height: 746px;
+        z-index: -2;
     }
-.ninja{
-position: absolute;
-top: 133px;
-width: 1280px;
-height: 277px;
+    @include tablet{
+        padding-top: 365px;
+    }
 
-}
-.heroText{
-            display: flex;
-                flex-direction: row;
-                align-items: center;
-}
-    .text {
-        flex: 1;
-        margin-right: 40px;
-
-        .reviews {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-
-            img {
-                margin-right: 10px;
-            }
-        }
-
-        h1 {
-display: none;
-        }
-
-        h2 {
-font-family: var(--second-family);
-    font-weight: 700;
-    font-size: 36px;
-    text-transform: uppercase;
     color: var(--white);
-        }
-                h3 {
-                    font-family: var(--second-family);
-                    font-weight: 900;
-                    font-size: 72px;
-                    text-transform: uppercase;
-                    color: var(--orange);
-                    line-height: 72px;
-                }
-                                h4 {
-        font-family: var(--second-family);
-            font-weight: 700;
-            font-size: 36px;
-            text-transform: uppercase;
-            color: var(--white);
-                }
-        p {
-font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 18px;
-    color: var(--white);
-        }
+   
+}
+.heroContent{
+    
+    position: relative;
+    padding: 42px 8px 51px 8px;
+    // max-width: 100%;
+    // height: 328px;
 
-        .buttons {
-            display: flex;
-            gap: 20px;
-            margin: 20px 0;
-
-            .signup {
-                background-color: #f86d08;
-                color: #fff;
-                border: none;
-                padding: 10px 20px;
-                cursor: pointer;
-                border-radius: 5px;
-            }
-
-            .certificate {
-                background-color: transparent;
-                color: #fff;
-                border: 1px solid #fff;
-                padding: 10px 20px;
-                cursor: pointer;
-                border-radius: 5px;
-            }
-        }
-.socialsMob
-{
+    &::after{
+       position: absolute;
+    content: "";
+    width: 100%;
+    height: 108%;
+    top: -26px;
+    left: 0;
+    z-index: -1;
+    border-radius: 12px;
+    fill: var(--black);
+    width: 100%;
+    background-image: url(data:image/svg+xml,%3Csvg%20width%3D%22343%22%20height%3D%22323%22%20viewBox%3D%220%200%20343%20323%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%2012.0585C0%204.04097%207.71139%20-1.72153%2015.4003%200.550294L334.4%2094.8046C339.5%2096.3114%20343%20100.995%20343%20106.313V310.306C343%20317.559%20336.615%20323.154%20329.424%20322.202L10.4244%20279.95C4.45807%20279.16%200%20274.072%200%20268.054V12.0585Z%22%20fill%3D%22%2319191C%22%2F%3E%3C%2Fsvg%3E);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+@include tablet{
+          top: 0;
+    }
+}
+    @include mobile{
+        width: 343px;
+    }
+    @include tablet{
+            width: 696px;
+            padding:112px 21px 101px 21px;
+    }
+}
+.heroContentText{
+    margin-bottom: 28px;
+    font-family: var(--second-family);
+}
+.heroReviewsExmp{
     display: flex;
-    gap: 16px;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 17.5px;
 }
-        .socials {
-            display: flex;
-            gap: 20px;
-            margin: 20px 0;
-        }
+.heroSubtitle{
+    font-weight: 400;
+    font-size: 8px;
+    @include tablet{
+        font-size: 10px;
+    }
+}
+.heroSubtitleNum{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: capitalize;
+    @include tablet{
+        font-size: 16px;
+    }
+}
+.heroUptitle{
+font-weight: 700;
+font-size: 16px;
+text-transform: uppercase;
+@include tablet{
+        font-size: 24px;
+    }
+}
+.heroMaintitle{
+font-weight: 900;
+text-transform: uppercase;
+color: var(--orange);
+margin-top: 8px;
+margin-bottom: 8px;
+display: block;
+font-size: 28px;
 
-        .gift {
-position: relative;
-bottom:70px;
-left: 268px;
-        }
-
+    @include mobile{
+        font-size: 32px;
+    }
+    @include tablet{
+        font-size: 48px;
+    }
+}
+.heroButtonsList{
+    display: flex;
+    gap: 17px;
+    flex-wrap: wrap;
+}
+.heroBtn{
+    border-radius: 24px;
+  padding: 12px;
+  width: 155px;
+  height: 50px;
+  font-family: var(--font-family);
+  font-size: 14px;
+  text-transform: capitalize;
+  color: var(--button-white);
+  @include tablet{
+      padding: 16px 24px;
+width: 180px;
+height: 48px;
+  font-size: 16px;
 
     }
+}
+.signup{
+  background: var(--button);
+  font-weight: 700;
+}
+.certificate {
+    border: 1px solid var(--white);
+  padding: 16px 39px;
+  font-weight: 500;
+  background-color: transparent;
+}
+.heroButtonsBox{
+    position: relative;
+}
+.heroCalltoAction{
+    position: absolute;
+    left: 38%;
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--yellow);
+    transform: rotate(5deg);
+    bottom: -23px;
+    left: 35%;
+    text-align: center;
+
+    @include tablet {
+        font-size: 14px;
+        transform: rotate(14deg);
+    }
+}
+
+// .hero {
+//     padding: 80px 0;
+//     background-color: #000;
+//     color: #fff;
+
+//     .container {
+//         max-width: 1280px;
+//         margin: 0 auto;
+//         padding: 80px;
+
+//     }
+// .ninja{
+// position: absolute;
+// top: 133px;
+// width: 1280px;
+// height: 277px;
+
+// }
+// .heroText{
+//             display: flex;
+//                 flex-direction: row;
+//                 align-items: center;
+// }
+//     .text {
+//         flex: 1;
+//         margin-right: 40px;
+
+//         .reviews {
+//             display: flex;
+//             align-items: center;
+//             margin-bottom: 20px;
+
+//             img {
+//                 margin-right: 10px;
+//             }
+//         }
+
+//         h1 {
+// display: none;
+//         }
+
+//         h2 {
+// font-family: var(--second-family);
+//     font-weight: 700;
+//     font-size: 36px;
+//     text-transform: uppercase;
+//     color: var(--white);
+//         }
+//                 h3 {
+//                     font-family: var(--second-family);
+//                     font-weight: 900;
+//                     font-size: 72px;
+//                     text-transform: uppercase;
+//                     color: var(--orange);
+//                     line-height: 72px;
+//                 }
+//                                 h4 {
+//         font-family: var(--second-family);
+//             font-weight: 700;
+//             font-size: 36px;
+//             text-transform: uppercase;
+//             color: var(--white);
+//                 }
+//         p {
+// font-family: var(--font-family);
+//     font-weight: 400;
+//     font-size: 18px;
+//     color: var(--white);
+//         }
+
+//         .buttons {
+//             display: flex;
+//             gap: 20px;
+//             margin: 20px 0;
+
+//             .signup {
+//                 background-color: #f86d08;
+//                 color: #fff;
+//                 border: none;
+//                 padding: 10px 20px;
+//                 cursor: pointer;
+//                 border-radius: 5px;
+//             }
+
+//             .certificate {
+//                 background-color: transparent;
+//                 color: #fff;
+//                 border: 1px solid #fff;
+//                 padding: 10px 20px;
+//                 cursor: pointer;
+//                 border-radius: 5px;
+//             }
+//         }
+// .socialsMob
+// {
+//     display: flex;
+//     gap: 16px;
+// }
+//         .socials {
+//             display: flex;
+//             gap: 20px;
+//             margin: 20px 0;
+//         }
+
+//         .gift {
+// position: relative;
+// bottom:70px;
+// left: 268px;
+//         }
+
+
+//     }
+
+// //     .image {
+// //  z-index: 20px;
+// //         height: 918px;
+// // width: 918px;
+// //     }
+// }
+//                                 .stripe {
+//                                     position: absolute;
+//                                     top: 550px;
+//                                     right:  150px;
+//                                     z-index: 2;
+                
+                
+//                                 }
+// /* Планшетная версия */
+// @media (max-width: 1024px) {
+//     .container {
+//         padding: 0 40px;
+//         flex-direction: column;
+//         text-align: center;
+//     }
+
+//     .text {
+//         margin-right: 0;
+//     }
 
 //     .image {
-//  z-index: 20px;
-//         height: 918px;
-// width: 918px;
+//         height: 400px;
 //     }
-}
-                                .stripe {
-                                    position: absolute;
-                                    top: 550px;
-                                    right:  150px;
-                                    z-index: 2;
-                
-                
-                                }
-/* Планшетная версия */
-@media (max-width: 1024px) {
-    .container {
-        padding: 0 40px;
-        flex-direction: column;
-        text-align: center;
-    }
+// }
 
-    .text {
-        margin-right: 0;
-    }
+// /* Мобильная версия */
+// @media (max-width: 768px) {
+//     .container {
+//         padding: 0 20px;
+//     }
 
-    .image {
-        height: 400px;
-    }
-}
+//     .text {
+//         h1 {
+//             font-size: 36px;
+//         }
 
-/* Мобильная версия */
-@media (max-width: 768px) {
-    .container {
-        padding: 0 20px;
-    }
+//         h2 {
+//             font-size: 28px;
+//         }
 
-    .text {
-        h1 {
-            font-size: 36px;
-        }
+//         p {
+//             font-size: 16px;
+//         }
 
-        h2 {
-            font-size: 28px;
-        }
+//         .buttons {
+//             flex-direction: column;
+//             gap: 10px;
+//         }
+//     }
 
-        p {
-            font-size: 16px;
-        }
-
-        .buttons {
-            flex-direction: column;
-            gap: 10px;
-        }
-    }
-
-    .image {
+//     .image {
        
-    }
-}
+//     }
+// }
