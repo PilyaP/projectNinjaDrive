@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./Pricing.module.scss";
-
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { KeyboardArrowDown } from "@mui/icons-material";
 const items = [
   {
     src: "/quadro-desk-210.png",
@@ -137,7 +138,7 @@ export default function Pricing() {
         </div>
         {visibleItems < items.length && (
           <button onClick={showMoreItems} className={styles.loadMoreButton}>
-            Показати більше
+            <KeyboardArrowDownIcon sx={{ color: "#f86d08" }} />
           </button>
         )}
       </div>
