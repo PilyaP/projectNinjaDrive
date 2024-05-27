@@ -1,67 +1,220 @@
-
+@import '../../../styles/mixins.scss';
 
 .navigation {
-
+    flex-direction:column;
     display: flex;
-    gap: 40px;
-a {
+    gap: 16px;
 font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 16px;
-    text-transform: uppercase;
+text-transform: uppercase;
+            font-weight: 400;
+                font-size: 16px;
     color: var(--white);
-    }
+
+        @include tablet {
+            margin-top: 24px;
+            flex-direction: row;
+        gap: 48px;
+             justify-content: center ;
+        
+            }
+        @include desktop {
+            display: block;
+                gap: 40px;
+
+        }
+}
+.navigationLink {
+
+
+
+    
+
 }
 
+                .footerLogo{
 
-                .logo {
-                    width: 99px;
-                    height: 94px;
+
+
+                            @include desktop {
+                                width: 99px;
+                                    height: 94px;
+                            
+                                }
+                 
+                    
                 }
 .footerContainer {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
+color: var(--white);
+    
 
-    .footerContent {
-        display: flex;
-        justify-content: space-between;
-        
+ 
 
 
-
-        
-
-    }
 }
 .footerNav{
-    display: flex;
 
-    justify-content: space-between;
-    align-items: center;
+display: block;
+    @include tablet {
+   
+    display: flex;
+    flex-direction: column;
+ 
+    
+        }
+                 @include desktop {
+
+        
+        
+                 }
+
 }
 
-.socialsList{
+
+
+
+
+.footerLine{
+border-bottom: 1px solid var(--yellow);
+margin-top: 32px;
+margin-bottom: 24px;
+        @include tablet {
+        
+            margin-top: 24px;
+             
+                border-bottom: 1px solid rgba(245, 249, 253, 1);
+            }
+}
+
+.footerLineMob {
+margin-top: 24px;
+border: 1px solid var(--yellow);
+margin-bottom: 32px;
+    
+   
+    @include tablet {
+
+        display: none;
+    }
+}
+
+.footerLogo{
+    width: 99px;
+        height: 94px;
+}
+
+.footerNavMob{
+
+    display: flex;
+    gap: 107px;
+    @include tablet {
+        flex-direction: column;
+    gap: 24px;
+        
+    
+    
+        }
+
+@include desktop {
+display: block;
+
+
+
+}
+}
+.socials {
+
+
+    @include desktop {
+            display: block;
+    
+    
+    
+        }
+}
+.socialsText{
+display: flex;
+
+
+flex-direction: column;
+align-items: center;
+margin-bottom: 12px;
+@include tablet{
+    display: none;
+
+}
+
+}
+
+.footerNavSoc{
+
+    display: flex;
+    flex-direction: row;
+    gap: 107px;
+    @include tablet {
+flex-direction: column;
+gap: 24px;
+        }
+        @include desktop {
+            display: block;
+            
+        }
+    
+}
+.socialsMob{
+    margin-bottom: auto;
+    margin-top: auto;
+align-items: center;
+    display: flex;
+    flex-direction: column;
+        @include tablet {
+              display: block;
+            }
+
+}
+
+
+.socialsList {
     display: flex;
     gap: 16px;
     align-items: center;
+
+   
+
+        @include tablet {
+
+            justify-content: center;
+
+
+        }
+                @include desktop {
+        
+                    display: block;
+        
+        
+                }
+
+    
 }
-
-.politics{
-
-    display: flex;
-    gap:319px;
-    p{
+.politics {
+    font-weight: 400;
+    font-size: 16px;
     font-family: var(--second-family);
-        font-weight: 400;
-        font-size: 16px;
-        text-transform: uppercase;
-        color: var(--white);
-    }
-}
+    display: flex;
+    text-transform: uppercase;
+    color: var(--white);
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 
-.footerLine{
-    margin-top: 24px; 
-    margin-bottom: 24px;
-    border-bottom: 1px solid rgba(245, 249, 253, 1);
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 215px;
+    }
+
+    @include desktop {
+
+
+        gap: 319px;
+    }
 }
