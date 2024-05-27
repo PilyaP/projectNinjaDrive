@@ -5,6 +5,7 @@ export default function Advantages() {
   return (
     <section className={styles.advantages} id="advantages">
       <div className="container">
+      
         <h2 className={styles.heading}>Наші переваги</h2>
         <div className={styles.imgWhy}>
           <Image
@@ -16,39 +17,27 @@ export default function Advantages() {
         </div>
         <div className={styles.grid}>
           <Image
-            src="/all-perevagu.png"
+            src="/all-advantages-desk.png"
             alt="Безпека"
             width={1275}
             height={677}
+            className={styles.desktopImage}
+          />
+          <Image
+            src="/all-advantages-mob.png"
+            alt="Безпека"
+            width={343}
+            height={1383}
+            className={styles.mobileImage}
+          />
+          <Image
+            src="/all-advantages-tablet.png"
+            alt="Безпека"
+            width={446}
+            height={527}
+            className={styles.tabletImage}
           />
         </div>
-
-        {/* <div className={styles.grid}>
-          <div className={styles.safety}>
-            <Image
-              src="/advantages-desk-1.png"
-              alt="Безпека"
-              width={434}
-              height={564}
-            />
-          </div>
-          <div className={styles.impression}>
-            <Image
-              src="/advantages-desk-2.png"
-              alt="Враження"
-              width={558}
-              height={677}
-            />
-          </div>
-          <div className={styles.comfort}>
-            <Image
-              src="/advantages-desk-3.png"
-              alt="Комфорт"
-              width={433}
-              height={563}
-            />
-          </div>
-        </div> */}
       </div>
     </section>
   );
