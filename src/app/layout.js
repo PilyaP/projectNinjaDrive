@@ -55,7 +55,7 @@ export default function RootLayout({ children }) {
         <link
           rel="icon"
           href="/favicon.ico"
-          sizes="16x16 32x32 48x48"
+          sizes="32x32"
           type="image/x-icon"
         />
         <link
