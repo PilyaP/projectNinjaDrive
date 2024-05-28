@@ -22,7 +22,7 @@ export default function Home() {
       <Advantages />
       {/* <GiftCertificate /> */}
       {/* <Reviews /> */}
-      {/* <Contacts /> */}
+      <Contacts />
       <Footer />
       {/* <WhatsButton /> */}
     </main>
