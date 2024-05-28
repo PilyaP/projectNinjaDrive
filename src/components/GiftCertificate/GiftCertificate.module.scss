@@ -1,82 +1,109 @@
+@import '../../../styles/mixins.scss';
 
 
 .certificate{
-    padding-top: 298px;
+padding-top: 110px;
+padding-bottom: 110px;
     position: relative;
+
+    
 }
 
 .giftCertificate {
+    margin-top: 90px;
     background-color: #ffdc00;
 
     border-radius: 12px;
-        width: 1280px;
-        height: 315px;
+        width: 100%;
+        height: 194px;
+        margin-left: auto;
+        margin-right: auto;
 
    
 }
 
 
     .content {
-margin-left: 12px;
-    }
-
-    .heading {
-padding-top: 24px;
-}
-
-    .subtitle {
-
-    }
-
-    .description {
  
     }
 
-    .button {
+    .heading {
+    display: none ;
 
+}
+
+    .subtitle {
+display: none;
+    }
+
+    .description {
+display: none;
+    }
+
+    .button {
+display: none;
     }
 
     .imageContainer {
         position: absolute;
-        bottom: 0;
-        right: 650px;
-        width: 391px;
-        height: 406;
+        top:23px;
+        left: 10px;
+        width: 343;
+        height: 356px;
+        // bottom: 0;
+        // right: 650px;
+        
+        // height: 406;
 
     }
 
-
-
-/* Планшетная версия */
-@media (max-width: 1024px) {
-
-
-    .content {
-  
-    }
-
-    .imageContainer {
+.contentMob{
+    margin-top: 24px;
+    font-family: var(--font-family);
+        color: var(--white);
         text-align: center;
-    }
+@include tablet {display: none;}
 }
+.headingMob{
+    margin-top: 16px;
+    margin-bottom: 12px;
+font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+  
+   
 
-/* Мобильная версия */
-@media (max-width: 768px) {
 
-
-    .heading {
-        font-size: 28px;
-    }
-
-    .subtitle {
-        font-size: 20px;
-    }
-
-    .description {
+@include tablet {display: none;}
+}
+.subtitleMob{
+    font-family: var(--font-family);
+        font-weight: 700;
         font-size: 16px;
-    }
-
-    .button {
-        font-size: 14px;
-    }
+        margin-bottom: 12px;
+        
+@include tablet {display: none;}
+}
+.descriptionMob{
+    font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 12px;
+        margin-bottom: 48px;
+@include tablet{display: none;}
+}
+.buttonMob{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 24px;
+        padding: 12px;
+        width: 152px;
+        height: 48px;
+        font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: capitalize;
+            color: var(--button-white);
+            background: var(--button);
+@include tablet {display: none;}
 }
