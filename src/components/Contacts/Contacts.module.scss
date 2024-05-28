@@ -1,105 +1,91 @@
+@import '../../../styles/mixins.scss';
+
 
 
 .contacts {
-    padding-bottom: 221px;
-    // display: flex;
-    
-    // align-items: center;
-    
-    // color: #fff;
-    // padding: 40px;
+color: var(--white);
+            position: relative;
 
-    .info {
+&::after {
+    position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
         
-        padding-left: 12px;
-        background-color: #25384b;
-display: flex;
-gap: 139px;
-margin-right: auto;
-        margin-left: auto;
-border-radius: 12px;
-width: 1280px;
-height: 500px;
+                background-image: url('/contacts-bg-mob.png');
+                z-index: 2;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                width: 343px;
+                // height: 100%;
+                 z-index: 2;
+               
+            }
+
+  @include tablet {
+    background-repeat: no-repeat;
+background-image: url('/contacts-bg-tab.png');
+  }
+@include desktop {
+background-image: url('/contacts-bg-desk.png');
+}
+        }   
 
 
-    
-        h2 {
-            
-            margin-top: 60px;
-            font-family: var(--second-family);
-                font-weight: 700;
-                font-size: 48px;
-                text-transform: uppercase;
-                color: var(--white);
-            
+                .contactsHeading{
+                    font-family: var(--second-family);
+                        font-weight: 700;
+                        font-size: 24px;
+                        text-transform: uppercase;
+                        margin-bottom: 48px;
+                        
+
+        @include desktop {
+        font-size: 48px;
         }
+                }
 
-.contactThink {
-    
+                                .contactFat{
+                                    font-family: var(--font-family);
+                                        font-weight: 700;
+                                        font-size: 16px;
+                                        margin-bottom: 12px;
+                                        @include tablet {}
+                                        
+                                            @include desktop {
+                                                font-weight: 600;
+                                                font-size: 24px;}
+                                }
+.contactThink{
+font-family: var(--font-family);
     font-weight: 400;
-    font-size: 24px;
-    color: var(--white);
-}
-
-.contactFat {
+    font-size: 14px;
+    margin-bottom: 24px;
+    @include tablet {
+        font-size: 16px;
+    }
     
-    font-weight: 600;
-    font-size: 24px;
-    color: var(--white);
-}
-.contactAdress{
-margin-top: 32px;
-margin-bottom: 32px;
-}
-.contactTel{
-margin-top: 72px;
-
-}
-        .socials {
-            margin-top: 12px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-
-            a {
-                display: inline-block;
-            }
-        }
+        @include desktop {
+            font-size: 24px;
+        margin-bottom: 32px;
     }
-
-    .map {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-
-        iframe {
-            width: 80%;
-            height: 300px;
-            border: none;
-        }
-    }
-
-    @media (min-width: 768px) {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-
-        .info {
-           
-            text-align: left;
-            // margin-right: 20px;
-
-            .socials {
-                justify-content: flex-start;
+                                                                }
+            .map{
+                margin-left: auto;
+                margin-right: auto;
+                position: absolute;
+                // width: 343px;
+                // height: 100%;
+                z-index: 0;
+                
+                
+                
             }
-        }
+                        .socials{
 
-        .map {
-            
-            iframe {
-                width: 100%;
-                height: 450px;
-            }
-        }
-    }
-}
+                            display: flex;
+                            flex-direction: row;
+                            gap: 16px;
+                            margin-bottom: 15px;
+                        }
