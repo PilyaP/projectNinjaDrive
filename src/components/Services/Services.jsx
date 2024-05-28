@@ -1,93 +1,75 @@
-import styles from "./Services.module.scss";
+import s from "./Services.module.scss";
 import Image from "next/image";
 
 export default function Services() {
   return (
-    <section className={styles.services} id="servies">
+    <section className={s.services} id="services">
       <div className="container">
-        <h2 className={styles.heading}>Послуги</h2>
-        <ul className={styles.tagsImage}>
-          {/* <div className={styles.tags}>Kvadro</div> */}
-          <div className={styles.quadroText}>
-            <Image
-              src="/quadro-text-desk.png"
-              alt="Квадроцикл"
-              width={146}
-              height={48}
-            />
-          </div>
-          <div className={styles.bagiText}>
-            <Image
-              src="/bagi-text-desk.png"
-              alt="Квадроцикл"
-              width={99}
-              height={48}
-            />
-          </div>
-          <div className={styles.motoText}>
-            <Image
-              src="/moto-text-desk.png"
-              alt="Квадроцикл"
-              width={181}
-              height={48}
-            />
-          </div>
-        </ul>
-        <div className={styles.grid}>
-          <li className={styles.gridItem}>
-            <Image
-              src="/services-desk-1.png"
-              alt="Квадро"
-              width={294}
-              height={570}
-            />
-          </li>
-          <li className={styles.gridItem}>
-            <Image
-              src="/services-desk-2.png"
-              alt="Мотоцикл"
-              width={194}
-              height={378}
-            />
-          </li>
-          <div className={styles.gridItem}>
-            {/* <div className={styles.bgCardDark}>
-              <div className={styles.bgCard}>
-
-              </div>
-            </div> */}
-            <li className={styles.card}>
-              <h3>Широкий спектр послуг</h3>
-              <p>
-                Для шанувальників мотоциклів ми надаємо прокат сучасних моделей.
-                Якщо вам до душі квадроцикли, ви можете орендувати сучасні та
-                надійні квадроцикли для незабутніх пригод. Для тих, хто шукає
-                екстремальних вражень на багі, ми пропонуємо прокат комфортних
-                та надійних багі для активного відпочинку.
-              </p>
-              <a href="https://instagram.com" className={styles.button}>
-                Переглянути в Instagram
-              </a>
+        <div className={s.servicesTopText}>
+          <h2 className={s.servicesTitle}>Послуги</h2>
+          <ul className={s.servicesFacilitiesList}>
+            <li className={s.servicesFacilitiesItem}>
+              <p className={s.servicesFacilitiesText}>Квадро</p>
             </li>
-            <Image src="/test.png" alt="cards" width={337} height={540} />
+            <li className={s.servicesFacilitiesItem}>
+              <p className={s.servicesFacilitiesText}>Багі</p>
+            </li>
+            <li className={s.servicesFacilitiesItem}>
+              <p className={s.servicesFacilitiesText}>Мотоцикл</p>
+            </li>
+          </ul>
+        </div>
+        <div className={s.servicesImgList}>
+          <div className={`${s.deskImg} ${s.servicesImgItem}`}><Image src="/public/services-desk-3.png" width={163} height={570} alt="" className={` ${s.servicesImgListPic}`} /></div>
+          <div className={`${s.servicesImgItem} ${s['servicesImgItem--f']}`}>
+           <div className={s.mobImg}> <Image src="/sevices-mob-1.jpg" width={163} height={570} alt="" className={`${s.servicesImg} ${s.servicesImgListPic}`} /></div>
+            <div className={s.deskImg}><Image src="/sevices-desk-2.jpg" width={163} height={570} alt="" className={`${s.servicesImg} ${s.servicesImgListPic}`} /></div>
           </div>
-          <li className={styles.gridItem}>
-            <Image
-              src="/services-desk-3.png"
-              alt="Мотоцикл"
-              width={193}
-              height={570}
-            />
-            <div className={styles.gridItem}></div>
-          </li>
-          <li className={styles.gridItem}>
-            <Image
-              src="/services-desk-4.png"
-              alt="Квадро"
-              width={302}
-              height={434}
-            />
-          </li>
+          <div className={`${s.servicesPref} ${s['servicesPref--tab']}`}>
+            <div className={s.servicesPrefText}>
+              <h3 className={s.servicesPrefTitle}>Широкий спектр послуг</h3>
+              <p className={s.servicesPrefDescr}>Для шанувальників мотоциклів ми надаємо прокат сучасних моделей.</p>
+              <p className={s.servicesPrefDescr}>Якщо вам до душі квадроцикли, ви можете орендувати сучасні та надійні квадроцикли для незабутніх пригод</p>
+              <p className={s.servicesPrefDescr}>Для тих, хто шукає екстремальних вражень на багі, ми пропонуємо прокат комфортних та надійних багі для активного відпочинку</p>
+              <button type="button" className={s.servicesPrefBtn}>
+                <span className={s.servicesPrefBtnIconBox}>
+                  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.1714 3.91431L5.37143 16.7143" stroke="#19191C" strokeWidth="1.37143" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M18.1714 13.304V3.91431H8.78172" stroke="#19191C" strokeWidth="1.37143" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div className={`${s.servicesImgItem} ${s['servicesImgItem--s']}`}>
+           <div className={s.mobImg}> <Image src="/sevices-mob-2.jpg" width={163} height={378} alt=""  /></div>
+           <div className={s.tabImg}> <Image src="/sevices-tab-2.jpg" width={163} height={378} alt=""  /></div>
+          </div>
+            <div className={`${s.deskImg} ${s.servicesImgItem}`}><Image src="/public/sevices-desk-4.png" width={163} height={570} alt="" className={` ${s.servicesImgListPic}`} /></div>
+        </div>
+        <div className={`${s.servicesPref} ${s['servicesPref--mob']}`}>
+          <div className={s.servicesPrefText}>
+            <h3 className={s.servicesPrefTitle}>Широкий спектр послуг</h3>
+            <p className={s.servicesPrefDescr}>Для шанувальників мотоциклів ми надаємо прокат сучасних моделей.</p>
+            <p className={s.servicesPrefDescr}>Якщо вам до душі квадроцикли, ви можете орендувати сучасні та надійні квадроцикли для незабутніх пригод</p>
+            <p className={s.servicesPrefDescr}>Для тих, хто шукає екстремальних вражень на багі, ми пропонуємо прокат комфортних та надійних багі для активного відпочинку</p>
+            <button type="button" className={s.servicesPrefBtn}>
+              <span className={s.servicesPrefBtnIconBox}>
+                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.1714 3.91431L5.37143 16.7143" stroke="#19191C" strokeWidth="1.37143" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M18.1714 13.304V3.91431H8.78172" stroke="#19191C" strokeWidth="1.37143" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div className={`${s.servicesImgList} ${s['servicesImgList--sec']}`}>
+          <div className={s.servicesImgItem}>
+            <Image src="/sevices-mob-4.jpg"width={163} height={390} alt="" className={`${s.servicesImg} ${s.servicesImgListPic}`} />
+          </div>
+          <div className={s.servicesImgItem}>
+            <Image src="/sevices-mob-3.jpg" width={163} height={570} alt="" className={`${s.servicesImg} ${s.servicesImgListPic}`} />
+          </div>
         </div>
       </div>
     </section>

@@ -4,8 +4,8 @@
 .hero{
     position: relative;
     padding-top: 387px;
-    padding-bottom: 110px;
     overflow-x: hidden;
+    width: 100%;
 
     &::before{
         @include desktop{
@@ -68,10 +68,12 @@
 
     @include mobile{
          background-size: contain;
+         padding-right: 0;
+         width: 343px;
     }
  @include tablet{
         padding: 112px 203px 101px 21px;
-        width: 100%;
+        width: 696px;
     }
     @include desktop{
         background-image: none;

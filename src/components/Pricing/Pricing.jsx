@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import styles from "./Pricing.module.scss";
+import s from "./Pricing.module.scss";
 
 const items = [
   {
@@ -86,17 +86,17 @@ const items = [
     ],
     buttonLink: "https://wa.me/123456789",
   },
-  {
-    src: "/bagi-desk.png",
-    alt: "Багі BRP 1000",
-    title: "Багі BRP 1000",
-    details: ["Бронь 500₴/ 1 одиниця техніки"],
-    pricing: [
-      { time: "з інструктором на одному багі", price: "4000₴" },
-      { time: "без інструктора/1год", price: "5000₴" },
-    ],
-    buttonLink: "https://wa.me/123456789",
-  },
+  // {
+  //   src: "/bagi-desk.png",
+  //   alt: "Багі BRP 1000",
+  //   title: "Багі BRP 1000",
+  //   details: ["Бронь 500₴/ 1 одиниця техніки"],
+  //   pricing: [
+  //     { time: "з інструктором на одному багі", price: "4000₴" },
+  //     { time: "без інструктора/1год", price: "5000₴" },
+  //   ],
+  //   buttonLink: "https://wa.me/123456789",
+  // },
 ];
 
 export default function Pricing() {
@@ -107,40 +107,93 @@ export default function Pricing() {
   };
 
   return (
-    <section className={styles.pricing} id="pricing">
+    <section className={s.price}>
       <div className="container">
-        <h2 className={styles.heading}>Тарифи та Вартість</h2>
-        <Image src="/zig-zag-desk.png" alt="zig-zag" width={229} height={27} />
-        <div className={styles.grid}>
-          {items.slice(0, visibleItems).map((item, index) => (
-            <div key={index} className={styles.gridItem}>
-              <Image src={item.src} alt={item.alt} width={300} height={200} />
-              <h3>{item.title}</h3>
-              <ul>
-                {item.details.map((detail, idx) => (
-                  <li key={idx}>{detail}</li>
-                ))}
-              </ul>
-              <div className={styles.pricingInfo}>
-                {item.pricing.map((price, idx) => (
-                  <div key={idx}>
-                    <p>{price.time}</p>
-                    <p>{price.price}</p>
-                  </div>
-                ))}
-              </div>
-              <a href={item.buttonLink} className={styles.button}>
-                Обрати
-              </a>
-            </div>
-          ))}
-        </div>
-        {visibleItems < items.length && (
-          <button onClick={showMoreItems} className={styles.loadMoreButton}>
+        <h3 className={`${s.priceTitle} ${s["priceTitle--mob"]}`}>вартість</h3>
+        <h3 className={`${s.priceTitle} ${s["priceTitle--desk"]}`}>тарифи та вартість</h3>
+        <ul className={s.priceList}>
+          {items.slice(0, visibleItems).map((item, index) => {
+            const { src, alt, title, details, pricing, buttonLink } = item;
+            return (
+              <li className={s.priceItem} key={index}>
+                <div className={s.priceImg}>
+                  <Image src={src} width={302} height={309} alt={alt} />
+                </div>
+                <div>
+                  <h4 className={s.priceItemTitle}>{title}</h4>
+                  <ul className={s.priceItemDscrTextList}>
+                    {details.map((content, i) => {
+                      return (
+                        <li key={i}>
+                          <p className={s.priceItemDscr}>{content}</p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+
+                  <ul className={s.priceItemDscrList}>
+                    {pricing.map(({ time, price }, i) => {
+                      return (
+                        <li key={i} className={s.priceItemDscrListItem}>
+                          <span className={`${s.priceHour} ${s["priceHour--f"]}`}>
+                            {time}
+                          </span>
+                          <span className={`${s.pricePerHour} ${s["pricePerHour--t"]}`}>
+                            {price}
+                          </span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  <a href={buttonLink} className={s.priceBn}>
+                    Обрати
+                  </a>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+        {/* {visibleItems < items.length && (
+          <button onClick={showMoreItems} className={s.loadMoreButton}>
             Показати більше
           </button>
-        )}
+        )} */}
       </div>
     </section>
+    // <section classNameN{s.me={styles.pricing} id="pricing">
+    //   <div classNameN{s.me="container">
+    //     <h2 classNameN{s.me={styles.heading}>Тарифи та Вартість</h2>
+    //     <Image src="/zig-zag-desk.png" alt="zig-zag" width={229} height={27} />
+    //     <div classNameN{s.me={styles.grid}>
+    //       {items.slice(0, visibleItems).map((item, index) => (
+    //         <div key={index} classNameN{s.me={styles.gridItem}>
+    //           <Image src={item.src} alt={item.alt} width={300} height={200} />
+    //           <h3>{item.title}</h3>
+    //           <ul>
+    //             {item.details.map((detail, idx) => (
+    //               <li key={idx}>{detail}</li>
+    //             ))}
+    //           </ul>
+    //           <div classNameN{s.me={styles.pricingInfo}>
+    //             {item.pricing.map((price, idx) => (
+    //               <div key={idx}>
+    //                 <p>{price.time}</p>
+    //                 <p>{price.price}</p>
+    //               </div>
+    //             ))}
+    //           </div>
+    //           <a href={item.buttonLink} classNameN{s.me={styles.button}>
+    //             Обрати
+    //           </a>
+    //         </div>
+    //       ))}
+    //     </div>
+    //     {visibleItems < items.length && (
+    //       <button onClick={showMoreItems} classNameN{s.me={styles.loadMoreButton}>
+    //         Показати більше
+    //       </button>
+    //     )}
+    //   </div>
+    // </section>
   );
 }
