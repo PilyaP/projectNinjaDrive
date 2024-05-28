@@ -1,58 +1,132 @@
-
+@import '../../../styles/mixins.scss';
 
 
 .about {
     padding: 80px 0;
-    background-color: #000;
-    color: #fff;
+    color:#fff;
 
 .aboutSection{
-            display: flex;
-                flex-direction: row;
-                align-items: flex-start;
+            display:flex;
+                flex-direction:column;
+                
+                justify-content:center;
+                @include tablet {
+                        flex-direction: row;
+                        gap:24px;
+                    }
+@include desktop{
+    flex-direction:row;
+        align-items:flex-start;
+        gap: 136px;
+}
+                
 }
 .aboutUs{
     display: flex;
-    gap: 41px;
+    flex-direction: column;
+ 
+    @include desktop{
+flex-direction: row;
+        gap: 41px;
+    }
 }
 .arrow{
-    height: 28px;
-    align-items: center;
+height: 14px;
+    width: 79px;
+    @include desktop{height: 28px;
+
+        width: 164px;
+        align-items: center;}
+
+}
+
+.interest{
+    display:none;
+
+@include desktop{
+    display: block;
+}
+
 }
     .textSection {
-        flex: 1;
-        margin-right: 40px;
+        
+       
 
         .heading {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .subheading {
-            font-size: 18px;
-            margin-bottom: 40px;
+font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: var(--white);
         }
 
         .accordion {
+            display: flex;
+                flex-direction: column;
+                gap: 16px;
+                margin-bottom: 24px;
+margin-top: 48px;
+
+
+                           @include desktop {
+gap: 32px;
+                
+                    margin-top: 103px;
+                           }
             .accordionItem {
-                border: 1px solid #fff;
-                border-radius: 5px;
-                margin-bottom: 10px;
+border: 1px solid var(--white);
+    border-radius: 8px;
+    padding: 24px 12px;
+    @include desktop{
+    border-radius: 12px;
+        
+        width: 519px;
+        
+    }
+ 
+ 
+ 
+
+
                 cursor: pointer;
 
                 .accordionTitle {
-                    padding: 15px 20px;
-                    font-size: 18px;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
+font-family: var(--second-family);
+    font-weight: 500;
+font-size: 20px;
+    color: var(--white);
+
+    @include tablet{
+font-size: 20px;
+
+    }
+
+
+        @include desktop {
+font-size: 32px;
+
+
+        }
                 }
 
                 .accordionContent {
-                    padding: 15px 20px;
-                    font-size: 16px;
+font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--white);
+    margin-top: 16px;
+    @include tablet{
+        font-size: 16px;
+    }
+          @include desktop {
+              font-size: 16px;
+              margin-top: 24px;
+          }
                 }
-
+.accordionIcon{
+    display: flex;
+    justify-content: space-between;
+}
                 &.active {
                     background-color: #333;
                 }
@@ -60,41 +134,67 @@
         }
     }
 
-    .imageSection {
-        flex: 1;
-        position: relative;
-    }
+
 }
 
-/* Планшетная версия */
-@media (max-width: 1024px) {
-    .container {
-        padding: 0 40px;
-        flex-direction: column;
-        align-items: center;
+.subheading {
+    display: none;
+
+    @include desktop {
+        display: block;
+        margin-bottom: 16px;
+        font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 24px;
+            color: var(--white);
+            max-width: 552px;
+            max-height: 24px;
+            
     }
 
-    .textSection {
-        margin-right: 0;
-        text-align: center;
-    }
-
-    .imageSection {
-        margin-top: 20px;
-    }
 }
 
-/* Мобильная версия */
-@media (max-width: 768px) {
-    .container {
-        padding: 0 20px;
+.subheadingSecond {
+    display: none;
+    @include desktop{
+display: block;
+font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--white);
+    max-width: 625px;
+        max-height: 80;
     }
 
-    .heading {
-        font-size: 28px;
-    }
+}
 
-    .subheading {
-        font-size: 16px;
+.animation{
+    // height: 343px;
+    width: 100%;
+    border-radius: 12px;
+    @include tablet{
+        border-radius: 8px;
+            width: 329px;
+            height: 239px;
+            margin-top: 150px;
+            
     }
+        @include desktop {
+border-radius: 12px;
+    width: 625px;
+    height: 423px;
+            margin-top: 72px;
+    
+        }
+}
+
+.subheadingMob{
+
+//  margin-bottom: 48px;
+ @include desktop {
+    display: none;
+ }   
+}
+.subheadingOrange{
+    color: var(--orange);
 }

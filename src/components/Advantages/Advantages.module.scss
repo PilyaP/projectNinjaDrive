@@ -3,7 +3,7 @@
 .advantages {
     text-transform: uppercase;
     color: #fff;
-    padding-top: 220px;
+   
 
     .heading {
         font-family: var(--second-family);
@@ -39,7 +39,7 @@ height: 19px;
     }
     }
            .grid {
-               
+               padding-bottom: 110px;
                padding-top: 73px;
     
                @include tablet {
