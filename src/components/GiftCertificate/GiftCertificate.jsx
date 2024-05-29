@@ -21,8 +21,9 @@ export default function GiftCertificate() {
                 Найкращий сюрприз для ваших близьких
               </p>
               <p className={styles.description}>
-                Купуй сертифікат у NINJA DRIVE або фізичний сертифікат. Напиши
-                нам, щоб дізнатися деталі.
+                Купуй сертифікат у{" "}
+                <span className={styles.ninjaDrive}>NINJA DRIVE</span> або
+                фізичний сертифікат. Напиши нам, щоб дізнатися деталі.
               </p>
               <button className={styles.button}>Деталі</button>
             </div>
@@ -33,8 +34,9 @@ export default function GiftCertificate() {
               Найкращий сюрприз для ваших близьких
             </p>
             <p className={styles.descriptionMob}>
-              Купуй сертифікат у NINJA DRIVE або фізичний сертифікат. Напиши
-              нам, щоб дізнатися деталі.
+              Купуй сертифікат у{" "}
+              <span className={styles.ninjaDrive}>NINJA DRIVE</span> або
+              фізичний сертифікат. Напиши нам, щоб дізнатися деталі.
             </p>
             <button className={styles.buttonMob}>Деталі</button>
           </div>

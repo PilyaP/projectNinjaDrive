@@ -10,53 +10,170 @@ padding-bottom: 110px;
 }
 
 .giftCertificate {
+    position: relative;
     margin-top: 90px;
     background-color: #ffdc00;
-
     border-radius: 12px;
         width: 100%;
-        height: 194px;
+        height: 192px;
         margin-left: auto;
         margin-right: auto;
 
+   @include tablet{
+height: 274px;
+   }
+   @include tablet {
+       height: 315px;
+   }
+}
+
+
    
-}
-
-
-    .content {
- 
-    }
-
-    .heading {
-    display: none ;
-
-}
-
-    .subtitle {
-display: none;
-    }
-
-    .description {
-display: none;
-    }
-
-    .button {
-display: none;
-    }
 
     .imageContainer {
         position: absolute;
-        top:23px;
-        left: 10px;
+        bottom:15px;
+        left: 0;
         width: 343;
         height: 356px;
         // bottom: 0;
         // right: 650px;
         
         // height: 406;
-
+@include tablet {
+        bottom: 15px;
+            left: 355px;
+    }
+        @include desktop {
+        bottom: 15px;
+            left: 795px;
+        }
     }
 
+.content{
+    display: none;
+    @include tablet {
+        display: block;
+max-width: 343px;
+text-align: center;
+padding-top: 28px;
+padding-left: 12px;
+
+    }
+        @include desktop {
+max-width: 805px;
+    text-align: start;
+    padding-top: 24px;
+        }
+}
+
+
+.heading{
+display: none;
+    @include tablet
+
+    {
+    display: block;
+
+font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    
+    color: var(--black);
+    margin-bottom: 16px;
+
+
+    }
+                        @include desktop {
+font-family: var(--second-family);
+
+    font-size: 48px;
+margin-bottom: 24px;
+
+
+
+                        }
+}
+
+.subtitle{
+
+    display: none;
+        ;
+    
+        @include tablet {
+    display: block;
+    font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 16px;
+    margin-bottom: 12px;
+        color: var(--black);
+        }
+                                @include desktop {
+font-weight: 600;
+font-size: 24px;
+margin-bottom: 8px;
+
+
+                                }
+}
+
+
+.description{
+
+
+    display: none;
+        ;
+    
+        @include tablet {
+                display: block;
+                font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 14px;
+                 margin-bottom: 24px;
+                    color: var(--black);
+        }
+                                @include desktop {
+font-weight: 400;
+    font-size: 24px;
+
+max-width:649px;
+min-height: 58px;
+
+                                }
+}
+
+
+.button{
+display: none;
+    ;
+
+    @include tablet {display: block;
+        margin-left: auto;
+        margin-right: auto;
+border-radius: 24px;
+    padding: 16px 24px;
+    width: 180px;
+    height: 48px;
+background: var(--button);
+border: none;
+font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: var(--button-white);
+    }
+                @include desktop {
+margin-left: 0;
+
+    width: 116px;
+    height: 52px;
+
+
+
+                }
+
+}
 .contentMob{
     margin-top: 24px;
     font-family: var(--font-family);
@@ -106,4 +223,9 @@ font-family: var(--second-family);
             color: var(--button-white);
             background: var(--button);
 @include tablet {display: none;}
+}
+
+.ninjaDrive {
+    font-weight: 600;
+
 }
