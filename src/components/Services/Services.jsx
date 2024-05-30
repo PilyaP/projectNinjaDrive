@@ -1,94 +1,30 @@
-import styles from "./Services.module.scss";
+import MobileServices from "./MobileServices";
+import s from "./Services.module.scss";
 import Image from "next/image";
+import TabletServices from "./TabletServices";
+import DesktopServices from "./DesktopServices";
 
 export default function Services() {
   return (
-    <section className={styles.services} id="servies">
+    <section className={s.services} id="services">
       <div className="container">
-        <h2 className={styles.heading}>Послуги</h2>
-        <ul className={styles.tagsImage}>
-          {/* <div className={styles.tags}>Kvadro</div> */}
-          <div className={styles.quadroText}>
-            <Image
-              src="/quadro-text-desk.png"
-              alt="Квадроцикл"
-              width={146}
-              height={48}
-            />
-          </div>
-          <div className={styles.bagiText}>
-            <Image
-              src="/bagi-text-desk.png"
-              alt="Квадроцикл"
-              width={99}
-              height={48}
-            />
-          </div>
-          <div className={styles.motoText}>
-            <Image
-              src="/moto-text-desk.png"
-              alt="Квадроцикл"
-              width={181}
-              height={48}
-            />
-          </div>
-        </ul>
-        <div className={styles.grid}>
-          <li className={styles.gridItem}>
-            <Image
-              src="/services-desk-1.png"
-              alt="Квадро"
-              width={294}
-              height={570}
-            />
-          </li>
-          <li className={styles.gridItem}>
-            <Image
-              src="/services-desk-2.png"
-              alt="Мотоцикл"
-              width={194}
-              height={378}
-            />
-          </li>
-          <div className={styles.gridItem}>
-            {/* <div className={styles.bgCardDark}>
-              <div className={styles.bgCard}>
-
-              </div>
-            </div> */}
-            <li className={styles.card}>
-              <h3>Широкий спектр послуг</h3>
-              <p>
-                Для шанувальників мотоциклів ми надаємо прокат сучасних моделей.
-                Якщо вам до душі квадроцикли, ви можете орендувати сучасні та
-                надійні квадроцикли для незабутніх пригод. Для тих, хто шукає
-                екстремальних вражень на багі, ми пропонуємо прокат комфортних
-                та надійних багі для активного відпочинку.
-              </p>
-              <a href="https://instagram.com" className={styles.button}>
-                Переглянути в Instagram
-              </a>
+        <div className={s.servicesTopText}>
+          <h2 className={s.servicesTitle}>Послуги</h2>
+          <ul className={s.servicesFacilitiesList}>
+            <li className={s.servicesFacilitiesItem}>
+              <p className={s.servicesFacilitiesText}>Квадро</p>
             </li>
-            <Image src="/test.png" alt="cards" width={337} height={540} />
-          </div>
-          <li className={styles.gridItem}>
-            <Image
-              src="/services-desk-3.png"
-              alt="Мотоцикл"
-              width={193}
-              height={570}
-            />
-            <div className={styles.gridItem}></div>
-          </li>
-          <li className={styles.gridItem}>
-            <Image
-              src="/services-desk-4.png"
-              alt="Квадро"
-              width={302}
-              height={434}
-            />
-          </li>
+            <li className={s.servicesFacilitiesItem}>
+              <p className={s.servicesFacilitiesText}>Багі</p>
+            </li>
+            <li className={s.servicesFacilitiesItem}>
+              <p className={s.servicesFacilitiesText}>Мотоцикл</p>
+            </li>
+          </ul>
         </div>
+        <div className={s.mobile}><MobileServices /></div>
+        <div className={s.tablet}><TabletServices/></div>
+        <div className={s.desktop}><DesktopServices/></div>
       </div>
     </section>
   );

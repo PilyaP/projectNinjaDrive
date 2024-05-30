@@ -1,104 +1,219 @@
-.pricing {
-    padding: 80px 0;
-    background-color: #000;
-    color: #fff;
 
+@import '../../../styles/mixins.scss';
 
+.price {
+    padding-top: 110px;
+    font-family: var(--font-family);
+    color: var(--white);
+    position: relative;
 
-    .heading {
+    @include tablet{
+         background-image: url('/bg-images/price-tab-bg.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+
+        @include desktop{
+            background-position: center;
+            background-image: url('/bg-images/price-desk-bg.png');
+        }
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 27px;
+        right: 0;
+        width: 229px;
+        height: 27px;
+        background-image: url('/bg-images/price-vector-mob.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+
+        @include tablet{
+          left: 114px;  
+        }
+        @include desktop{
+            top: 77px;
+            left: 90px;
+        }
+    }
+
+}
+.priceTitle{
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 91px;
+
+    @include tablet{
         font-size: 36px;
-        margin-bottom: 20px;
+        margin-bottom: 79px;
     }
-
-    .grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
-
-    .gridItem {
-        background-color: #333;
-        border-radius: 10px;
-        padding: 20px;
-        flex: 1 1 300px;
-        max-width: 300px;
-        position: relative;
-        text-align: left;
-
-
-
-        
-
-       
-        .pricingInfo {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 0;
-
-            div {
-                text-align: center;
-            }
-
-
+    
+    &--mob{
+        @include desktop{
+            display: none;
         }
-
-        .button {
-            background-color: #f86d08;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
+    }
+    &--desk{
+        display: none;
+        @include desktop{
             display: block;
-            text-align: center;
-            font-size: 16px;
+            font-size: 48px;
+            margin-bottom: 128px;
         }
     }
 
-    .loadMoreButton {
-        background-color: transparent;
-        color: #fff;
-        
-        border: none;
-        
-        margin-left: auto;
-        margin-right: auto;
-        cursor: pointer;
-      
+}
+.priceList {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 
-        &:hover {
-            background-color: #d65e07;
-        }
+    @include tablet{
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        width: 696px;
+
     }
-
-    /* Планшетная версия */
-    @media (max-width: 1024px) {
-        .container {
-            padding: 0 40px;
-        }
-
-        .grid {
-            flex-direction: column;
-            align-items: center;
-        }
+    @include desktop{
+        width: 1200px;
+        gap: 68px 24px;
     }
+}
+.priceItem {
+    margin: 0 auto;
+    width: 288px;
+    @include mobile{
+        width: 343px;
+    }
+    
+   @include tablet{
+    margin: 0;
+    width: 336px;
+   }
+   @include desktop{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    width: calc((100% - 25px) / 2);
 
-    /* Мобильная версия */
-    @media (max-width: 768px) {
-        .container {
-            padding: 0 20px;
+    &:nth-child(4n+3),
+        &:nth-child(4n+4) {
+            flex-direction: row-reverse;
         }
+    
+   }
+}
 
-        .heading {
-            font-size: 28px;
-        }
 
-        .gridItem {
-            max-width: 100%;
-        }
+.priceImg {
+    overflow: hidden;
+    border-radius: 8px;
+    height: 351px;
+    background-color: var(--10);
+    margin-bottom: 24px;
+    height: 351px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-        .button {
-            font-size: 14px;
-        }
+    @include tablet{
+        width: 336px;
+        height: 351px;
+    }
+   
+}
+.priceItemTitle {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 12px;
+    @include desktop{
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+}
+.priceItemDscrTextList{
+    margin-bottom: 72px;
+    @include desktop{
+        margin-bottom: 97px;
+    }
+}
+.priceItemDscr {
+    font-size: 12px;
+    margin-bottom: 2px;
+    @include tablet{
+        font-size: 14px;
+    }
+    @include desktop{
+        font-size: 12px;
+    }
+}
+.priceItemDscrList {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 48px;
+    @include desktop{
+        margin-bottom: 24px;
+    }
+}
+.priceItemDscrListItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.priceHour {
+    font-weight: 400;
+
+    &--f{
+        font-size: 12px;
+    }
+    &--s{
+        font-size: 16px;
+    }
+}
+
+.pricePerHour {
+    font-weight: 700;
+    &--t{
+        font-size: 16px;
+    }
+    &--b{
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+}
+
+.priceBn {
+    border-radius: 24px;
+    margin-left: auto;
+    background-color: var(--button);
+    border: none;
+    display: block;
+    font-weight: 700;
+    display: flex;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: var(--button-white);
+    width: 152px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet{
+        font-size: 16px;
+    }
+    @include desktop{
+        width: 120px;
+        height: 32px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

@@ -16,14 +16,16 @@ export default function Home() {
     <main className={styles.main}>
       <Header />
       <Hero />
-      <About />
-      {/* <Services /> */}
-      {/* <Pricing /> */}
-      <Advantages />
-      <GiftCertificate />
-      <Reviews />
-      <Contacts />
-      <Footer />
+
+      {/* <About /> */}
+      <Services />
+      <Pricing />
+      {/* <Advantages /> */}
+      {/* <GiftCertificate /> */}
+      {/* <Reviews /> */}
+      {/* <Contacts /> */}
+      {/* <Footer /> */}
+
       {/* <WhatsButton /> */}
     </main>
   );
