@@ -1,0 +1,237 @@
+@import '../../../styles/mixins.scss';
+
+
+// .overlay {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(0, 0, 0, 0.5);
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   z-index: 20;
+// }
+
+// .modal {
+//   background: var(--white);
+//   border-radius: 12px;
+//   padding: 20px;
+//   max-width: 623px;
+//   width: 90%;
+//   box-sizing: border-box;
+// height: 495px;
+
+
+//   @include tablet {
+//     max-width: 623px;
+//     height: 777px;
+//   }
+
+//   @include desktop {
+//     max-width: 623px;
+//     height: 777px;
+//   }
+// }
+
+// .closeButton {
+//   background: none;
+//   border: none;
+//   font-size: 24px;
+//   position: absolute;
+//   top: 10px;
+//   right: 10px;
+//   cursor: pointer;
+//   color: black;
+// }
+// .modalForm {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 10px;
+// }
+
+// .modalInput {
+//   padding: 10px;
+//   border: 1px solid #ccc;
+//   border-radius: 4px;
+// }
+
+// .modalButton {
+//   background: orange;
+//   color: white;
+//   border: none;
+//   padding: 10px;
+//   border-radius: 4px;
+//   cursor: pointer;
+//   font-size: 16px;
+// }
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  @include tablet {}
+  
+    @include desktop {}
+
+}
+
+.modal {
+  background: var(--white);
+  border-radius: 12px;
+  padding-left: 23px;
+  padding-right: 46px;
+  max-width: 623px;
+  width: 90%;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1001;
+  @include tablet {
+     max-width: 623px;
+       height: 75%;
+  }
+
+     @include desktop {
+    max-width: 623px;
+      height: 777px;
+    }
+ }
+
+
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  @include tablet {}
+  
+    @include desktop {}
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  @include tablet {}
+  
+    @include desktop {}
+}
+
+
+
+.modalButton {
+  margin-top: 40px;
+border-radius: 24px;
+background: var(--button);
+    padding: 12px;
+    width: 152px;
+    height: 48px;
+  border: none;
+font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: capitalize;
+  color: var(--button-white);
+margin-left: auto;
+margin-right: auto;
+  cursor: pointer;
+  margin-bottom: 20px;
+
+  @include tablet {
+
+
+  padding: 16px 24px;
+  width: 549px;
+  height: 52px;
+
+
+    font-size: 16px;
+ 
+
+  }
+  
+    @include desktop {
+
+
+    
+    }
+}
+
+.modalTitle{
+font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--black);
+  margin-top: 77px;
+    margin-bottom: 4px;
+  @include tablet {
+font-size: 32px;
+
+  }
+  
+    @include desktop {
+    font-size: 36px;
+    }
+
+}
+.modalDescription{
+
+  font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 24px;
+
+    @include tablet{
+font-size: 16px;
+    }
+    @include desktop{
+
+ 
+    }
+}
+.modalLabel{
+
+  margin-bottom: 8px;
+}
+.modalInput {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+
+  color: var(--black);
+margin-top: 4px;
+  border: 1px solid var(--10);
+  border-radius: 8px;
+  padding: 18px 12px;
+
+  opacity: 0.7;
+  width: 100%;
+
+  @include tablet {
+
+
+
+
+    // height: 100%;
+
+  }
+
+  @include desktop {}
+}
