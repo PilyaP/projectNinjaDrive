@@ -167,21 +167,14 @@
         }
     }
     @include tablet{
-        // display: block;
         background-image: url('/services-bg-tab.png');
     }
-
-    // &--tab{
-    // // display: none;
-    // }
 
     @include desktop{
         padding-bottom: 0;
             min-height: 540px;
             background-image: url('/services-bg-desk.png');
         }
-
-       
 }
 .servicesPrefText{
     transform: rotate(4deg);
