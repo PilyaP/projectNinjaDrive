@@ -1,7 +1,26 @@
-import styles from "./GiftCertificate.module.scss";
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
+import styles from "./GiftCertificate.module.scss";
+import Modal from "../Modal/Modal";
 
 export default function GiftCertificate() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState({
+    title: "",
+    description: "",
+  });
+
+  const openModalWithContent = (title, description) => {
+    setModalContent({ title, description });
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <section className={styles.certificate}>
       <div className="container">
@@ -25,7 +44,17 @@ export default function GiftCertificate() {
                 <span className={styles.ninjaDrive}>NINJA DRIVE</span> або
                 фізичний сертифікат. Напиши нам, щоб дізнатися деталі.
               </p>
-              <button className={styles.button}>Деталі</button>
+              <button
+                className={styles.button}
+                onClick={() =>
+                  openModalWithContent(
+                    "Дізнатися деталі",
+                    "Залиште свій номер телефону, ми вам передзвонимо протягом декількох хвилин та розповімо всі деталі :)"
+                  )
+                }
+              >
+                Деталі
+              </button>
             </div>
           </div>
           <div className={styles.contentMob}>
@@ -38,10 +67,27 @@ export default function GiftCertificate() {
               <span className={styles.ninjaDrive}>NINJA DRIVE</span> або
               фізичний сертифікат. Напиши нам, щоб дізнатися деталі.
             </p>
-            <button className={styles.buttonMob}>Деталі</button>
+            <button
+              className={styles.buttonMob}
+              onClick={() =>
+                openModalWithContent(
+                  "Дізнатися деталі",
+                  "Залиште свій номер телефону, ми вам передзвонимо протягом декількох хвилин та розповімо всі деталі :)"
+                )
+              }
+            >
+              Деталі
+            </button>
           </div>
         </div>
       </div>
+      {isModalOpen && (
+        <Modal
+          onClose={closeModal}
+          title={modalContent.title}
+          description={modalContent.description}
+        />
+      )}
     </section>
   );
 }
