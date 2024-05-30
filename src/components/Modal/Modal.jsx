@@ -130,7 +130,7 @@ export default function Modal({ onClose, title, description }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const whatsappMessage = `Привіт! Моє ім'я ${name}, мій номер телефону ${phone}. Я хочу дізнатися деталі.`;
-    const whatsappUrl = `https://wa.me/380634737910?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/380632285538?text=${encodeURIComponent(
       whatsappMessage
     )}`;
     window.open(whatsappUrl, "_blank");
