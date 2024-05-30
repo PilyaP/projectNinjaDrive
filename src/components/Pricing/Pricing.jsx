@@ -1,7 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+
 import s from "./Pricing.module.scss";
+
 
 const items = [
   {
@@ -109,6 +111,7 @@ export default function Pricing() {
   return (
     <section className={s.price}>
       <div className="container">
+
         <h3 className={`${s.priceTitle} ${s["priceTitle--mob"]}`}>вартість</h3>
         <h3 className={`${s.priceTitle} ${s["priceTitle--desk"]}`}>тарифи та вартість</h3>
         <ul className={s.priceList}>

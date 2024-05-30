@@ -6,67 +6,85 @@ const Footer = () => (
   <footer className={styles.footerContainer}>
     <div className="container">
       <div className={styles.footerNav}>
-        <div style={{ width: "99px", height: "94px", position: "relative" }}>
-          <Image
-            src="/logo.png"
-            alt="Logo"
-            layout="responsive"
-            width={99}
-            height={94}
-          />
+        <div className={styles.footerLogo}>
+          <Image src="/logo.png" alt="Logo" width={99} height={94} />
         </div>
-
-        <ul className={styles.navigation}>
-          <li>
-            <a href="#about">Про нас</a>
-          </li>
-          <li>
-            <a href="#services">Послуги</a>
-          </li>
-          <li>
-            <a href="#pricing">Ціни</a>
-          </li>
-          <li>
-            <a href="#advantages">Переваги</a>
-          </li>
-          <li>
-            <a href="#reviews">Відгуки</a>
-          </li>
-          <li>
-            <a href="#contacts">Контакти</a>
-          </li>
-        </ul>
-
-        <ul className={styles.socialsList}>
-          <li>
-            <Image
-              src="/facebook-dask.png"
-              alt="Facebook"
-              width={40}
-              height={40}
-            />
-          </li>
-          <li>
-            <Image
-              src="/insta-desk.png"
-              alt="Instagram"
-              width={40}
-              height={40}
-            />
-          </li>
-          <li>
-            <Image
-              src="/whats-desk.png"
-              alt="WhatsApp"
-              width={40}
-              height={40}
-            />
-          </li>
-          <li>
-            <Image src="/tiktok-desk.png" alt="TikTok" width={30} height={30} />
-          </li>
-        </ul>
+        <div className={styles.footerLineMob}> </div>
+        <div className={styles.footerNavSoc}>
+          <div>
+            <ul className={styles.navigation}>
+              <li>
+                <a className={styles.navigationLink} href="#about">
+                  Про нас
+                </a>
+              </li>
+              <li>
+                <a className={styles.navigationLink} href="#services">
+                  Послуги
+                </a>
+              </li>
+              <li>
+                <a className={styles.navigationLink} href="#pricing">
+                  Ціни
+                </a>
+              </li>
+              <li>
+                <a className={styles.navigationLink} href="#advantages">
+                  Переваги
+                </a>
+              </li>
+              <li>
+                <a className={styles.navigationLink} href="#reviews">
+                  Відгуки
+                </a>
+              </li>
+              <li>
+                <a className={styles.navigationLink} href="#contacts">
+                  Контакти
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.socialsMob}>
+            <p className={styles.socialsText}>Соц. мережі</p>
+            <ul className={styles.socialsList}>
+              <li>
+                <Image
+                  src="/facebook-dask.png"
+                  alt="Facebook"
+                  width={40}
+                  height={40}
+                />
+              </li>
+              <li>
+                <Image
+                  src="/insta-desk.png"
+                  alt="Instagram"
+                  width={40}
+                  height={40}
+                />
+              </li>
+              <li>
+                <Image
+                  src="/whats-desk.png"
+                  alt="WhatsApp"
+                  width={40}
+                  height={40}
+                />
+              </li>
+              <li>
+                <Image
+                  src="/tiktok-desk.png"
+                  alt="TikTok"
+                  width={30}
+                  height={30}
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
+
       <div className={styles.footerLine}></div>
       <div className={styles.politics}>
         <p>Всі права захищено</p>

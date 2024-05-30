@@ -16,6 +16,7 @@ export default function Home() {
     <main className={styles.main}>
       <Header />
       <Hero />
+
       {/* <About /> */}
       <Services />
       <Pricing />
@@ -24,6 +25,7 @@ export default function Home() {
       {/* <Reviews /> */}
       {/* <Contacts /> */}
       {/* <Footer /> */}
+
       {/* <WhatsButton /> */}
     </main>
   );

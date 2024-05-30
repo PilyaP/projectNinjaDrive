@@ -7,7 +7,7 @@ const Contacts = () => {
       <div className="container">
         <div className={styles.info}>
           <div className={styles.contactsMap}>
-            <h2>Контакти</h2>
+            <h2 className={styles.contactsHeading}>Контакти</h2>
             <div className={styles.contactTel}>
               <p className={styles.contactFat}>Телефон</p>
               <p className={styles.contactThink}>+38 (096) 00 20 777</p>
@@ -24,48 +24,43 @@ const Contacts = () => {
                 <Image
                   src="/facebook-dask.png"
                   alt="Facebook"
-                  width={30}
-                  height={30}
+                  width={40}
+                  height={40}
                 />
               </a>
               <a href="#">
                 <Image
                   src="/insta-desk.png"
                   alt="Instagram"
-                  width={30}
-                  height={30}
+                  width={40}
+                  height={40}
                 />
               </a>
               <a href="#">
                 <Image
                   src="/whats-desk.png"
                   alt="WhatsApp"
-                  width={30}
-                  height={30}
+                  width={40}
+                  height={40}
                 />
               </a>
               <a href="#">
                 <Image
                   src="/tiktok-desk.png"
                   alt="TikTok"
-                  width={30}
-                  height={30}
+                  width={40}
+                  height={40}
                 />
               </a>
             </div>
           </div>
-          <div
-            style={{ width: "842px", height: "506px", position: "relative" }}
-          >
-            <Image src="/map-desk.png" alt="Map" width={825} height={526} />
-            {/* <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.046393747318!2d30.733462616122197!3d46.48252797912537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63138f4d3a2d1%3A0x2d2c7f06d7c2e1d4!2z0YPQuy4g0J_QtdGA0LXQvdGMLCAyMTMsINCR0LvQsNCy0LDRgdGC0YDQvtC9LCDQkdC10LvQsNGB0YLRgNC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1sru!2sua!4v1621502109036!5m2!1sru!2sua"
-          width="600"
-          height="450"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-        ></iframe> */}
+          <div className={styles.map}>
+            <iframe
+              width={343}
+              height={244}
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.259935448335!2d34.90982121570999!3d48.54582837925719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe01e579650cb%3A0x691e2f5edfc7b6b6!2sPoltavs&#39;ke%20Shose%2C%20619%2C%20Dnipro%2C%20Dnipropetrovsk%20Oblast%2C%20Ukraine!5e0!3m2!1sen!2sus!4v1628753171317!5m2!1sen!2sus"
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+
 @import '../../../styles/mixins.scss';
 
 .price {
@@ -65,6 +66,7 @@
             margin-bottom: 128px;
         }
     }
+
 }
 .priceList {
     display: flex;
@@ -76,6 +78,7 @@
         flex-wrap: wrap;
         margin: 0 auto;
         width: 696px;
+
     }
     @include desktop{
         width: 1200px;
