@@ -191,7 +191,10 @@
 
     @include mobile{
         width: 283px;
-        padding-left: 41px;
+        padding-left: 57px;
+    }
+    @include desktop{
+     padding-left: 14px;   
     }
 }
 .servicesPrefTitle {
@@ -221,19 +224,19 @@
 
     position: absolute;
     bottom: -32px;
-    right: 0;
+    right: 26px;
     
     @include mobile{
-        right: 35px;
+        right: 51px;
     }
     @include tablet{
-        bottom: -52px;
-        right: 33px;
+        bottom: 58px;
+        right: 51px;
     }
     @include desktop{
         width: 105px;
         height: 105px;
-        top: 445px;
+        top: 400px;
         right: -29px;
         svg{
             width: 48px;
