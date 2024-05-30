@@ -166,14 +166,14 @@
             background-image: url('/services-bg-mob.png');
         }
     }
-
-    &--tab{
-    display: none;
-        @include tablet{
-            display: block;
-            background-image: url('/services-bg-tab.png');
-        }
+    @include tablet{
+        // display: block;
+        background-image: url('/services-bg-tab.png');
     }
+
+    // &--tab{
+    // // display: none;
+    // }
 
     @include desktop{
         padding-bottom: 0;
@@ -307,6 +307,8 @@
     display: flex;
     align-items: flex-end;
     gap: 17px;
+    width: 100%;
+    justify-content: center;
 }
 .servImgfr{
 border-radius: 8px;
@@ -315,4 +317,34 @@ overflow: hidden;
 .servImgsec{
 border-radius: 8px;
 overflow: hidden;
+}
+.tablet{
+    display: none;
+    @include tablet{
+        display: block;
+    }
+    @include desktop{
+        display: none;
+    }
+}
+.tabServicesMainBox{
+    display: flex;
+    gap: 21px;
+    align-items: stretch;
+    justify-content: center;
+
+}
+.desktop{
+    display: none;
+    @include desktop{
+        display: block;
+    }
+}
+.deskServicesMainBox{
+display: flex;
+}
+.deskServicesImgBox{
+    display: flex;
+    gap: 24px;
+        align-items: flex-end;
 }

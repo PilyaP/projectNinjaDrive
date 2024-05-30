@@ -1,6 +1,8 @@
 import MobileServices from "./MobileServices";
 import s from "./Services.module.scss";
 import Image from "next/image";
+import TabletServices from "./TabletServices";
+import DesktopServices from "./DesktopServices";
 
 export default function Services() {
   return (
@@ -20,7 +22,9 @@ export default function Services() {
             </li>
           </ul>
         </div>
-        <div className={s.mobile}><MobileServices/></div>
+        <div className={s.mobile}><MobileServices /></div>
+        <div className={s.tablet}><TabletServices/></div>
+        <div className={s.desktop}><DesktopServices/></div>
         {/* <div className={s.mainDeskImgBlock}>
           <div className={s.servicesImgList}>
             <div className={`${s.servicesImgItem} ${s['servicesImgItem--f']}`}>
