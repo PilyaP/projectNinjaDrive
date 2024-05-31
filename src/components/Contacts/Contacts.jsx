@@ -34,39 +34,65 @@ const Contacts = () => {
               </a>
             </div>
             <p className={styles.contactFat}>Соц. мережі</p>
-            <div className={styles.socials}>
-              <a href="#">
-                <Image
-                  src="/facebook-dask.png"
-                  alt="Facebook"
-                  width={40}
-                  height={40}
-                />
-              </a>
-              <a href="#">
-                <Image
-                  src="/insta-desk.png"
-                  alt="Instagram"
-                  width={40}
-                  height={40}
-                />
-              </a>
-              <a href="#">
-                <Image
-                  src="/whats-desk.png"
-                  alt="WhatsApp"
-                  width={40}
-                  height={40}
-                />
-              </a>
-              <a href="#">
-                <Image
-                  src="/tiktok-desk.png"
-                  alt="TikTok"
-                  width={40}
-                  height={40}
-                />
-              </a>
+            <div>
+              <ul className={styles.socials}>
+                <li>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61559328162876&mibextid=LQQJ4d"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src="/facebook-dask.png"
+                      alt="Facebook"
+                      width={40}
+                      height={40}
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/ninja.drive?igsh=eWRvaWVjNWF1ZDJz&utm_source=qr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src="/insta-desk.png"
+                      alt="Instagram"
+                      width={40}
+                      height={40}
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://wa.me/380934800007"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src="/whats-desk.png"
+                      alt="WhatsApp"
+                      width={40}
+                      height={40}
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.tiktok.com/@ninjadriveclub?_t=8mo4RBv4GSk&_r=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src="/tiktok-desk.png"
+                      alt="TikTok"
+                      width={40}
+                      height={40}
+                    />
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
