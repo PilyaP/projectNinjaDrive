@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Reviews.module.scss";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -53,6 +53,8 @@ const reviews = [
 ];
 
 const Reviews = () => {
+  const [colors, setColors] = useState([]);
+
   const getRandomColor = () => {
     const letters = "0123456789ABCDEF";
     let color = "#";
@@ -61,6 +63,11 @@ const Reviews = () => {
     }
     return color;
   };
+
+  useEffect(() => {
+    const generatedColors = reviews.map(() => getRandomColor());
+    setColors(generatedColors);
+  }, []);
 
   return (
     <section id="reviews" className={styles.reviewsSection}>
@@ -73,8 +80,8 @@ const Reviews = () => {
         <div className={styles.subtitle}>
           <p>
             Ми завжди прагнемо досконалості у всьому, що робимо, і наші клієнти
-            це цінують. Відгуки тих, хто скористався нашими послугами, говорять
-            самі за себе.
+            це цінують. Відгуки тих, хто скористався нашими послугами, <br />
+            говорять самі за себе.
           </p>
           <p>
             Наша репутація побудована на надійності, професіоналізмі та
@@ -95,11 +102,9 @@ const Reviews = () => {
               480: {
                 slidesPerView: 1,
               },
-
               768: {
                 slidesPerView: 2,
               },
-
               1200: {
                 slidesPerView: 3,
               },
@@ -113,7 +118,9 @@ const Reviews = () => {
                     <div className={styles.avatarName}>
                       <div
                         className={styles.avatar}
-                        style={{ backgroundColor: getRandomColor() }}
+                        style={{
+                          backgroundColor: colors[index] || "#000",
+                        }}
                       >
                         <span className={styles.initials}>
                           {review.initials}

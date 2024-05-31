@@ -1,4 +1,3 @@
-// Footer.js
 import Image from "next/image";
 import styles from "./Footer.module.scss";
 
@@ -11,37 +10,25 @@ const Footer = () => (
         </div>
         <div className={styles.footerLineMob}> </div>
         <div className={styles.footerNavSoc}>
-          <div>
+          <div className={styles.footerMobTab}>
             <ul className={styles.navigation}>
               <li>
-                <a className={styles.navigationLink} href="#about">
-                  Про нас
-                </a>
+                <a href="#about">Про нас</a>
               </li>
               <li>
-                <a className={styles.navigationLink} href="#services">
-                  Послуги
-                </a>
+                <a href="#servies">Послуги</a>
               </li>
               <li>
-                <a className={styles.navigationLink} href="#pricing">
-                  Ціни
-                </a>
+                <a href="#pricing">Ціни</a>
               </li>
               <li>
-                <a className={styles.navigationLink} href="#advantages">
-                  Переваги
-                </a>
+                <a href="#advantages">Переваги</a>
               </li>
               <li>
-                <a className={styles.navigationLink} href="#reviews">
-                  Відгуки
-                </a>
+                <a href="#reviews">Відгуки</a>
               </li>
               <li>
-                <a className={styles.navigationLink} href="#contacts">
-                  Контакти
-                </a>
+                <a href="#contacts">Контакти</a>
               </li>
             </ul>
           </div>
@@ -76,15 +63,14 @@ const Footer = () => (
                 <Image
                   src="/tiktok-desk.png"
                   alt="TikTok"
-                  width={30}
-                  height={30}
+                  width={40}
+                  height={40}
                 />
               </li>
             </ul>
           </div>
         </div>
       </div>
-
       <div className={styles.footerLine}></div>
       <div className={styles.politics}>
         <p>Всі права захищено</p>
