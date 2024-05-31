@@ -18,18 +18,12 @@ text-transform: uppercase;
         
             }
         @include desktop {
-            display: block;
+            
                 gap: 40px;
 
         }
 }
-.navigationLink {
 
-
-
-    
-
-}
 
                 .footerLogo{
 
@@ -45,15 +39,14 @@ text-transform: uppercase;
                 }
 .footerContainer {
 color: var(--white);
-    
 
- 
+padding-top: 200px;
 
 
 }
 .footerNav{
 
-display: block;
+
     @include tablet {
    
     display: flex;
@@ -63,8 +56,11 @@ display: block;
         }
                  @include desktop {
 
-        
-        
+      
+            flex-direction: row;
+          justify-content: baseline;
+          gap: 139px;
+        align-items: center;
                  }
 
 }
@@ -105,7 +101,7 @@ margin-bottom: 32px;
 .footerNavMob{
 
     display: flex;
-    gap: 107px;
+    // gap: 107px;
     @include tablet {
         flex-direction: column;
     gap: 24px;
@@ -115,22 +111,13 @@ margin-bottom: 32px;
         }
 
 @include desktop {
-display: block;
+
 
 
 
 }
 }
-.socials {
 
-
-    @include desktop {
-            display: block;
-    
-    
-    
-        }
-}
 .socialsText{
 display: flex;
 
@@ -150,13 +137,16 @@ margin-bottom: 12px;
     display: flex;
     flex-direction: row;
     gap: 107px;
-    @include tablet {
+    @include tablet { 
+        
 flex-direction: column;
 gap: 24px;
         }
         @include desktop {
-            display: block;
-            
+          display: flex;
+            flex-direction: row;
+            gap: 122px;
+            justify-content: center;
         }
     
 }
@@ -167,7 +157,7 @@ align-items: center;
     display: flex;
     flex-direction: column;
         @include tablet {
-              display: block;
+              
             }
 
 }
@@ -188,8 +178,8 @@ align-items: center;
         }
                 @include desktop {
         
-                    display: block;
-        
+                    
+        justify-content: flex-end;
         
                 }
 
@@ -217,4 +207,12 @@ padding-bottom: 20px;
 padding-bottom: 24px;
         gap: 319px;
     }
+}
+
+.footerMobTab{
+
+        @include desktop {
+        
+
+            }
 }

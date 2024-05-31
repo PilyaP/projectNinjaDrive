@@ -5,18 +5,33 @@ const Contacts = () => {
   return (
     <section className={styles.contacts} id="contacts">
       <div className="container">
+        <div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2641.342634948266!2d34.90724627644639!3d48.5458283712915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe01e579650cb%3A0x691e2f5edfc7b6b6!2z0J_QvtC70YLQsNCy0YHRjNC60LUg0YjQvtGB0LUsIDYxOSwg0JTQvdGW0L_RgNC-0L_QtdGC0YDQvtCy0YHRjNC60LAg0L7QsdC70LDRgdGC0Yw!5e0!3m2!1suk!2sua!4v1717111414049!5m2!1suk!2sua"
+            width={341}
+            height={236}
+            allowFullScreen=""
+            loading="lazy"
+            className={styles.map}
+          ></iframe>
+        </div>
         <div className={styles.info}>
           <div className={styles.contactsMap}>
             <h2 className={styles.contactsHeading}>Контакти</h2>
             <div className={styles.contactTel}>
               <p className={styles.contactFat}>Телефон</p>
-              <p className={styles.contactThink}>+38 (096) 00 20 777</p>
+              <a className={styles.contactThink} href="tel:+380960020777">
+                +38 (096) 00 20 777
+              </a>
             </div>
             <div className={styles.contactAdress}>
               <p className={styles.contactFat}>Адреса</p>
-              <p className={styles.contactThink}>
+              <a
+                className={styles.contactThink}
+                href="https://www.google.com/maps/place/%D0%9F%D0%BE%D0%BB%D1%82%D0%B0%D0%B2%D1%81%D1%8C%D0%BA%D0%B5+%D1%88%D0%BE%D1%81%D0%B5,+619,+%D0%94%D0%BD%D1%96%D0%BF%D1%80%D0%BE%D0%BF%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C/@48.5458284,34.9072463,17z/data=!3m1!4b1!4m5!3m4!1s0x40dbe01e579650cb:0x691e2f5edfc7b6b6!8m2!3d48.5458284!4d34.9098212?entry=ttu"
+              >
                 м.Дніпро, Полтавське шосе, 619
-              </p>
+              </a>
             </div>
             <p className={styles.contactFat}>Соц. мережі</p>
             <div className={styles.socials}>
@@ -53,14 +68,6 @@ const Contacts = () => {
                 />
               </a>
             </div>
-          </div>
-          <div className={styles.map}>
-            <iframe
-              width={343}
-              height={244}
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.259935448335!2d34.90982121570999!3d48.54582837925719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe01e579650cb%3A0x691e2f5edfc7b6b6!2sPoltavs&#39;ke%20Shose%2C%20619%2C%20Dnipro%2C%20Dnipropetrovsk%20Oblast%2C%20Ukraine!5e0!3m2!1sen!2sus!4v1628753171317!5m2!1sen!2sus"
-              loading="lazy"
-            ></iframe>
           </div>
         </div>
       </div>

@@ -19,7 +19,7 @@ display: none;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 16px;
-    
+    margin-top: 4px;
     display: flex;
     gap: 12px;
     justify-content: end;
@@ -28,6 +28,9 @@ display: none;
     align-items: flex-end;
     flex-direction: column;
     margin-bottom: 102px;
+    height: 112px;
+    width: 625px;
+    margin-left: auto;
     }
   }
 
@@ -158,6 +161,11 @@ max-width: 319px;
 display: none;
 @include desktop{
   display: block;
+  font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 48px;
+    text-transform: uppercase;
+    
 }
     }
 
