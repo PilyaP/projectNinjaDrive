@@ -20,11 +20,8 @@
 
     @include tablet {
         background-image: url('/contacts-bg-tab.png');
-        width: 336px;
-        height: 118px;
-        background-position: left;
-        top: 0;
-        left: -200px;
+width:66%;
+border-radius: 8px;
     }
 @include desktop {
     background-image: url('/contacts-bg-desk.png');
@@ -34,6 +31,7 @@
     padding: 0;
     left: 0;
     border-radius: 12px;
+
 }
 
 
@@ -64,16 +62,17 @@ position:absolute;
     right:  0;  
     @include tablet {
             top: 0;
-            left:1px;
-            width: 738px;
-            height: 555px;
-            z-index: -2;
+            left: 370px;
+            width: 50%;
+            height: 573px;
+            z-index: 2;
     
         }
     @include desktop{
 top: 0;
-left: 600px;
-width: 50%;
+
+left: 500px;
+width: 58%;
 height: 510px;
 z-index: 10;
 

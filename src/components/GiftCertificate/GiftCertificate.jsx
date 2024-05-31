@@ -41,8 +41,8 @@ export default function GiftCertificate() {
               </p>
               <p className={styles.description}>
                 Купуй сертифікат у{" "}
-                <span className={styles.ninjaDrive}>NINJA DRIVE</span> або
-                фізичний сертифікат. Напиши нам, щоб дізнатися деталі.
+                <span className={styles.ninjaDrive}>NINJA DRIVE</span>. Напиши
+                нам, щоб дізнатися деталі.
               </p>
               <button
                 className={styles.button}
