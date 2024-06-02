@@ -12,7 +12,7 @@ export default function Pricing() {
   };
 
   return (
-    <section className={s.price}>
+    <section className={s.price} id="pricing">
       <div className="container">
 
         <h3 className={`${s.priceTitle} ${s["priceTitle--mob"]}`}>вартість</h3>

@@ -49,7 +49,7 @@ const items = [
     buttonLink: "https://wa.me/123456789",
   },
   {
-    src: "/moto-desk-300.png",
+    src: "/advance300.png",
     alt: "Advance300",
     title: "Advance300",
     details:'*бронь 500₴/ 1 одиня техніки',
@@ -60,7 +60,7 @@ const items = [
     buttonLink: "https://wa.me/123456789",
   },
   {
-    src: "/pitbike-desk.png",
+    src: "/pitbike.png",
     alt: "Pitbike",
     title: "Pitbike",
     details:'*бронь 500₴/ 1 одиня техніки',
@@ -71,7 +71,7 @@ const items = [
     buttonLink: "https://wa.me/123456789",
   },
   {
-    src: "/pitbike-desk.png",
+    src: "/bagi-BRP-1000.png",
     alt: "Багі BRP 1000",
     title: "Багі BRP 1000",
     details:'*бронь 500₴/ 1 одиня техніки',
