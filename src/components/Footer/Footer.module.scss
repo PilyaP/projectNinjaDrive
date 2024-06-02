@@ -1,218 +1,159 @@
 @import '../../../styles/mixins.scss';
 
-.navigation {
-    flex-direction:column;
-    display: flex;
-    gap: 16px;
-font-family: var(--second-family);
-text-transform: uppercase;
-            font-weight: 400;
-                font-size: 16px;
-    color: var(--white);
-
-        @include tablet {
-            margin-top: 24px;
-            flex-direction: row;
-        gap: 48px;
-             justify-content: center ;
-        
-            }
-        @include desktop {
-            
-                gap: 40px;
-
-        }
-}
-
-
-                .footerLogo{
-
-
-
-                            @include desktop {
-                                width: 99px;
-                                    height: 94px;
-                            
-                                }
-                 
-                    
-                }
 .footerContainer {
-color: var(--white);
-
-padding-top: 200px;
-
-
+  color: var(--white);
+  padding-top: 200px;
 }
-.footerNav{
 
-
-    @include tablet {
-   
+.footerNav {
+  @include tablet {
     display: flex;
     flex-direction: column;
- 
-    
-        }
-                 @include desktop {
-
-      
-            flex-direction: row;
-          justify-content: baseline;
-          gap: 139px;
-        align-items: center;
-                 }
-
+  }
+  @include desktop {
+    flex-direction: row;
+    justify-content: baseline;
+    gap: 139px;
+    align-items: center;
+  }
 }
 
+.footerLogo {
+  width: 99px;
+  height: 94px;
 
+  @include desktop {
+    width: 99px;
+    height: 94px;
+  }
+}
 
+.footerLine {
+  border-bottom: 1px solid var(--yellow);
+  margin-top: 32px;
+  margin-bottom: 24px;
 
-
-.footerLine{
-border-bottom: 1px solid var(--yellow);
-margin-top: 32px;
-margin-bottom: 24px;
-        @include tablet {
-        
-            margin-top: 24px;
-             
-                border-bottom: 1px solid rgba(245, 249, 253, 1);
-            }
+  @include tablet {
+    margin-top: 24px;
+    border-bottom: 1px solid rgba(245, 249, 253, 1);
+  }
 }
 
 .footerLineMob {
-margin-top: 24px;
-border: 1px solid var(--yellow);
-margin-bottom: 32px;
-    
-   
-    @include tablet {
+  margin-top: 24px;
+  border: 1px solid var(--yellow);
+  margin-bottom: 32px;
 
-        display: none;
-    }
-}
-
-.footerLogo{
-    width: 99px;
-        height: 94px;
-}
-
-.footerNavMob{
-
-    display: flex;
-    // gap: 107px;
-    @include tablet {
-        flex-direction: column;
-    gap: 24px;
-        
-    
-    
-        }
-
-@include desktop {
-
-
-
-
-}
-}
-
-.socialsText{
-display: flex;
-
-
-flex-direction: column;
-align-items: center;
-margin-bottom: 12px;
-@include tablet{
+  @include tablet {
     display: none;
-
+  }
 }
 
-}
+.footerNavSoc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
-.footerNavSoc{
+  @include tablet {
+    flex-direction: column;
+    gap: 24px;
+  }
 
+  @include desktop {
     display: flex;
     flex-direction: row;
-    gap: 55px;
-    @include tablet { 
-        
-flex-direction: column;
-gap: 24px;
-        }
-        @include desktop {
-          display: flex;
-            flex-direction: row;
-            gap: 122px;
-            justify-content: center;
-        }
-    
-}
-.socialsMob{
-    margin-bottom: auto;
-    margin-top: auto;
-align-items: center;
-    display: flex;
-    flex-direction: column;
-        @include tablet {
-              
-            }
-
+    gap: 122px;
+    justify-content: center;
+  }
 }
 
+.footerMobTab {
+  @include desktop {}
+}
+
+.navigation {
+  flex-direction: column;
+  display: flex;
+  gap: 16px;
+  font-family: var(--second-family);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--white);
+
+  @include tablet {
+    margin-top: 24px;
+    flex-direction: row;
+    gap: 48px;
+    justify-content: center;
+  }
+
+  @include desktop {
+    gap: 40px;
+  }
+}
+
+.socialsText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.socialsMob {
+  margin-bottom: auto;
+  margin-top: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {}
+}
 
 .socialsList {
-    display: flex;
-    gap: 16px;
-    align-items: center;
+  display: flex;
+  gap: 16px;
+  align-items: center;
 
-   
+  @include tablet {
+    justify-content: center;
+  }
 
-        @include tablet {
-
-            justify-content: center;
-
-
-        }
-                @include desktop {
-        
-                    
-        justify-content: flex-end;
-        
-                }
-
-    
+  @include desktop {
+    justify-content: flex-end;
+  }
 }
+
+.socialsListIcon {
+  width: 28px;
+  height: 28px;
+}
+
 .politics {
-    font-weight: 400;
-    font-size: 16px;
-    font-family: var(--second-family);
-    display: flex;
-    text-transform: uppercase;
-    color: var(--white);
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-padding-bottom: 20px;
-    @include tablet {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 215px;padding-bottom: 49px;
-    }
+  font-weight: 400;
+  font-size: 16px;
+  font-family: var(--second-family);
+  display: flex;
+  text-transform: uppercase;
+  color: var(--white);
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 20px;
 
-    @include desktop {
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 215px;
+    padding-bottom: 49px;
+  }
 
-padding-bottom: 24px;
-        gap: 319px;
-    }
-}
-
-.footerMobTab{
-
-        @include desktop {
-        
-
-            }
+  @include desktop {
+    padding-bottom: 24px;
+    gap: 319px;
+  }
 }

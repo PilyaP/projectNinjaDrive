@@ -1,141 +1,117 @@
 @import '../../../styles/mixins.scss';
 
-
-
 .contacts {
-    
-    color: var(--white);
-    position: relative;
-    padding-bottom: 360px;
-    background-image: url('/contacts-bg-mob.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 90%;
+  color: var(--white);
+ width: 100%
+}
+
+.contactsWrapper{
+ position: relative;
+  padding-bottom: 360px;
+  padding-left: 12px;
+  background-image: url('/contacts-bg-mob.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+    width:97%;
     height: 115px;
     padding-top: 100px;
+   
+  @include tablet {
+    background-image: url('/contacts-bg-tab.png');
+    border-radius: 8px;
+  }
 
-    
-    margin: 0 auto;
-
-    @include tablet {
-        background-image: url('/contacts-bg-tab.png');
-width:66%;
-border-radius: 8px;
-    }
-@include desktop {
+  @include desktop {
     background-image: url('/contacts-bg-desk.png');
-    width: 1200px;
     height: 510px;
-    top: 0;
     padding: 0;
-    left: 0;
     border-radius: 12px;
+  }
 
-}
+  &::after {
+    content: '';
+    height: 300px;
+    z-index: 2;
 
-
-    &::after {
-        height: 300px;
-        
-        content: '';
-  
-        z-index: 2; 
-            @include desktop {
-
-                }
+    @include desktop {
     }
+  }
 }
-
-                                                                                                                                
-
-
 .map {
     border: none;
     border-radius: 8px;
-position:absolute;
-    width: 100%;  
+    position: absolute;
+    width: 99%;
     height: 237px;
-    z-index: -2; 
-    margin: 0 auto;
-    top:470px;
-    right:  0;  
-    @include tablet {
-            top: 0;
-            left: 370px;
-            width: 50%;
-            height: 573px;
-            z-index: 2;
-    
-        }
-    @include desktop{
-top: 0;
+    z-index: -2;
+    top: 507px;
+    right: 1px;
 
-left: 500px;
-width: 58%;
-height: 510px;
-z-index: 10;
-
+    @include mobile{
+    top: 496px;
     }
-    // padding-left: 20px;
-    // padding-right: 20px;
+
+  @include tablet {
+    top: 0;
+    left: 370px;
+    width: 50%;
+    height: 573px;
+    z-index: 2;
+  }
+
+  @include desktop {
+    top: 0;
+    left: 500px;
+    width: 58%;
+    height: 510px;
+    z-index: 10;
+  }
 }
-    
-                                  
+
 .contactFat {
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 16px;
-    margin-bottom: 12px;
-margin-top: 24px;
-    @include tablet {}
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 12px;
+  margin-top: 24px;
 
-    @include desktop {
-        font-weight: 600;
-        font-size: 24px;
-        margin-top: 32px;
-    }
-
+  @include desktop {
+    font-weight: 600;
+    font-size: 24px;
+    margin-top: 32px;
+  }
 }
+
 .contactThink {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 14px;
-    
-    
-    cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
 
-    @include tablet {
-        font-size: 16px;
-    }
+  @include tablet {
+    font-size: 16px;
+  }
 
-    @include desktop {
-        font-size: 24px;
-        
-    }
+  @include desktop {
+    font-size: 24px;
+  }
 }
-                                      
 
-    .socials{
+.socials {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-bottom: 15px;
+}
 
-                   display: flex;
-                     flex-direction: row;
-                     gap: 16px;
-                     margin-bottom: 15px;
-                                           }
-                                           
-                                           
-                                           
-                                           
-                                           .contactsHeading {
-                                    
- font-family: var(--second-family);
-                                      font-size: 24px;
-                                 margin-bottom: 48px;
-       margin-top: 20px;
-                            }
-                            
-                            .info{
-                                padding-top: 20px;
-                            }
+.contactsHeading {
+  font-family: var(--second-family);
+  font-size: 24px;
+  margin-bottom: 48px;
+  margin-top: 20px;
+}
 
+.info {
+  padding-top: 20px;
+}

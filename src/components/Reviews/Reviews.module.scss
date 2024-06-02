@@ -1,21 +1,14 @@
 @import '../../../styles/mixins.scss';
 
-
-
 .reviewsSection {
-  // padding-top: 110px;
   color: var(--white);
   padding-bottom: 110px;
 }
 
+.subtitle {
+  display: none;
 
-
-
-
-  .subtitle {
-display: none;
-
-    @include desktop{
+  @include desktop {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 16px;
@@ -31,149 +24,134 @@ display: none;
     height: 112px;
     width: 625px;
     margin-left: auto;
-    }
+  }
+}
+
+.reviewContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  @include tablet {
+    gap: 32px;
   }
 
-  
-    .reviewContainer {
-  display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-      gap: 20px;
-    @include tablet {
-gap: 32px;
-    }
-        @include desktop {
+  @include desktop {
+    gap: 30px;
+  }
+}
 
-gap: 30px;
-
-        }
-    }
-
-    .reviewCard {
+.reviewCard {
   background: var(--10);
-border-radius: 8px;
+  border-radius: 8px;
   padding: 24px 12px;
   width: 100%;
   height: 330px;
- 
+
   @include tablet {
-      width: 319px;
-        height: 282px;
-    // width: calc(50% - 40px);
+    width: 319px;
+    height: 282px;
   }
 
-     @include desktop {
-      // width: calc(33.333% - 60px);
-border-radius: 12px;
-        width: 399px;
-          height: 432px;
-     }
+  @include desktop {
+    border-radius: 12px;
+    width: 399px;
+    height: 432px;
+  }
+}
 
+.title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
 
-    }
-    .title {
-      font-family: var(--second-family);
-      font-weight: 700;
-      font-size: 24px;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-  
-      @include tablet {
+  @include tablet {
+    font-size: 36px;
+  }
 
-font-size: 36px;
-      }
-  
-            @include desktop {
-              display: none;
-            }
-    }
+  @include desktop {
+    display: none;
+  }
+}
 
-        .subtitleReview {
-    font-family: var(--font-family);
-      font-weight: 400;
+.subtitleReview {
+  font-family: var(--font-family);
+  font-weight: 400;
+  margin-bottom: 68px;
 
-  
-          margin-bottom: 68px;
-    width: 343px;
-    @include tablet {margin-bottom: 68px;}
-                    @include desktop {
-                      display: none;
-                    }
-        }
-                  
-                        
-      .avatar {
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: 48px;
-        color: var(--white);
-        border-radius: 50%;
-        width: 72px;
-        height: 72px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        // margin: 0 auto 16px; 
-      }
+  @include tablet {
+    margin-bottom: 68px;
+  }
 
-        .avatarName{
-display: flex;
-flex-direction: row;
-gap:12px;
-align-items: center;
-margin-bottom: 24px;
+  @include desktop {
+    display: none;
+  }
+}
 
-        }
+.avatar {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 48px;
+  color: var(--white);
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-                .name{
-font-family: var(--font-family);
+.avatarName {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.name {
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 24px;
+}
 
-
-                }
 .text {
-font-family: var(--font-family);
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
   margin-bottom: 42px;
-max-width: 319px;
+  max-width: 319px;
 
-@include desktop {
+  @include desktop {
     font-size: 24px;
   }
 }
 
-.source{
+.source {
   font-family: var(--font-family);
-    font-weight: 400;
-    
-    color: var(--orange);
-    @include tablet {font-size: 14px;}
-                @include desktop {
-                  font-size: 16px;
-                }
-                
+  font-weight: 400;
+  color: var(--orange);
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
 }
 
-    .titleDesk{
-display: none;
-@include desktop{
-  display: block;
-  font-family: var(--second-family);
+.titleDesk {
+  display: none;
+
+  @include desktop {
+    display: block;
+    font-family: var(--second-family);
     font-weight: 700;
     font-size: 48px;
     text-transform: uppercase;
-    
+  }
 }
-    }
-
-
-
-        // .mySwiper {
-          
-        //       background: #feffff;
-        //         opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
-        // }
-

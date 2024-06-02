@@ -1,17 +1,17 @@
 import Image from "next/image";
-import styles from "./Footer.module.scss";
+import s from "./Footer.module.scss";
 
 const Footer = () => (
-  <footer className={styles.footerContainer}>
+  <footer className={s.footerContainer}>
     <div className="container">
-      <div className={styles.footerNav}>
-        <div className={styles.footerLogo}>
+      <div className={s.footerNav}>
+        <div className={s.footerLogo}>
           <Image src="/logo.png" alt="Logo" width={99} height={94} />
         </div>
-        <div className={styles.footerLineMob}> </div>
-        <div className={styles.footerNavSoc}>
-          <div className={styles.footerMobTab}>
-            <ul className={styles.navigation}>
+        <div className={s.footerLineMob}> </div>
+        <div className={s.footerNavSoc}>
+          <div className={s.footerMobTab}>
+            <ul className={s.navigation}>
               <li>
                 <a href="#about">Про нас</a>
               </li>
@@ -32,9 +32,9 @@ const Footer = () => (
               </li>
             </ul>
           </div>
-          <div className={styles.socialsMob}>
-            <p className={styles.socialsText}>Соц. мережі</p>
-            <ul className={styles.socialsList}>
+          <div className={s.socialsMob}>
+            <p className={s.socialsText}>Соц. мережі</p>
+            <ul className={s.socialsList}>
               <li>
                 <a
                   href="https://www.facebook.com/profile.php?id=61559328162876&mibextid=LQQJ4d"
@@ -42,6 +42,7 @@ const Footer = () => (
                   rel="noopener noreferrer"
                 >
                   <Image
+                    className={s.socialsListIcon}
                     src="/facebook-dask.png"
                     alt="Facebook"
                     width={40}
@@ -56,6 +57,7 @@ const Footer = () => (
                   rel="noopener noreferrer"
                 >
                   <Image
+                   className={s.socialsListIcon}
                     src="/insta-desk.png"
                     alt="Instagram"
                     width={40}
@@ -70,6 +72,7 @@ const Footer = () => (
                   rel="noopener noreferrer"
                 >
                   <Image
+                     className={s.socialsListIcon}
                     src="/whats-desk.png"
                     alt="WhatsApp"
                     width={40}
@@ -84,6 +87,7 @@ const Footer = () => (
                   rel="noopener noreferrer"
                 >
                   <Image
+                     className={s.socialsListIcon}
                     src="/tiktok-desk.png"
                     alt="TikTok"
                     width={40}
@@ -95,8 +99,8 @@ const Footer = () => (
           </div>
         </div>
       </div>
-      <div className={styles.footerLine}></div>
-      <div className={styles.politics}>
+      <div className={s.footerLine}></div>
+      <div className={s.politics}>
         <p>Всі права захищено</p>
         <p>Політика конфіденційності</p>
       </div>
