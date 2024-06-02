@@ -51,7 +51,7 @@ export default function Pricing() {
                       );
                     })}
                   </ul>
-                  <a href={buttonLink} className={s.priceBn}>
+                  <a target="blank" href={buttonLink} className={s.priceBn}>
                     Обрати
                   </a>
                 </div>
@@ -61,7 +61,9 @@ export default function Pricing() {
         </ul>
         {visibleItems < items.length && (
           <button title="Показати більше" onClick={showMoreItems} className={s.loadMoreButton}>
-            Показати більше
+            <svg width="25" height="25" viewBox="0 0 25 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.42 26.95L13.9 33.47C13.13 34.24 11.87 34.24 11.1 33.47L4.57996 26.95" stroke="#FC8A22" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </button>
         )}
       </div>

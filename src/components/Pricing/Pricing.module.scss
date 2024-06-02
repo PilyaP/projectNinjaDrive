@@ -217,3 +217,13 @@
         justify-content: center;
     }
 }
+.loadMoreButton{
+    background-color: transparent;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    width: 24px;
+    height: 24px;
+    color: var(--orange);
+    padding: 0;
+}

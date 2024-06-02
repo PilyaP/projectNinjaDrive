@@ -52,7 +52,7 @@ const items = [
     src: "/advance300.png",
     alt: "Advance300",
     title: "Advance300",
-    details:'*бронь 500₴/ 1 одиня техніки',
+    details:['*бронь 500₴/ 1 одиня техніки'],
     pricing:[
       { time: "2 години", price: "2800₴" },
       { time: "3 години", price: "3500₴" },
@@ -63,7 +63,7 @@ const items = [
     src: "/pitbike.png",
     alt: "Pitbike",
     title: "Pitbike",
-    details:'*бронь 500₴/ 1 одиня техніки',
+    details:['*бронь 500₴/ 1 одиня техніки'],
     pricing: [
       { time: "2 години", price: "2800₴" },
       { time: "3 години", price: "3500₴" },
@@ -74,7 +74,7 @@ const items = [
     src: "/bagi-BRP-1000.png",
     alt: "Багі BRP 1000",
     title: "Багі BRP 1000",
-    details:'*бронь 500₴/ 1 одиня техніки',
+    details:['*бронь 500₴/ 1 одиня техніки'],
     pricing: [
       { time: "з інструктором на одному багі", price: "4000₴" },
       { time: "без інструктора/1год", price: "5000₴" },
