@@ -123,6 +123,10 @@ button {
   display: block;
   // cursor: url(../images/cursor.png), auto;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  display: block;
 }
 h1,
 h2,

@@ -28,7 +28,7 @@ function DesktopServices() {
                 </div>
                 <div className={s.deskServicesImgBox}>
                  <div className={s.servImgsec1}> <Image src="/services-desk-3.png" width={193} height={570} alt="img"/></div>
-                  <div className={s.servImgfr1}><Image src="/services-desk-4.png" width={302} height={434} alt="img"/></div>
+                  <div className={s.servImgfr1}><Image src="/services-desk-4.png" width={236} height={434} alt="img"/></div>
               </div>
           </div>
   )
