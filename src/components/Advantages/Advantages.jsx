@@ -1,41 +1,42 @@
-import styles from "./Advantages.module.scss";
+import s from "./Advantages.module.scss";
 import Image from "next/image";
 
 export default function Advantages() {
   return (
-    <section className={styles.advantages} id="advantages">
+    <section className={s.advantages} id="advantages">
       <div className="container">
       
-        <h2 className={styles.heading}>Наші переваги</h2>
-        <div className={styles.imgWhy}>
+        <h2 className={s.heading}>Наші переваги</h2>
+        <div className={s.imgWhy}>
           <Image
+            className={s.advantagesImg}
             src="/why-we-desk.png"
             alt="Facebook"
             width={209}
             height={38}
           />
         </div>
-        <div className={styles.grid}>
+        <div className={s.grid}>
           <Image
             src="/all-advantages-desk.png"
             alt="Безпека"
             width={1275}
             height={677}
-            className={styles.desktopImage}
+            className={`${s.advantagesImg} ${s.desktopImage}`}
           />
           <Image
             src="/all-advantages-mob.png"
             alt="Безпека"
             width={343}
             height={1383}
-            className={styles.mobileImage}
+            className={`${s.advantagesImg} ${s.mobileImage}`}
           />
           <Image
             src="/all-advantages-tablet.png"
             alt="Безпека"
             width={446}
             height={527}
-            className={styles.tabletImage}
+            className={`${s.advantagesImg} ${s.tabletImage}`}
           />
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import styles from "./GiftCertificate.module.scss";
+import s from "./GiftCertificate.module.scss";
 import Modal from "../Modal/Modal";
 
 export default function GiftCertificate() {
@@ -22,30 +22,31 @@ export default function GiftCertificate() {
   };
 
   return (
-    <section className={styles.certificate}>
+    <section className={s.certificate}>
       <div className="container">
         <div>
-          <div className={styles.giftCertificate}>
-            <div className={styles.imageContainer}>
+          <div className={s.giftCertificate}>
+            <div className={s.imageContainer}>
               <Image
+                className={s.certificateImg}
                 src="/certificate-desk.png"
                 alt="Подарунковий сертифікат"
                 width={391}
                 height={406}
               />
             </div>
-            <div className={styles.content}>
-              <h2 className={styles.heading}>ПОДАРУНКОВИЙ СЕРТИФІКАТ</h2>
-              <p className={styles.subtitle}>
+            <div className={s.content}>
+              <h2 className={s.heading}>ПОДАРУНКОВИЙ СЕРТИФІКАТ</h2>
+              <p className={s.subtitle}>
                 Найкращий сюрприз для ваших близьких
               </p>
-              <p className={styles.description}>
+              <p className={s.description}>
                 Купуй сертифікат у{" "}
-                <span className={styles.ninjaDrive}>NINJA DRIVE</span>. Напиши
+                <span className={s.ninjaDrive}>NINJA DRIVE</span>. Напиши
                 нам, щоб дізнатися деталі.
               </p>
               <button
-                className={styles.button}
+                className={s.button}
                 onClick={() =>
                   openModalWithContent(
                     "Дізнатися деталі",
@@ -57,18 +58,18 @@ export default function GiftCertificate() {
               </button>
             </div>
           </div>
-          <div className={styles.contentMob}>
-            <h3 className={styles.headingMob}>ПОДАРУНКОВИЙ СЕРТИФІКАТ</h3>
-            <p className={styles.subtitleMob}>
+          <div className={s.contentMob}>
+            <h3 className={s.headingMob}>ПОДАРУНКОВИЙ СЕРТИФІКАТ</h3>
+            <p className={s.subtitleMob}>
               Найкращий сюрприз для ваших близьких
             </p>
-            <p className={styles.descriptionMob}>
+            <p className={s.descriptionMob}>
               Купуй сертифікат у{" "}
-              <span className={styles.ninjaDrive}>NINJA DRIVE</span> або
+              <span className={s.ninjaDrive}>NINJA DRIVE</span> або
               фізичний сертифікат. Напиши нам, щоб дізнатися деталі.
             </p>
             <button
-              className={styles.buttonMob}
+              className={s.buttonMob}
               onClick={() =>
                 openModalWithContent(
                   "Дізнатися деталі",
