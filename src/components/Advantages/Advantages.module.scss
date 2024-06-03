@@ -40,7 +40,6 @@
   }
 
   .grid {
-    padding-bottom: 110px;
     padding-top: 73px;
 
     @include tablet {
@@ -48,7 +47,7 @@
     }
 
     @include desktop {
-      padding-top: 160px;
+      padding-top: 73px;
     }
   }
 
