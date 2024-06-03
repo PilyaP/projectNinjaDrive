@@ -8,13 +8,14 @@
     position: relative;
 
     @include tablet{
-         background-image: url('/bg-images/price-tab-bg.png');
+         background-image: url('/pricing-bg-tab.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: bottom;
 
         @include desktop{
-            background-position: center;
+                    background-position-x: center;
+        background-position-y: bottom;
             background-image: url('/bg-images/price-desk-bg.png');
         }
     }
@@ -41,6 +42,7 @@
     }
 
 }
+.priceWrap
 .priceTitle{
     font-family: var(--second-family);
     font-weight: 700;
@@ -89,7 +91,7 @@
     margin: 0 auto;
     width: 288px;
     @include mobile{
-        width: 343px;
+        width: 100%;
     }
     
    @include tablet{

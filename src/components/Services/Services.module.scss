@@ -14,8 +14,9 @@
     @include desktop{
         justify-content: flex-start;
         align-items: flex-end;
-        margin-bottom: 48px;
+        margin-bottom: 72px;
         display: flex;
+        gap: 46px;
     }
 }
 .servicesTitle {
@@ -40,6 +41,7 @@
     height: 89px;
     @include desktop{
         width: 250px;
+        height: 119px;
     }
 }
 .servicesFacilitiesItem {
