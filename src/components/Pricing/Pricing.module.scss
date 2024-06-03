@@ -2,7 +2,7 @@
 @import '../../../styles/mixins.scss';
 
 .price {
-    padding-top: 110px;
+    padding-bottom: 110px;
     font-family: var(--font-family);
     color: var(--white);
     position: relative;
@@ -27,7 +27,7 @@
         right: 0;
         width: 229px;
         height: 27px;
-        background-image: url('/bg-images/price-vector-mob.png');
+        background-image: url('/price-vector-mob.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: top;
@@ -42,7 +42,6 @@
     }
 
 }
-.priceWrap
 .priceTitle{
     font-family: var(--second-family);
     font-weight: 700;

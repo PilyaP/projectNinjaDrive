@@ -3,13 +3,14 @@
 .footerContainer {
   color: var(--white);
   padding-top: 428px;
-  @include tablet{
-    padding-top: 288px;
-  }
+  padding-top: 261px;
+  // @include tablet{
+  //   padding-top: 288px;
+  // }
 
-  @include desktop{
-  padding-top: 327px;
-  }
+  // @include desktop{
+  // padding-top: 327px;
+  // }
 }
 
 .footerNav {
