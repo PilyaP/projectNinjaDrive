@@ -29,9 +29,9 @@
         position: absolute;
         background-image: url('/motorcycle-hero-mobile.png');
 
-        @include tablet{
-            background-image: url('/motorcycle-hero-tab.png');
-        }
+        // @include tablet{
+        //     background-image: url('/motorcycle-hero-tab.png');
+        // }
         @include desktop{
             background-image: url('/motorcycle-hero-desk.png');
             right: -405px;;
