@@ -3,10 +3,7 @@
 
 .certificate{
 padding-top: 110px;
-padding-bottom: 110px;
-    position: relative;
-
-    
+position: relative;
 }
 
 .giftCertificate {
@@ -32,14 +29,9 @@ height: 274px;
 
     .imageContainer {
         position: absolute;
-        bottom:15px;
+        bottom:0;
         left: 0;
         width: 343;
-        height: 356px;
-        // bottom: 0;
-        // right: 650px;
-        
-        // height: 406;
 @include tablet {
         bottom: 15px;
             left: 355px;

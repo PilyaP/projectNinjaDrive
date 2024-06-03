@@ -65,21 +65,21 @@ export default function Header() {
                 showMobileNav ? styles.showMobileNav : ""
               }`}
             >
-              <ul className={styles.mobileNavList}>
-                <li><a href="#about" onClick={toggleMobileNav}>Про нас</a></li>
-                <li><a href="#services" onClick={toggleMobileNav}>Послуги</a></li>
-                <li><a href="#pricing" onClick={toggleMobileNav}>Ціни</a></li>
-                <li><a href="#advantages" onClick={toggleMobileNav}>Переваги</a></li>
-                <li><a href="#reviews" onClick={toggleMobileNav}>Відгуки</a></li>
-                <li><a href="#contacts" onClick={toggleMobileNav}>Контакти</a></li>
-              </ul>
-              <div>
-                <SocialsList />
-                <ul className={styles.mobileNavContactsList}>
-                  <li><p className={styles.mobileNavContactsTitle}>Телефон:</p> <a className={styles.mobileNavContactsLink} href="tel:+38 (096) 00 20 777">+38 (096) 00 20 777</a></li>
-                  <li><p className={styles.mobileNavContactsTitle}>Адреса:</p> <a className={styles.mobileNavContactsLink} href="#">м. Дніпро, Полтавське шосе, 619</a></li>
+            <div className={styles.navWrap}>
+                <ul className={styles.mobileNavList}>
+                  <li><a href="#about" onClick={toggleMobileNav}>Про нас</a></li>
+                  <li><a href="#services" onClick={toggleMobileNav}>Послуги</a></li>
+                  <li><a href="#pricing" onClick={toggleMobileNav}>Ціни</a></li>
+                  <li><a href="#advantages" onClick={toggleMobileNav}>Переваги</a></li>
+                  <li><a href="#reviews" onClick={toggleMobileNav}>Відгуки</a></li>
+                  <li><a href="#contacts" onClick={toggleMobileNav}>Контакти</a></li>
                 </ul>
-              </div>
+                  <SocialsList />
+                  <ul className={styles.mobileNavContactsList}>
+                    <li><p className={styles.mobileNavContactsTitle}>Телефон:</p> <a className={styles.mobileNavContactsLink} href="tel:+38 (096) 00 20 777">+38 (096) 00 20 777</a></li>
+                    <li><p className={styles.mobileNavContactsTitle}>Адреса:</p> <a className={styles.mobileNavContactsLink} href="#">м. Дніпро, Полтавське шосе, 619</a></li>
+                  </ul>
+            </div>
             </nav>
           </div>
         </div>
