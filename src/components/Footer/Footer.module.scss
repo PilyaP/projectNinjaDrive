@@ -3,12 +3,13 @@
 .footerContainer {
   color: var(--white);
   padding-top: 428px;
+  padding-top: 261px;
   @include tablet{
-    padding-top: 288px;
+    padding-top: 575px;
   }
 
   @include desktop{
-  padding-top: 327px;
+  padding-top: 0;
   }
 }
 

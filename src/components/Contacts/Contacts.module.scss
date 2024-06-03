@@ -2,7 +2,14 @@
 
 .contacts {
   color: var(--white);
- width: 100%
+ width: 100%;
+ padding-bottom: 110px;
+ @include tablet{
+  position: relative;
+ }
+ @include desktop{
+  position: unset;
+ }
 }
 
 .contactsWrapper{
@@ -18,12 +25,20 @@
     padding-top: 100px;
    
   @include tablet {
-    background-image: url('/contacts-bg-tab.png');
+    // background-image: url('/contacts-bg-tab.png');
+    background-image: none;
+    background-color: var( --10);
     border-radius: 8px;
+    position: absolute;
+    width: 100%;
+    border-radius: 0;
+    top: 0;
+    right: 0;
   }
 
   @include desktop {
-    background-image: url('/contacts-bg-desk.png');
+    // background-image: url('/contacts-bg-desk.png');
+    position: relative;
     height: 510px;
     padding: 0;
     border-radius: 12px;
@@ -50,22 +65,24 @@
 
     @include mobile{
     top: 496px;
+    border-radius: 0;
     }
 
   @include tablet {
     top: 0;
-    left: 370px;
+    right: 0;
     width: 50%;
-    height: 573px;
+    height: 100%;
     z-index: 2;
   }
 
   @include desktop {
-    top: 0;
-    left: 500px;
-    width: 58%;
-    height: 510px;
-    z-index: 10;
+            top: 2px;
+        right: 0;
+        width: 58%;
+        height: 99%;
+        z-index: 10;
+        border-radius: 12px;
   }
 }
 
@@ -114,4 +131,10 @@
 
 .info {
   padding-top: 20px;
+  @include tablet{
+    padding-left: 24px;
+  }
+  @include desktop{
+    padding-left: 12px;
+  }
 }

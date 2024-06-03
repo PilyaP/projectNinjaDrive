@@ -3,7 +3,7 @@
 .services {
     color: var(--white);
     font-family: var(--font-family);
-    padding-top: 110px;
+padding-bottom: 110px;
 }
 .servicesTopText{
     display: flex;
@@ -160,8 +160,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
-    // margin-bottom: 24px;
 
+    max-width: 97%;
     &--mob{
         @include tablet{
             display: none;

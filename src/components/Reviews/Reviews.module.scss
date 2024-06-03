@@ -2,12 +2,13 @@
 
 .reviewsSection {
   color: var(--white);
-  padding-top: 110px;
-  padding-bottom: 405px;
+  // padding-top: 110px;
+  // padding-bottom: 405px;
+  padding-bottom: 110px;
 
-  @include tablet{
-    padding-bottom: 398px;
-  }
+  // @include tablet{
+  //   padding-bottom: 398px;
+  // }
 }
 
 .subtitle {
