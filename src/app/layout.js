@@ -143,6 +143,11 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
+        <script
+          src="https://www.googletagmanager.com/gtag/js?id=G-L096GYV598"
+          async="true"
+          data-nscript="afterInteractive"
+        ></script>
       </Head>
       <body className={montserratAlternates.className}>{children}</body>
     </html>
