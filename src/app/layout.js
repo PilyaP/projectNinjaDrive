@@ -1,3 +1,4 @@
+
 import React from "react";
 import "../../styles/globals.scss";
 import { Montserrat_Alternates } from "next/font/google";
@@ -15,6 +16,7 @@ export const metadata = {
   title: "Прокат квадроциклів у Дніпрі",
   url: "https://ninjadriveclub.com",
   siteName: "Ninja Drive Club",
+  metadataBase: process.env.NEXT_PUBLIC_BASE_URL,
   openGraph: {
     title: "Прокат квадроциклів у Дніпрі",
     description:
@@ -70,7 +72,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="uk">
+    <html lang="uk_UA">
       <Head>
         <title>{metadata.title}</title>
         <meta charSet="utf-8" />
@@ -111,44 +113,45 @@ export default function RootLayout({ children }) {
         />
         <link rel="manifest" href={metadata.manifest} />
       </Head>
-      <body className={montserratAlternates.className}>
-        {children}
-        <Script id="google-tag-manager" strategy="afterInteractive">
-          {`
+
+      <Script id="google-tag-manager" strategy="afterInteractive">
+        {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','${GTM_ID}');
           `}
-        </Script>
-        <Script
-          src="https://www.google.com/recaptcha/api.js"
-          async
-          defer
-        ></Script>
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
+      </Script>
+      <Script
+        src="https://www.google.com/recaptcha/api.js"
+        async
+        defer
+      ></Script>
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${GTM_ID}');
           `}
-        </Script>
-        <Script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "Ninja Drive Club",
-            url: "https://ninjadriveclub.com",
-            logo: "https://ninjadriveclub.com/logo512.png",
-            contactPoint: {
-              "@type": "ContactPoint",
-              telephone: "+380504800007",
-              contactType: "Customer Service",
-            },
-          })}
-        </Script>
+      </Script>
+      <Script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Ninja Drive Club",
+          url: "https://ninjadriveclub.com",
+          logo: "https://ninjadriveclub.com/logo512.png",
+          contactPoint: {
+            "@type": "ContactPoint",
+            telephone: "+380504800007",
+            contactType: "Customer Service",
+          },
+        })}
+      </Script>
+      <body className={montserratAlternates.className}>
+        {children}
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display: none; visibility: hidden;"></iframe>`,
