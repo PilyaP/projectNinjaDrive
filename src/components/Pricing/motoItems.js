@@ -13,7 +13,7 @@ const items = [
       { time: "1 година", price: "1000₴" },
       { time: "2 години", price: "1800₴" },
     ],
-    buttonLink: "https://wa.me/123456789",
+    buttonLink: "https://wa.me/380934800007",
   },
   {
     src: "/quadro-desk-300.png",
@@ -24,7 +24,7 @@ const items = [
       { time: "1 година", price: "1300₴" },
       { time: "2 години", price: "2400₴" },
     ],
-    buttonLink: "https://wa.me/123456789",
+    buttonLink: "https://wa.me/380934800007",
   },
   {
     src: "/quadro-desk-400.png",
@@ -35,7 +35,7 @@ const items = [
       { time: "1 година", price: "1400₴" },
       { time: "2 години", price: "2600₴" },
     ],
-    buttonLink: "https://wa.me/123456789",
+    buttonLink: "https://wa.me/380934800007",
   },
   {
     src: "/quadro-desk-550.png",
@@ -46,7 +46,7 @@ const items = [
       { time: "1 година", price: "1600₴" },
       { time: "2 години", price: "3000₴" },
     ],
-    buttonLink: "https://wa.me/123456789",
+    buttonLink: "https://wa.me/380934800007",
   },
   {
     src: "/advance300.png",
@@ -57,7 +57,7 @@ const items = [
       { time: "2 години", price: "2800₴" },
       { time: "3 години", price: "3500₴" },
     ],
-    buttonLink: "https://wa.me/123456789",
+    buttonLink: "https://wa.me/380934800007",
   },
   {
     src: "/pitbike.png",
@@ -68,7 +68,7 @@ const items = [
       { time: "2 години", price: "2800₴" },
       { time: "3 години", price: "3500₴" },
     ],
-    buttonLink: "https://wa.me/123456789",
+    buttonLink: "https://wa.me/380934800007",
   },
   {
     src: "/bagi-BRP-1000.png",
@@ -79,7 +79,7 @@ const items = [
       { time: "з інструктором на одному багі", price: "4000₴" },
       { time: "без інструктора/1год", price: "5000₴" },
     ],
-    buttonLink: "https://wa.me/123456789",
+    buttonLink: "https://wa.me/380934800007",
   },
 ];
 

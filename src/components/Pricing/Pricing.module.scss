@@ -5,7 +5,7 @@
     padding-bottom: 110px;
     font-family: var(--font-family);
     color: var(--white);
-    position: relative;
+    // position: relative;
 
     @include tablet{
          background-image: url('/pricing-bg-tab.png');
@@ -48,6 +48,28 @@
     font-size: 24px;
     text-transform: uppercase;
     margin-bottom: 91px;
+
+    position: relative;
+     &::before{
+        content: '';
+        position: absolute;
+        top: 27px;
+        right: 0;
+        width: 229px;
+        height: 27px;
+        background-image: url('/price-vector-mob.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+
+        @include tablet{
+          left: 114px;  
+        }
+        @include desktop{
+            top: 77px;
+            left: 90px;
+        }
+    }
 
     @include tablet{
         font-size: 36px;
