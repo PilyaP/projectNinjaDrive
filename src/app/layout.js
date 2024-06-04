@@ -109,7 +109,7 @@ export default function RootLayout({ children }) {
         />
         <link rel="manifest" href={metadata.manifest} />
 
-        <script
+        {/* <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -125,7 +125,7 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-        />
+        /> */}
 
         {/* Google Analytics */}
         {/* <script
