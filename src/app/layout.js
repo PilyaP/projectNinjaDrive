@@ -109,7 +109,7 @@ export default function RootLayout({ children }) {
         />
         <link rel="manifest" href={metadata.manifest} />
 
-        {/* <script
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -125,10 +125,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-        /> */}
+        />
 
         {/* Google Analytics */}
-        {/* <script
+        <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=G-L096GYV598`}
         ></script>
@@ -142,7 +142,7 @@ export default function RootLayout({ children }) {
               gtag('config', 'G-L096GYV598');
             `,
           }}
-        /> */}
+        />
       </Head>
       <body className={montserratAlternates.className}>{children}</body>
     </html>
