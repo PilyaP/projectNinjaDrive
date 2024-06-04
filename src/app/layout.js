@@ -2,6 +2,7 @@ import React from "react";
 import "../../styles/globals.scss";
 import { Montserrat_Alternates } from "next/font/google";
 import Head from "next/head";
+import Script from "next/script";
 
 const montserratAlternates = Montserrat_Alternates({
   subsets: ["latin"],
@@ -126,30 +127,27 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
-
+      </Head>
+      <body className={montserratAlternates.className}>
+        {children}
         {/* Google Analytics */}
-        <script
-          async
+        <Script
+          strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=G-L096GYV598`}
-        ></script>
-        <script
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-
               gtag('config', 'G-L096GYV598');
             `,
           }}
         />
-        <script
-          src="https://www.googletagmanager.com/gtag/js?id=G-L096GYV598"
-          async="true"
-          data-nscript="afterInteractive"
-        ></script>
-      </Head>
-      <body className={montserratAlternates.className}>{children}</body>
+      </body>
     </html>
   );
 }
