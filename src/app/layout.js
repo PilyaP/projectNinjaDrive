@@ -35,7 +35,7 @@ const metadata = {
     title: "Прокат квадроциклів у Дніпрі",
     description:
       "Приєднуйтесь до Ninja Drive Club для незабутніх вражень! Прокат квадроциклів та мото багів у місті Дніпро.",
-    url: process.env.NEXT_PUBLIC_BASE_URL,
+    url: "https://ninjadriveclub.com",
     siteName: "Ninja Drive Club",
     images: [
       {
@@ -63,11 +63,15 @@ export default function RootLayout({ children }) {
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.openGraph.description} />
+        <meta name="keywords" content={metadata.keywords.join(", ")} />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Ninja Drive Club" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <meta
           name="google-site-verification"
           content="axszHEOIvB3MfCvCjDJZefCsB9Y9du8XFMLCDcCPBVI"
         />
-        <meta name="keywords" content={metadata.keywords.join(", ")} />
         <link
           rel="icon"
           href="/favicon.ico"
@@ -86,23 +90,28 @@ export default function RootLayout({ children }) {
           type="image/png"
         />
         <link rel="manifest" href={metadata.openGraph.manifest} />
+
+        {/* Open Graph */}
         <meta property="og:title" content={metadata.openGraph.title} />
         <meta
           property="og:description"
           content={metadata.openGraph.description}
         />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
         <meta property="og:url" content={metadata.openGraph.url} />
         <meta property="og:site_name" content={metadata.openGraph.siteName} />
         <meta property="og:locale" content={metadata.openGraph.locale} />
         <meta property="og:type" content={metadata.openGraph.type} />
-        {metadata.openGraph.images.map((image, index) => (
-          <meta key={index} property="og:image" content={image.url} />
-        ))}
-        {/* WhatsApp Specific Meta Tags */}
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        {/* Telegram Specific Meta Tags */}
-        <meta property="og:image:type" content="image/png" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={metadata.openGraph.title} />
+        <meta
+          name="twitter:description"
+          content={metadata.openGraph.description}
+        />
+        <meta name="twitter:image" content={metadata.openGraph.images[0].url} />
+        <meta name="twitter:site" content="@your_twitter_handle" />
 
         {/* Global site tag (gtag.js) - Google Analytics */}
         <script
@@ -115,6 +124,22 @@ export default function RootLayout({ children }) {
           gtag('js', new Date());
 
           gtag('config', 'G-L096GYV598');`}
+        </script>
+
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Ninja Drive Club",
+            "url": "https://ninjadriveclub.com",
+            "logo": "https://ninjadriveclub.com/logo512.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+380504800007",
+              "contactType": "Customer Service"
+            }
+          }`}
         </script>
       </Head>
       <body className={montserratAlternates.className}>{children}</body>
