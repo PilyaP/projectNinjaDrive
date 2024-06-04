@@ -67,7 +67,6 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="axszHEOIvB3MfCvCjDJZefCsB9Y9du8XFMLCDcCPBVI"
         />
-
         <meta name="keywords" content={metadata.keywords.join(", ")} />
         <link
           rel="icon"
@@ -104,6 +103,19 @@ export default function RootLayout({ children }) {
         <meta property="og:image:height" content="630" />
         {/* Telegram Specific Meta Tags */}
         <meta property="og:image:type" content="image/png" />
+
+        {/* Global site tag (gtag.js) - Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-L096GYV598"
+        ></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-L096GYV598');`}
+        </script>
       </Head>
       <body className={montserratAlternates.className}>{children}</body>
     </html>
