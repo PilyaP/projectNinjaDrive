@@ -1,4 +1,3 @@
-
 import React from "react";
 import "../../styles/globals.scss";
 import { Montserrat_Alternates } from "next/font/google";
@@ -10,7 +9,8 @@ const montserratAlternates = Montserrat_Alternates({
   weight: "400",
 });
 
-const GTM_ID = "G-L096GYV598"; // Ваш Google Tag Manager ID
+
+const GTM_ID = "G-L096GYV598";
 
 export const metadata = {
   title: "Прокат квадроциклів у Дніпрі",
