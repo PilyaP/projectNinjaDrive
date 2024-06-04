@@ -140,6 +140,8 @@ export default function RootLayout({ children }) {
               "contactType": "Customer Service"
             }
           }`}
+
+          
         </script>
       </Head>
       <body className={montserratAlternates.className}>{children}</body>
