@@ -107,7 +107,7 @@ export default function RootLayout({ children }) {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         {/* Telegram Specific Meta Tags */}
-        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:type" content="/logo192.png" />
       </Head>
       <body className={montserratAlternates.className}>{children}</body>
     </html>
