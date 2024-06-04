@@ -2,14 +2,14 @@
 
 .footerContainer {
   color: var(--white);
-  padding-top: 428px;
-  padding-top: 261px;
+  // padding-top: 428px;
+  padding-top: 100px;
   @include tablet{
-    padding-top: 575px;
+    padding-top: 0;
   }
 
   @include desktop{
-  padding-top: 0;
+  
   }
 }
 

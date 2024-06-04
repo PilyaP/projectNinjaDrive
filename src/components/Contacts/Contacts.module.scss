@@ -29,11 +29,12 @@
     background-image: none;
     background-color: var( --10);
     border-radius: 8px;
-    position: absolute;
+    // position: absolute;
     width: 100%;
     border-radius: 0;
     top: 0;
     right: 0;
+    padding-left: 0px;
   }
 
   @include desktop {
