@@ -1,10 +1,11 @@
 import { Montserrat_Alternates } from "next/font/google";
 import "../../styles/globals.scss";
+import Script from "next/script";
 import Head from "next/head";
 
 const montserratAlternates = Montserrat_Alternates({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: "400",
 });
 
 const metadata = {
@@ -53,8 +54,8 @@ const metadata = {
     ],
     locale: "uk_UA",
     type: "website",
-    manifest: "/site.webmanifest",
   },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({ children }) {
@@ -62,16 +63,24 @@ export default function RootLayout({ children }) {
     <html lang="uk">
       <Head>
         <title>{metadata.title}</title>
-        <meta name="description" content={metadata.openGraph.description} />
+        <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords.join(", ")} />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Ninja Drive Club" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        {/* Open Graph */}
+        <meta property="og:title" content={metadata.openGraph.title} />
         <meta
-          name="google-site-verification"
-          content="axszHEOIvB3MfCvCjDJZefCsB9Y9du8XFMLCDcCPBVI"
+          property="og:description"
+          content={metadata.openGraph.description}
         />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta property="og:locale" content={metadata.openGraph.locale} />
+        <meta property="og:type" content={metadata.openGraph.type} />
+
         <link
           rel="icon"
           href="/favicon.ico"
@@ -89,62 +98,35 @@ export default function RootLayout({ children }) {
           sizes="192x192"
           type="image/png"
         />
-        <link rel="manifest" href={metadata.openGraph.manifest} />
-
-        {/* Open Graph */}
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta
-          property="og:description"
-          content={metadata.openGraph.description}
-        />
-        <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:site_name" content={metadata.openGraph.siteName} />
-        <meta property="og:locale" content={metadata.openGraph.locale} />
-        <meta property="og:type" content={metadata.openGraph.type} />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={metadata.openGraph.title} />
-        <meta
-          name="twitter:description"
-          content={metadata.openGraph.description}
-        />
-        <meta name="twitter:image" content={metadata.openGraph.images[0].url} />
-        <meta name="twitter:site" content="@your_twitter_handle" />
-
-        {/* Global site tag (gtag.js) - Google Analytics */}
-        <script
+        <link rel="manifest" href={metadata.manifest} />
+      </Head>
+      <body className={montserratAlternates.className}>
+        {children}
+        <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-L096GYV598"
-        ></script>
-        <script>
+        ></Script>
+        <Script id="google-analytics">
           {`window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-L096GYV598');`}
-        </script>
-
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {`{
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-L096GYV598');`}
+        </Script>
+        <Script type="application/ld+json">
+          {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Ninja Drive Club",
-            "url": "https://ninjadriveclub.com",
-            "logo": "https://ninjadriveclub.com/logo512.png",
-            "contactPoint": {
+            name: "Ninja Drive Club",
+            url: "https://ninjadriveclub.com",
+            logo: "https://ninjadriveclub.com/logo512.png",
+            contactPoint: {
               "@type": "ContactPoint",
-              "telephone": "+380504800007",
-              "contactType": "Customer Service"
-            }
-          }`}
-
-          
-        </script>
-      </Head>
-      <body className={montserratAlternates.className}>{children}</body>
+              telephone: "+380504800007",
+              contactType: "Customer Service",
+            },
+          })}
+        </Script>
+      </body>
     </html>
   );
 }
