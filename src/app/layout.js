@@ -1,16 +1,12 @@
 import React from "react";
 import "../../styles/globals.scss";
 import { Montserrat_Alternates } from "next/font/google";
-import Script from "next/script";
 import Head from "next/head";
 
 const montserratAlternates = Montserrat_Alternates({
   subsets: ["latin"],
   weight: "400",
 });
-
-
-const GTM_ID = "G-L096GYV598";
 
 export const metadata = {
   title: "Прокат квадроциклів у Дніпрі",
@@ -112,52 +108,43 @@ export default function RootLayout({ children }) {
           type="image/png"
         />
         <link rel="manifest" href={metadata.manifest} />
-      </Head>
 
-      <Script id="google-tag-manager" strategy="afterInteractive">
-        {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','${GTM_ID}');
-          `}
-      </Script>
-      <Script
-        src="https://www.google.com/recaptcha/api.js"
-        async
-        defer
-      ></Script>
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GTM_ID}');
-          `}
-      </Script>
-      <Script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Ninja Drive Club",
-          url: "https://ninjadriveclub.com",
-          logo: "https://ninjadriveclub.com/logo512.png",
-          contactPoint: {
-            "@type": "ContactPoint",
-            telephone: "+380504800007",
-            contactType: "Customer Service",
-          },
-        })}
-      </Script>
-      <body className={montserratAlternates.className}>
-        {children}
-        <noscript
+        <script
+          type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display: none; visibility: hidden;"></iframe>`,
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Ninja Drive Club",
+              url: "https://ninjadriveclub.com",
+              logo: "https://ninjadriveclub.com/logo512.png",
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+380504800007",
+                contactType: "Customer Service",
+              },
+            }),
           }}
         />
-      </body>
+
+        {/* Google Analytics */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-L096GYV598`}
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-L096GYV598');
+            `,
+          }}
+        />
+      </Head>
+      <body className={montserratAlternates.className}>{children}</body>
     </html>
   );
 }
