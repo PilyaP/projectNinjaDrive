@@ -1,6 +1,6 @@
-import { Montserrat_Alternates } from "next/font/google";
+import React from "react";
 import "../../styles/globals.scss";
-import Script from "next/script";
+import { Montserrat_Alternates } from "next/font/google";
 import Head from "next/head";
 
 const montserratAlternates = Montserrat_Alternates({
@@ -8,30 +8,11 @@ const montserratAlternates = Montserrat_Alternates({
   weight: "400",
 });
 
-const metadata = {
+export const metadata = {
   title: "Прокат квадроциклів у Дніпрі",
-  description:
-    "Приєднуйтесь до Ninja Drive Club для незабутніх вражень! Прокат квадроциклів та мото багів у місті Дніпро.",
-  keywords: [
-    "Прокат квадроциклов Днепр",
-    "Квадроциклы в Обуховке",
-    "Квадро Днепр",
-    "Эндуро Днепр",
-    "Прокат эндуро Днепр",
-    "Прокат багги Днепр",
-    "Покататься на квадроциклах в Днепре",
-    "Поездка на квадроциклах",
-    "Прогулка на квадроциклах",
-    "Квадрики в Обуховке",
-    "Прокат багги в Днепре",
-    "Прокат квадроциклов в Днепре",
-    "Отдых в Днепре",
-    "Выходные в Днепре",
-    "Куда пойти в Днепре",
-    "Экстремальный досуг в Днепре",
-    "Что подарить",
-    "Подарочный сертификат Днепр",
-  ],
+  url: "https://ninjadriveclub.com",
+  siteName: "Ninja Drive Club",
+  metadataBase: process.env.NEXT_PUBLIC_BASE_URL,
   openGraph: {
     title: "Прокат квадроциклів у Дніпрі",
     description:
@@ -55,19 +36,47 @@ const metadata = {
     locale: "uk_UA",
     type: "website",
   },
+  icons: {
+    icon: ["/favicon.ico"],
+    apple: ["/apple-touch-icon.png"],
+    shortcut: ["/logo192.png"],
+  },
   manifest: "/site.webmanifest",
+  description:
+    "Приєднуйтесь до Ninja Drive Club для незабутніх вражень! Прокат квадроциклів та мото багів у місті Дніпро.",
+  keywords: [
+    "Прокат квадроциклов Днепр",
+    "Квадроциклы в Обуховке",
+    "Квадро Днепр",
+    "Эндуро Днепр",
+    "Прокат эндуро Днепр",
+    "Прокат багги Днепр",
+    "Покататься на квадроциклах в Днепре",
+    "Поездка на квадроциклах",
+    "Прогулка на квадроциклах",
+    "Квадрики в Обуховке",
+    "Прокат багги в Днепре",
+    "Прокат квадроциклов в Днепре",
+    "Отдых в Днепре",
+    "Выходные в Днепре",
+    "Куда пойти в Днепре",
+    "Экстремальный досуг в Днепре",
+    "Что подарить",
+    "Подарочный сертификат Днепр",
+  ],
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="uk">
+    <html lang="uk_UA">
       <Head>
         <title>{metadata.title}</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords.join(", ")} />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Ninja Drive Club" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         {/* Open Graph */}
         <meta property="og:title" content={metadata.openGraph.title} />
@@ -99,34 +108,43 @@ export default function RootLayout({ children }) {
           type="image/png"
         />
         <link rel="manifest" href={metadata.manifest} />
-      </Head>
-      <body className={montserratAlternates.className}>
-        {children}
-        <Script
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Ninja Drive Club",
+              url: "https://ninjadriveclub.com",
+              logo: "https://ninjadriveclub.com/logo512.png",
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+380504800007",
+                contactType: "Customer Service",
+              },
+            }),
+          }}
+        />
+
+        {/* Google Analytics */}
+        <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-L096GYV598"
-        ></Script>
-        <Script id="google-analytics">
-          {`window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-L096GYV598');`}
-        </Script>
-        <Script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "Ninja Drive Club",
-            url: "https://ninjadriveclub.com",
-            logo: "https://ninjadriveclub.com/logo512.png",
-            contactPoint: {
-              "@type": "ContactPoint",
-              telephone: "+380504800007",
-              contactType: "Customer Service",
-            },
-          })}
-        </Script>
-      </body>
+          src={`https://www.googletagmanager.com/gtag/js?id=G-L096GYV598`}
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-L096GYV598');
+            `,
+          }}
+        />
+      </Head>
+      <body className={montserratAlternates.className}>{children}</body>
     </html>
   );
 }
