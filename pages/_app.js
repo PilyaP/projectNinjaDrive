@@ -1,12 +1,7 @@
-import RootLayout from "@/app/layout";
 import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <RootLayout>
-      <Component {...pageProps} />
-    </RootLayout>
-  );
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;
