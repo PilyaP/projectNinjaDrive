@@ -6,7 +6,7 @@ import Head from "next/head";
 
 const montserratAlternates = Montserrat_Alternates({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -63,6 +63,25 @@ export default function RootLayout({ children }) {
   return (
     <html lang="uk">
       <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords.join(", ")} />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Ninja Drive Club" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta
+          property="og:description"
+          content={metadata.openGraph.description}
+        />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta property="og:locale" content={metadata.openGraph.locale} />
+        <meta property="og:type" content={metadata.openGraph.type} />
+
         <link
           rel="icon"
           href="/favicon.ico"
@@ -80,6 +99,7 @@ export default function RootLayout({ children }) {
           sizes="192x192"
           type="image/png"
         />
+        <link rel="manifest" href={metadata.manifest} />
       </Head>
       <body className={montserratAlternates.className}>
         {children}
