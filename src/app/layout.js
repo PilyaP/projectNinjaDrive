@@ -10,17 +10,17 @@ const montserratAlternates = Montserrat_Alternates({
 export const metadata = {
   title: "Прокат мото багів, квадроциклів та іншої техніки у місті Дніпро",
   url: process.env.NEXT_PUBLIC_BASE_URL,
-  siteName: "Project Ninja Drive",
+  siteName: "Ninja Drive Club",
   metadataBase: process.env.NEXT_PUBLIC_BASE_URL,
   openGraph: {
     title: "Прокат мото багів, квадроциклів та іншої техніки у місті Дніпро",
-    description: `Компанія Project Ninja Drive пропонує прокат мото багів, квадроциклів та іншої техніки у місті Дніпро. Незабутні пригоди та екстремальний відпочинок для всіх! Наші послуги включають:
+    description: `Компанія Ninja Drive Club пропонує прокат мото багів, квадроциклів та іншої техніки у місті Дніпро. Незабутні пригоди та екстремальний відпочинок для всіх! Наші послуги включають:
 - Прокат мото багів та квадроциклів
 - Екстремальні тури та розваги
 - Індивідуальний підхід до кожного клієнта
 Приєднуйтеся до нас для незабутніх вражень та активного відпочинку.`,
     url: process.env.NEXT_PUBLIC_BASE_URL,
-    siteName: "Project Ninja Drive",
+    siteName: "Ninja Drive Club",
     icons: {
       icon: ["/favicon.ico"],
       apple: ["/apple-touch-icon.png"],
@@ -31,13 +31,13 @@ export const metadata = {
         url: "/logo512.png",
         width: 800,
         height: 600,
-        alt: "Project Ninja Drive",
+        alt: "Ninja Drive Club",
       },
       {
         url: "/logo512.png",
         width: 1800,
         height: 1600,
-        alt: "Project Ninja Drive",
+        alt: "Ninja Drive Club",
       },
     ],
     locale: "uk_UA",
@@ -111,7 +111,7 @@ export default function RootLayout({ children }) {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         {/* Telegram Specific Meta Tags */}
-        <meta property="og:image:type" content="/logo192.png" />
+        <meta property="og:image:type" content="image/png" />
         <meta
           name="google-site-verification"
           content="axszHEOIvB3MfCvCjDJZefCsB9Y9du8XFMLCDcCPBVI"
