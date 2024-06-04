@@ -1,6 +1,5 @@
 import { Montserrat_Alternates } from "next/font/google";
 import "../../styles/globals.scss";
-import { Metadata } from "next";
 import Script from "next/script";
 import Head from "next/head";
 
@@ -9,7 +8,7 @@ const montserratAlternates = Montserrat_Alternates({
   weight: "400",
 });
 
-export const metadata: Metadata = {
+const metadata = {
   title: "Прокат квадроциклів у Дніпрі",
   description:
     "Приєднуйтесь до Ninja Drive Club для незабутніх вражень! Прокат квадроциклів та мото багів у місті Дніпро.",
