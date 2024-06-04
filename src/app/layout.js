@@ -9,7 +9,7 @@ const montserratAlternates = Montserrat_Alternates({
 
 export const metadata = {
   title: "Прокат мото багів, квадроциклів та іншої техніки у місті Дніпро",
-  url: "https://project-ninja-drive.vercel.app/",
+  url: process.env.NEXT_PUBLIC_BASE_URL,
   siteName: "Project Ninja Drive",
   metadataBase: process.env.NEXT_PUBLIC_BASE_URL,
   openGraph: {
@@ -19,7 +19,7 @@ export const metadata = {
 - Екстремальні тури та розваги
 - Індивідуальний підхід до кожного клієнта
 Приєднуйтеся до нас для незабутніх вражень та активного відпочинку.`,
-    url: "https://project-ninja-drive.vercel.app",
+    url: process.env.NEXT_PUBLIC_BASE_URL,
     siteName: "Project Ninja Drive",
     icons: {
       icon: ["/favicon.ico"],
@@ -44,6 +44,26 @@ export const metadata = {
     type: "website",
     manifest: "/site.webmanifest",
   },
+  keywords: [
+    "Прокат квадроциклов Днепр",
+    "Квадроциклы в Обуховке",
+    "Квадро Днепр",
+    "Эндуро Днепр",
+    "Прокат эндуро Днепр",
+    "Прокат багги Днепр",
+    "Покататься на квадроциклах в Днепре",
+    "Поездка на квадроциклах",
+    "Прогулка на квадроциклах",
+    "Квадрики в Обуховке",
+    "Прокат багги в Днепре",
+    "Прокат квадроциклов в Днепре",
+    "Отдых в Днепре",
+    "Выходные в Днепре",
+    "Куда пойти в Днепре",
+    "Экстремальный досуг в Днепре",
+    "Что подарить",
+    "Подарочный сертификат Днепр",
+  ],
 };
 
 export default function RootLayout({ children }) {
@@ -52,6 +72,7 @@ export default function RootLayout({ children }) {
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.openGraph.description} />
+        <meta name="keywords" content={metadata.keywords.join(", ")} />
         <link
           rel="icon"
           href="/favicon.ico"
@@ -82,6 +103,11 @@ export default function RootLayout({ children }) {
         {metadata.openGraph.images.map((image, index) => (
           <meta key={index} property="og:image" content={image.url} />
         ))}
+        {/* WhatsApp Specific Meta Tags */}
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        {/* Telegram Specific Meta Tags */}
+        <meta property="og:image:type" content="image/png" />
       </Head>
       <body className={montserratAlternates.className}>{children}</body>
     </html>
