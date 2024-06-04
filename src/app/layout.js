@@ -1,5 +1,6 @@
-import { Montserrat_Alternates } from "next/font/google";
+import React from "react";
 import "../../styles/globals.scss";
+import { Montserrat_Alternates } from "next/font/google";
 import Script from "next/script";
 import Head from "next/head";
 
@@ -8,30 +9,12 @@ const montserratAlternates = Montserrat_Alternates({
   weight: "400",
 });
 
-const metadata = {
+const GTM_ID = "G-L096GYV598"; // Ваш Google Tag Manager ID
+
+export const metadata = {
   title: "Прокат квадроциклів у Дніпрі",
-  description:
-    "Приєднуйтесь до Ninja Drive Club для незабутніх вражень! Прокат квадроциклів та мото багів у місті Дніпро.",
-  keywords: [
-    "Прокат квадроциклов Днепр",
-    "Квадроциклы в Обуховке",
-    "Квадро Днепр",
-    "Эндуро Днепр",
-    "Прокат эндуро Днепр",
-    "Прокат багги Днепр",
-    "Покататься на квадроциклах в Днепре",
-    "Поездка на квадроциклах",
-    "Прогулка на квадроциклах",
-    "Квадрики в Обуховке",
-    "Прокат багги в Днепре",
-    "Прокат квадроциклов в Днепре",
-    "Отдых в Днепре",
-    "Выходные в Днепре",
-    "Куда пойти в Днепре",
-    "Экстремальный досуг в Днепре",
-    "Что подарить",
-    "Подарочный сертификат Днепр",
-  ],
+  url: "https://ninjadriveclub.com",
+  siteName: "Ninja Drive Club",
   openGraph: {
     title: "Прокат квадроциклів у Дніпрі",
     description:
@@ -55,7 +38,34 @@ const metadata = {
     locale: "uk_UA",
     type: "website",
   },
+  icons: {
+    icon: ["/favicon.ico"],
+    apple: ["/apple-touch-icon.png"],
+    shortcut: ["/logo192.png"],
+  },
   manifest: "/site.webmanifest",
+  description:
+    "Приєднуйтесь до Ninja Drive Club для незабутніх вражень! Прокат квадроциклів та мото багів у місті Дніпро.",
+  keywords: [
+    "Прокат квадроциклов Днепр",
+    "Квадроциклы в Обуховке",
+    "Квадро Днепр",
+    "Эндуро Днепр",
+    "Прокат эндуро Днепр",
+    "Прокат багги Днепр",
+    "Покататься на квадроциклах в Днепре",
+    "Поездка на квадроциклах",
+    "Прогулка на квадроциклах",
+    "Квадрики в Обуховке",
+    "Прокат багги в Днепре",
+    "Прокат квадроциклов в Днепре",
+    "Отдых в Днепре",
+    "Выходные в Днепре",
+    "Куда пойти в Днепре",
+    "Экстремальный досуг в Днепре",
+    "Что подарить",
+    "Подарочный сертификат Днепр",
+  ],
 };
 
 export default function RootLayout({ children }) {
@@ -63,11 +73,12 @@ export default function RootLayout({ children }) {
     <html lang="uk">
       <Head>
         <title>{metadata.title}</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords.join(", ")} />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Ninja Drive Club" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         {/* Open Graph */}
         <meta property="og:title" content={metadata.openGraph.title} />
@@ -102,15 +113,27 @@ export default function RootLayout({ children }) {
       </Head>
       <body className={montserratAlternates.className}>
         {children}
+        <Script id="google-tag-manager" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','${GTM_ID}');
+          `}
+        </Script>
         <Script
+          src="https://www.google.com/recaptcha/api.js"
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-L096GYV598"
+          defer
         ></Script>
-        <Script id="google-analytics">
-          {`window.dataLayer = window.dataLayer || [];
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-L096GYV598');`}
+            gtag('config', '${GTM_ID}');
+          `}
         </Script>
         <Script type="application/ld+json">
           {JSON.stringify({
@@ -126,6 +149,11 @@ export default function RootLayout({ children }) {
             },
           })}
         </Script>
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display: none; visibility: hidden;"></iframe>`,
+          }}
+        />
       </body>
     </html>
   );
