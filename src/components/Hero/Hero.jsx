@@ -1,8 +1,20 @@
+'use client';
+import { useState } from "react";
 import SocialsList from "../common/SocialsList/SocialsList";
 import s from "./Hero.module.scss";
 import Image from "next/image";
+import Modal from "../Modal/Modal";
 
 export default function Hero() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setmodalContent] = useState({title: '', description: ''});
+  
+  const toggleModal = ( title = '', description = '') => {
+    setmodalContent({title, description})
+     setIsModalOpen(!isModalOpen)
+  }
+  
+
   return (
      <section className={s.hero}>
       <div className='container'>
@@ -34,56 +46,25 @@ export default function Hero() {
             
             <div className={s.heroButtonsBox}>
               <ul className={s.heroButtonsList}>
-               <li> <button className={`${s.heroBtn} ${s.signup}`}>Записатися</button></li>
-               <li> <button className={`${s.heroBtn} ${s.certificate}`}>Сертифікат</button></li>
+               <li> <button onClick={()=> toggleModal( 'Бажаєте записятися на прогулянку?', "Залишіть свій номер телефону, ми вам передзвонимо протягом декількох хвилин та розповімо всі деталі :)")} className={`${s.heroBtn} ${s.signup}`}>Записатися</button></li>
+               <li> <button onClick={()=> toggleModal('Бажаєте замовити Сертифікат?', 'Залишіть свій номер телефону, ми вам передзвонимо протягом декількох хвилин та розповімо всі деталі :)')} className={`${s.heroBtn} ${s.certificate}`}>Сертифікат</button></li>
               </ul>
                 <p className={s.heroCalltoAction}>купуй в подарунок:)</p>
             </div>
             <div className={s.socialsListBox}>
 
               <SocialsList/>
-             {/* <ul className="socialsList">
-          <li>
-            <Image
-            class="socialsListIcon"
-              src="./assets/facebook-dask.png"
-              alt="Facebook"
-              width={24}
-              height={24}
-            />
-          </li>
-          <li>
-            <Image
-            class="socialsListIcon"
-              src="./assets/insta-desk.png"
-              alt="Instagram"
-              width={24}
-              height={24}
-            />
-          </li>
-          <li>
-            <Image
-            class="socialsListIcon"
-              src="./assets/whats-desk.png"
-              alt="WhatsApp"
-              width={24}
-              height={24}
-            />
-          </li>
-          <li>
-            <Image
-            class="socialsListIcon"
-            src="./assets/tiktok-desk.png" alt="TikTok"
-            width={24}
-              height={24} />
-          </li>
-NameclassName        </ul> */}
            
           </div>
           </div>
           
         </div>
       </div>
+    { isModalOpen && <Modal
+       onClose={toggleModal}
+      title={modalContent.title}
+      description={modalContent.description}
+      />}
     </section>
   );
 }
