@@ -7,43 +7,10 @@ const montserratAlternates = Montserrat_Alternates({
   weight: ["400"],
 });
 
-export const metadata = {
-  title: "Прокат мото багів, квадроциклів та іншої техніки у місті Дніпро",
-  url: process.env.NEXT_PUBLIC_BASE_URL,
-  siteName: "Ninja Drive Club",
-  metadataBase: process.env.NEXT_PUBLIC_BASE_URL,
-  openGraph: {
-    title: "Прокат мото багів, квадроциклів та іншої техніки у місті Дніпро",
-    description: `Компанія Ninja Drive Club пропонує прокат мото багів, квадроциклів та іншої техніки у місті Дніпро. Незабутні пригоди та екстремальний відпочинок для всіх! Наші послуги включають:
-- Прокат мото багів та квадроциклів
-- Екстремальні тури та розваги
-- Індивідуальний підхід до кожного клієнта
-Приєднуйтеся до нас для незабутніх вражень та активного відпочинку.`,
-    url: process.env.NEXT_PUBLIC_BASE_URL,
-    siteName: "Ninja Drive Club",
-    icons: {
-      icon: ["/favicon.ico"],
-      apple: ["/apple-touch-icon.png"],
-      shortcut: ["/logo192.png"],
-    },
-    images: [
-      {
-        url: "/logo512.png",
-        width: 800,
-        height: 600,
-        alt: "Ninja Drive Club",
-      },
-      {
-        url: "/logo512.png",
-        width: 1800,
-        height: 1600,
-        alt: "Ninja Drive Club",
-      },
-    ],
-    locale: "uk_UA",
-    type: "website",
-    manifest: "/site.webmanifest",
-  },
+const metadata = {
+  title: "Прокат квадроциклів у Дніпрі",
+  description:
+    "Приєднуйтесь до Ninja Drive Club для незабутніх вражень! Прокат квадроциклів та мото багів у місті Дніпро.",
   keywords: [
     "Прокат квадроциклов Днепр",
     "Квадроциклы в Обуховке",
@@ -64,6 +31,30 @@ export const metadata = {
     "Что подарить",
     "Подарочный сертификат Днепр",
   ],
+  openGraph: {
+    title: "Прокат квадроциклів у Дніпрі",
+    description:
+      "Приєднуйтесь до Ninja Drive Club для незабутніх вражень! Прокат квадроциклів та мото багів у місті Дніпро.",
+    url: process.env.NEXT_PUBLIC_BASE_URL,
+    siteName: "Ninja Drive Club",
+    images: [
+      {
+        url: "/logo512.png",
+        width: 800,
+        height: 600,
+        alt: "Ninja Drive Club",
+      },
+      {
+        url: "/logo512.png",
+        width: 1800,
+        height: 1600,
+        alt: "Ninja Drive Club",
+      },
+    ],
+    locale: "uk_UA",
+    type: "website",
+    manifest: "/site.webmanifest",
+  },
 };
 
 export default function RootLayout({ children }) {
