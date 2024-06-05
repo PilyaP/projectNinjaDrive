@@ -87,37 +87,27 @@ export default function RootLayout({ children }) {
         <link rel="shortcut icon" href="/logo192.png" sizes="192x192" type="image/png" />
         <link rel="manifest" href={metadata.manifest} />
 
-        <script type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Ninja Drive Club",
-              url: "https://ninjadriveclub.com",
-              logo: "https://ninjadriveclub.com/logo512.png",
-              contactPoint: {
-                "@type": "ContactPoint",
-                telephone: "+380504800007",
-                contactType: "Customer Service",
-              },
-            }),
-          }}
-        />
+        {/* Google Tag (gtag.js) */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-16562630999" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-16562630999');
+          `}
+        </Script>
+        
+        {/* Event snippet for conversion page */}
+        <Script id="google-conversion-event" strategy="afterInteractive">
+          {`
+            gtag('event', 'conversion', {'send_to': 'AW-16562630999/TSw3cLXEgbcZENfiitk9'});
+          `}
+        </Script>
       </Head>
       <body className={montserratAlternates.className}>
         {children}
-        {/* Google Analytics */}
-        <Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`} />
-        <Script id="google-analytics" strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');
-            `,
-          }}
-        />
       </body>
     </html>
   );
