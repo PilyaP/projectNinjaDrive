@@ -21,9 +21,9 @@ export const metadata = {
     siteName: "Ninja Drive Club",
     images: [
       {
-        url: "https://ninjadriveclub.com/logo512.png", // Полный URL к логотипу
-        width: 512, // Указание ширины изображения
-        height: 512, // Указание высоты изображения
+        url: "https://ninjadriveclub.com/logo512.png",
+        width: 512,
+        height: 512,
         alt: "Ninja Drive Club",
       },
     ],
