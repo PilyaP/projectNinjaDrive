@@ -16,21 +16,14 @@ export const metadata = {
   metadataBase: process.env.NEXT_PUBLIC_BASE_URL,
   openGraph: {
     title: "Прокат квадроциклів у Дніпрі",
-    description:
-      "Приєднуйтесь до Ninja Drive Club для незабутніх вражень! Прокат квадроциклів та мото багів у місті Дніпро.",
+    description: "Приєднуйтесь до Ninja Drive Club для незабутніх вражень! Прокат квадроциклів та мото багів у місті Дніпро.",
     url: "https://ninjadriveclub.com",
     siteName: "Ninja Drive Club",
     images: [
       {
-        url: "/logo512.png",
-        width: 800,
-        height: 600,
-        alt: "Ninja Drive Club",
-      },
-      {
-        url: "/logo512.png",
-        width: 1800,
-        height: 1600,
+        url: "https://ninjadriveclub.com/logo512.png", // Полный URL к логотипу
+        width: 512, // Указание ширины изображения
+        height: 512, // Указание высоты изображения
         alt: "Ninja Drive Club",
       },
     ],
@@ -43,8 +36,7 @@ export const metadata = {
     shortcut: ["/logo192.png"],
   },
   manifest: "/site.webmanifest",
-  description:
-    "Приєднуйтесь до Ninja Drive Club для незабутніх вражень! Прокат квадроциклів та мото багів у місті Дніпро.",
+  description: "Приєднуйтесь до Ninja Drive Club для незабутніх вражень! Прокат квадроциклів та мото багів у місті Дніпро.",
   keywords: [
     "Прокат квадроциклов Днепр",
     "Квадроциклы в Обуховке",
@@ -81,37 +73,21 @@ export default function RootLayout({ children }) {
 
         {/* Open Graph */}
         <meta property="og:title" content={metadata.openGraph.title} />
-        <meta
-          property="og:description"
-          content={metadata.openGraph.description}
-        />
+        <meta property="og:description" content={metadata.openGraph.description} />
         <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:image:width" content={metadata.openGraph.images[0].width} />
+        <meta property="og:image:height" content={metadata.openGraph.images[0].height} />
         <meta property="og:url" content={metadata.openGraph.url} />
         <meta property="og:site_name" content={metadata.openGraph.siteName} />
         <meta property="og:locale" content={metadata.openGraph.locale} />
         <meta property="og:type" content={metadata.openGraph.type} />
 
-        <link
-          rel="icon"
-          href="/favicon.ico"
-          sizes="32x32"
-          type="image/x-icon"
-        />
-        <link
-          rel="apple-touch-icon"
-          href="/apple-touch-icon.png"
-          sizes="180x180"
-        />
-        <link
-          rel="shortcut icon"
-          href="/logo192.png"
-          sizes="192x192"
-          type="image/png"
-        />
+        <link rel="icon" href="/favicon.ico" sizes="32x32" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+        <link rel="shortcut icon" href="/logo192.png" sizes="192x192" type="image/png" />
         <link rel="manifest" href={metadata.manifest} />
 
-        <script
-          type="application/ld+json"
+        <script type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
@@ -131,19 +107,14 @@ export default function RootLayout({ children }) {
       <body className={montserratAlternates.className}>
         {children}
         {/* Google Analytics */}
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-L096GYV598`}
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
+        <Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`} />
+        <Script id="google-analytics" strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-L096GYV598');
+              gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');
             `,
           }}
         />
