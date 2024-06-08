@@ -5,7 +5,6 @@
     padding-bottom: 110px;
     font-family: var(--font-family);
     color: var(--white);
-    // position: relative;
 
     @include tablet{
          background-image: url('/pricing-bg-tab.png');
@@ -19,28 +18,6 @@
             background-image: url('/bg-images/price-desk-bg.png');
         }
     }
-
-    &::before{
-        content: '';
-        position: absolute;
-        top: 27px;
-        right: 0;
-        width: 229px;
-        height: 27px;
-        background-image: url('/price-vector-mob.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: top;
-
-        @include tablet{
-          left: 114px;  
-        }
-        @include desktop{
-            top: 77px;
-            left: 90px;
-        }
-    }
-
 }
 .priceTitle{
     font-family: var(--second-family);
@@ -62,18 +39,25 @@
         background-repeat: no-repeat;
         background-position: top;
 
+        
         @include tablet{
-          left: 114px;  
+          right:0;  
         }
         @include desktop{
             top: 77px;
-            left: 90px;
+            left: 36px;
         }
     }
 
+    @include mobile{
+        width: 343px;
+    }
     @include tablet{
         font-size: 36px;
         margin-bottom: 79px;
+    }
+    @include desktop{
+        width: 574px;
     }
     
     &--mob{
