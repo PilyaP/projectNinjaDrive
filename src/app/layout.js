@@ -173,6 +173,7 @@
 //     </html>
 //   );
 // }
+
 import React from "react";
 import "../../styles/globals.scss";
 import { Montserrat_Alternates } from "next/font/google";
@@ -183,8 +184,6 @@ const montserratAlternates = Montserrat_Alternates({
   subsets: ["latin"],
   weight: "400",
 });
-
-
 
 export const metadata = {
   title: "Прокат квадроциклів у Дніпрі",
@@ -250,8 +249,10 @@ export default function RootLayout({ children }) {
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Ninja Drive Club" />
 
-        {/* Google Tag Manager */}
+        {/* Google Tag Manager (Script for Head) */}
         <Script
+          id="google-tag-manager"
+          strategy="beforeInteractive" // Ensures it loads before the page becomes interactive
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -262,45 +263,6 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-
-        {/* Open Graph */}
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta
-          property="og:description"
-          content={metadata.openGraph.description}
-        />
-        <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        <meta
-          property="og:image:width"
-          content={metadata.openGraph.images[0].width}
-        />
-        <meta
-          property="og:image:height"
-          content={metadata.openGraph.images[0].height}
-        />
-        <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:site_name" content={metadata.openGraph.siteName} />
-        <meta property="og:locale" content={metadata.openGraph.locale} />
-        <meta property="og:type" content={metadata.openGraph.type} />
-
-        <link
-          rel="icon"
-          href="/favicon.ico"
-          sizes="32x32"
-          type="image/x-icon"
-        />
-        <link
-          rel="apple-touch-icon"
-          href="/apple-touch-icon.png"
-          sizes="180x180"
-        />
-        <link
-          rel="shortcut icon"
-          href="/logo192.png"
-          sizes="192x192"
-          type="image/png"
-        />
-        <link rel="manifest" href={metadata.manifest} />
       </Head>
       <body className={montserratAlternates.className}>
         {/* Google Tag Manager (noscript) */}
