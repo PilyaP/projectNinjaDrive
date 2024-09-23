@@ -72,7 +72,17 @@ export default function RootLayout({ children }) {
         <meta name="keywords" content={metadata.keywords.join(", ")} />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Ninja Drive Club" />
-
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j,f);
+        })(window, document, 'script', 'dataLayer', 'GTM-59GJXVGV');
+      `,
+          }}
+        />
         {/* Open Graph */}
         <meta property="og:title" content={metadata.openGraph.title} />
         <meta
@@ -111,17 +121,6 @@ export default function RootLayout({ children }) {
           type="image/png"
         />
         <link rel="manifest" href={metadata.manifest} />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j,f);
-        })(window, document, 'script', 'dataLayer', 'GTM-59GJXVGV');
-      `,
-          }}
-        />
       </Head>
       <body className={montserratAlternates.className}>
         <noscript>
