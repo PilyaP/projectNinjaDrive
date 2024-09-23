@@ -249,7 +249,7 @@ export default function RootLayout({ children }) {
         <meta name="author" content="Ninja Drive Club" />
 
         {/* Google Tag Manager */}
-        <script
+        <Script
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
