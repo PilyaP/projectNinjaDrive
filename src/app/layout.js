@@ -326,13 +326,6 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-L096GYV598');
           `}
         </Script>
-
-        {/* Google Ads Conversion */}
-        <Script id="google-conversion-event" strategy="afterInteractive">
-          {`
-            gtag('event', 'conversion', {'send_to': 'AW-16562630999/TSw3cLXEgbcZENfiitk9'});
-          `}
-        </Script>
       </body>
     </html>
   );
