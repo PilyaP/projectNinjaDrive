@@ -72,17 +72,7 @@
 //         <meta name="keywords" content={metadata.keywords.join(", ")} />
 //         <meta name="robots" content="index, follow" />
 //         <meta name="author" content="Ninja Drive Club" />
-//         <script
-//           dangerouslySetInnerHTML={{
-//             __html: `
-//         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-//         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-//         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-//         'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j,f);
-//         })(window, document, 'script', 'dataLayer', 'GTM-59GJXVGV');
-//       `,
-//           }}
-//         />
+
 //         {/* Open Graph */}
 //         <meta property="og:title" content={metadata.openGraph.title} />
 //         <meta
@@ -123,14 +113,6 @@
 //         <link rel="manifest" href={metadata.manifest} />
 //       </Head>
 //       <body className={montserratAlternates.className}>
-//         <noscript>
-//           <iframe
-//             src="https://www.googletagmanager.com/ns.html?id=GTM-59GJXVGV"
-//             height="0"
-//             width="0"
-//             style={{ display: "none", visibility: "hidden" }}
-//           ></iframe>
-//         </noscript>
 //         {children}
 
 //         {/* Google Tag Manager */}
@@ -179,6 +161,7 @@ import "../../styles/globals.scss";
 import { Montserrat_Alternates } from "next/font/google";
 import Head from "next/head";
 import Script from "next/script";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const montserratAlternates = Montserrat_Alternates({
   subsets: ["latin"],
@@ -249,32 +232,47 @@ export default function RootLayout({ children }) {
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Ninja Drive Club" />
 
-        {/* Google Tag Manager (Script for Head) */}
-        <Script
-          id="google-tag-manager"
-          strategy="beforeInteractive" // Ensures it loads before the page becomes interactive
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id=GTM-59GJXVGV'+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-59GJXVGV');
-            `,
-          }}
+        {/* Open Graph */}
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta
+          property="og:description"
+          content={metadata.openGraph.description}
         />
-      </Head>
-      <body className={montserratAlternates.className}>
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-59GJXVGV"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript>
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta
+          property="og:image:width"
+          content={metadata.openGraph.images[0].width}
+        />
+        <meta
+          property="og:image:height"
+          content={metadata.openGraph.images[0].height}
+        />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta property="og:locale" content={metadata.openGraph.locale} />
+        <meta property="og:type" content={metadata.openGraph.type} />
 
+        <link
+          rel="icon"
+          href="/favicon.ico"
+          sizes="32x32"
+          type="image/x-icon"
+        />
+        <link
+          rel="apple-touch-icon"
+          href="/apple-touch-icon.png"
+          sizes="180x180"
+        />
+        <link
+          rel="shortcut icon"
+          href="/logo192.png"
+          sizes="192x192"
+          type="image/png"
+        />
+        <link rel="manifest" href={metadata.manifest} />
+      </Head>
+      <GoogleTagManager gtmId="GTM-59GJXVGV" />
+      <body className={montserratAlternates.className}>
         {children}
 
         {/* Google Analytics */}
@@ -288,6 +286,13 @@ export default function RootLayout({ children }) {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-L096GYV598');
+          `}
+        </Script>
+
+        {/* Google Ads Conversion */}
+        <Script id="google-conversion-event" strategy="afterInteractive">
+          {`
+            gtag('event', 'conversion', {'send_to': 'AW-16562630999/TSw3cLXEgbcZENfiitk9'});
           `}
         </Script>
       </body>
