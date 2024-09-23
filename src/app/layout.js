@@ -184,6 +184,8 @@ const montserratAlternates = Montserrat_Alternates({
   weight: "400",
 });
 
+
+
 export const metadata = {
   title: "Прокат квадроциклів у Дніпрі",
   url: "https://ninjadriveclub.com",
