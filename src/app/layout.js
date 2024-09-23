@@ -276,7 +276,7 @@ export default function RootLayout({ children }) {
         {children}
 
         {/* Google Analytics */}
-        <Script
+        {/* <Script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=G-L096GYV598`}
         />
@@ -287,7 +287,7 @@ export default function RootLayout({ children }) {
             gtag('js', new Date());
             gtag('config', 'G-L096GYV598');
           `}
-        </Script>
+        </Script> */}
 
         {/* Google Ads Conversion */}
         {/* <Script id="google-conversion-event" strategy="afterInteractive">
