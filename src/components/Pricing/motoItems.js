@@ -26,17 +26,17 @@ const items = [
     ],
     buttonLink: "https://wa.me/380934800007",
   },
-  {
-    src: "/quadro-desk-400.png",
-    alt: "Квадро 400 куб",
-    title: "Квадро 400 куб",
-    details:itemsDetails,
-    pricing: [
-      { time: "1 година", price: "1400₴" },
-      { time: "2 години", price: "2600₴" },
-    ],
-    buttonLink: "https://wa.me/380934800007",
-  },
+  // {
+  //   src: "/quadro-desk-400.png",
+  //   alt: "Квадро 400 куб",
+  //   title: "Квадро 400 куб",
+  //   details:itemsDetails,
+  //   pricing: [
+  //     { time: "1 година", price: "1400₴" },
+  //     { time: "2 години", price: "2600₴" },
+  //   ],
+  //   buttonLink: "https://wa.me/380934800007",
+  // },
   {
     src: "/quadro-desk-550.png",
     alt: "Квадро 550 куб",
