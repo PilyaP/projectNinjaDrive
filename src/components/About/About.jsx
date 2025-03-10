@@ -51,7 +51,7 @@ export default function About() {
                 </div>
                 {activeIndex === 0 && (
                   <div className={styles.accordionContent}>
-                    Це результат наполегливої роботи і впевненості в тому, що
+                    Це результат наполегливої роботи і впевненості в тому, що{" "}
                     <span className={styles.subheadingOrange}>
                       жодні перешкоди не зможуть зупинити{" "}
                     </span>
