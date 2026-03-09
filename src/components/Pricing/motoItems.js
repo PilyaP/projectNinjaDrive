@@ -10,8 +10,8 @@ const items = [
     title: "Квадро 210 куб",
     details:itemsDetails,
     pricing: [
-      { time: "1 година", price: "1000₴" },
-      { time: "2 години", price: "1800₴" },
+      { time: "1 година", price: "1300₴" },
+      { time: "2 години", price: "2400₴" },
     ],
     buttonLink: "https://wa.me/380934800007",
   },
@@ -21,8 +21,8 @@ const items = [
     title: "Квадро 300 куб",
     details:itemsDetails,
     pricing: [
-      { time: "1 година", price: "1300₴" },
-      { time: "2 години", price: "2400₴" },
+      { time: "1 година", price: "1600₴" },
+      { time: "2 години", price: "3000₴" },
     ],
     buttonLink: "https://wa.me/380934800007",
   },
@@ -43,8 +43,8 @@ const items = [
     title: "Квадро 550 куб",
     details:itemsDetails,
     pricing: [
-      { time: "1 година", price: "1600₴" },
-      { time: "2 години", price: "3000₴" },
+      { time: "1 година", price: "1900₴" },
+      { time: "2 години", price: "3600₴" },
     ],
     buttonLink: "https://wa.me/380934800007",
   },
@@ -76,8 +76,8 @@ const items = [
     title: "Багі BRP 1000",
     details:['*бронь 500₴/ 1 одиня техніки'],
     pricing: [
-      { time: "з інструктором на одному багі", price: "4000₴" },
-      { time: "без інструктора/1год", price: "5000₴" },
+      { time: "з інструктором на одному багі", price: "тимчасово відсутня" },
+      { time: "без інструктора/1год", price: "тимчасово відсутня" },
     ],
     buttonLink: "https://wa.me/380934800007",
   },
